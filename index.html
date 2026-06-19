@@ -684,20 +684,444 @@
         transition-duration: 1ms !important;
       }
     }
+
+    body {
+      background: #f7f3ea;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .title-screen {
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 28px 20px;
+      color: #151515;
+    }
+
+    .title-card {
+      width: min(620px, 100%);
+      text-align: center;
+    }
+
+    .title-years {
+      margin: 0 0 28px;
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      color: rgba(21, 21, 21, 0.62);
+    }
+
+    .title-card h1 {
+      margin: 0;
+      font-family: "Songti SC", "Noto Serif SC", STSong, serif;
+      font-size: clamp(48px, 14vw, 92px);
+      line-height: 0.95;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .title-copy {
+      margin: 28px auto 0;
+      max-width: 500px;
+      color: rgba(21, 21, 21, 0.74);
+      font-family: "Songti SC", "Noto Serif SC", STSong, serif;
+      font-size: 18px;
+      line-height: 1.9;
+      white-space: pre-line;
+    }
+
+    .title-footnote {
+      margin: 24px auto 0;
+      max-width: 520px;
+      color: rgba(21, 21, 21, 0.48);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .title-screen .button,
+    .narrative-action,
+    #confirmInvestments {
+      margin-top: 34px;
+      border: 2px solid #151515;
+      border-radius: 0;
+      background: transparent;
+      color: #151515;
+      padding: 11px 34px;
+      min-height: 48px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      box-shadow: none;
+    }
+
+    .title-screen .button:hover,
+    .narrative-action:hover,
+    #confirmInvestments:hover:not(:disabled) {
+      background: #151515;
+      color: #f7f3ea;
+      transform: none;
+    }
+
+    #confirmInvestments:disabled {
+      border-color: rgba(21, 21, 21, 0.18);
+      color: rgba(21, 21, 21, 0.38);
+      cursor: not-allowed;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 24px));
+      padding: 0 0 36px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      margin: 0;
+      border-bottom: 1px solid rgba(21, 21, 21, 0.1);
+      font-size: 12px;
+      color: rgba(21, 21, 21, 0.66);
+    }
+
+    .topbar h1,
+    .topbar .subtitle,
+    .topbar .eyebrow svg {
+      display: none;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: inherit;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .top-actions {
+      gap: 8px;
+    }
+
+    .top-actions .button {
+      min-height: 34px;
+      padding: 6px 10px;
+      border: 1px solid rgba(21, 21, 21, 0.18);
+      border-radius: 0;
+      background: transparent;
+      color: #151515;
+      font-size: 12px;
+      box-shadow: none;
+    }
+
+    .top-actions .button:hover {
+      background: #151515;
+      color: #f7f3ea;
+      transform: none;
+    }
+
+    .topbar .top-actions {
+      display: none;
+    }
+
+    .status-strip {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      padding: 10px 0;
+      margin: 0;
+      border-bottom: 1px solid rgba(21, 21, 21, 0.1);
+    }
+
+    .status-strip .metric:nth-child(2),
+    .status-strip .metric:nth-child(3) {
+      display: none;
+    }
+
+    .metric {
+      min-height: 58px;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .metric-label {
+      color: rgba(21, 21, 21, 0.58);
+      font-size: 12px;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .metric-value {
+      font-size: 22px;
+    }
+
+    .metric-note {
+      display: none;
+    }
+
+    .workspace {
+      display: block;
+    }
+
+    .side-left,
+    .side-right {
+      display: none;
+    }
+
+    .panel,
+    .main-stage {
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .main-stage {
+      min-height: calc(100dvh - 150px);
+      padding: 28px 0 10px;
+    }
+
+    .event {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 4px 22px;
+      border: 0;
+      background: transparent;
+    }
+
+    .event-meta {
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: rgba(21, 21, 21, 0.64);
+    }
+
+    .year-pill,
+    .tag {
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .year-pill {
+      background: #151515;
+      color: #f7f3ea;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-weight: 800;
+    }
+
+    .event h2 {
+      margin: 0 auto 20px;
+      text-align: center;
+      font-family: "Songti SC", "Noto Serif SC", STSong, serif;
+      font-size: clamp(24px, 5vw, 36px);
+      line-height: 1.25;
+    }
+
+    .event-copy {
+      margin: 0 auto;
+      color: rgba(21, 21, 21, 0.72);
+      font-family: "Songti SC", "Noto Serif SC", STSong, serif;
+      font-size: 17px;
+      line-height: 1.9;
+      white-space: pre-line;
+    }
+
+    .choice-grid {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .choice {
+      width: min(100%, 342px);
+      min-height: 0;
+      padding: 18px;
+      border: 2px solid rgba(21, 21, 21, 0.18);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      color: #151515;
+      transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+    }
+
+    .choice:hover {
+      border-color: #151515;
+      transform: none;
+    }
+
+    .choice.is-selected,
+    .choice[aria-pressed="true"] {
+      border-color: #151515;
+      background: #151515;
+      color: #f7f3ea;
+    }
+
+    .choice-top {
+      display: block;
+    }
+
+    .choice-title {
+      display: block;
+      margin: 8px 0 12px;
+      font-family: "Songti SC", "Noto Serif SC", STSong, serif;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .choice-copy {
+      color: inherit;
+      font-family: "Songti SC", "Noto Serif SC", STSong, serif;
+      font-size: 15px;
+      line-height: 1.75;
+      opacity: 0.78;
+    }
+
+    .project-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 18px 0 14px;
+      font-size: 12px;
+    }
+
+    .project-meta span {
+      display: grid;
+      gap: 3px;
+      color: inherit;
+      opacity: 0.86;
+    }
+
+    .project-meta b {
+      font-size: 14px;
+      font-family: var(--mono);
+    }
+
+    .risk-copy {
+      margin: 0;
+      color: inherit;
+      font-size: 14px;
+      line-height: 1.65;
+      opacity: 0.74;
+    }
+
+    .selected-mark {
+      position: absolute;
+      right: 16px;
+      bottom: 14px;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .choice-impact,
+    .impact,
+    .deal-progress {
+      display: none;
+    }
+
+    .ending {
+      max-width: 760px;
+      margin: 0 auto;
+      border: 0;
+      border-top: 2px solid #151515;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .toast {
+      border-radius: 0;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 20px, 1180px);
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .eyebrow {
+        flex-wrap: wrap;
+        row-gap: 4px;
+      }
+
+      .top-actions {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .top-actions .button {
+        width: 100%;
+      }
+
+      .status-strip {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .metric-value {
+        font-size: 20px;
+      }
+
+      .choice {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
-  <main class="page">
+  <section class="title-screen" id="titleScreen">
+    <div class="title-card">
+      <p class="title-years">2005 — 2025</p>
+      <h1>重生之投资<br>风云</h1>
+      <p class="title-copy">自顶尖学府步入风念资本起，
+亲历中国创投黄金二十年的资本盛宴。
+每一次出手，皆是圈层与品位的双重跃升。</p>
+      <button class="button" type="button" id="titleStart">开始新游戏</button>
+      <p class="title-footnote">二十年，从 Analyst 到 Partner，在每个风口上做出你的 call</p>
+    </div>
+  </section>
+
+  <main class="page game-shell" id="gameShell" hidden>
     <header class="topbar">
       <div>
         <p class="eyebrow">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 19V5m0 14h16M8 16l3-4 3 2 5-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          Investment Committee Simulator
+          <span id="turnLabel">第 1 / 20 回合</span>
+          <span>|</span>
+          <span id="topYearLabel">2005</span>
         </p>
         <h1>中国VC投资模拟器</h1>
         <p class="subtitle">从 2005 到 2025，作为风念资本投资人经历中国创投二十年。看项目、做选择、等退出，也管理自己的声誉、人脉和健康。</p>
+      </div>
+      <div class="eyebrow" aria-label="当前职业状态">
+        <span id="topEraLabel">PC互联网时代</span>
+        <span>|</span>
+        <span id="topFirmLabel">风念资本</span>
+        <span>|</span>
+        <span id="topStageLabel">投资经理</span>
       </div>
       <div class="top-actions">
         <button class="button secondary" type="button" id="howToPlay">
@@ -718,7 +1142,7 @@
 
     <section class="status-strip" aria-label="基金状态">
       <article class="metric">
-        <span class="metric-label">AUM</span>
+        <span class="metric-label">管理规模</span>
         <span class="metric-value" id="cashMetric">100</span>
         <span class="metric-note">基金管理资产规模</span>
       </article>
@@ -5248,7 +5672,7 @@ function Ce() {
   };
 
   const els = {
-    cashMetric: document.getElementById('cashMetric'), navMetric: document.getElementById('navMetric'), dpiMetric: document.getElementById('dpiMetric'), lpMetric: document.getElementById('lpMetric'), repMetric: document.getElementById('repMetric'), disciplineMetric: document.getElementById('disciplineMetric'), heatList: document.getElementById('heatList'), yearPill: document.getElementById('yearPill'), phaseTag: document.getElementById('phaseTag'), cycleTag: document.getElementById('cycleTag'), eventTitle: document.getElementById('eventTitle'), eventCopy: document.getElementById('eventCopy'), choiceGrid: document.getElementById('choiceGrid'), portfolioList: document.getElementById('portfolioList'), logList: document.getElementById('logList'), portfolioCount: document.getElementById('portfolioCount'), logCount: document.getElementById('logCount'), endingPane: document.getElementById('endingPane'), endingTitle: document.getElementById('endingTitle'), endingCopy: document.getElementById('endingCopy'), endingStats: document.getElementById('endingStats'), toast: document.getElementById('toast'), cycleDot: document.getElementById('cycleDot')
+    titleScreen: document.getElementById('titleScreen'), gameShell: document.getElementById('gameShell'), titleStart: document.getElementById('titleStart'), turnLabel: document.getElementById('turnLabel'), topYearLabel: document.getElementById('topYearLabel'), topEraLabel: document.getElementById('topEraLabel'), topFirmLabel: document.getElementById('topFirmLabel'), topStageLabel: document.getElementById('topStageLabel'), cashMetric: document.getElementById('cashMetric'), navMetric: document.getElementById('navMetric'), dpiMetric: document.getElementById('dpiMetric'), lpMetric: document.getElementById('lpMetric'), repMetric: document.getElementById('repMetric'), disciplineMetric: document.getElementById('disciplineMetric'), heatList: document.getElementById('heatList'), yearPill: document.getElementById('yearPill'), phaseTag: document.getElementById('phaseTag'), cycleTag: document.getElementById('cycleTag'), eventTitle: document.getElementById('eventTitle'), eventCopy: document.getElementById('eventCopy'), choiceGrid: document.getElementById('choiceGrid'), portfolioList: document.getElementById('portfolioList'), logList: document.getElementById('logList'), portfolioCount: document.getElementById('portfolioCount'), logCount: document.getElementById('logCount'), endingPane: document.getElementById('endingPane'), endingTitle: document.getElementById('endingTitle'), endingCopy: document.getElementById('endingCopy'), endingStats: document.getElementById('endingStats'), toast: document.getElementById('toast'), cycleDot: document.getElementById('cycleDot')
   };
 
   function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
@@ -5257,13 +5681,19 @@ function Ce() {
   function maxInvestments() { return game.careerStage === 'partner' ? 3 : 1; }
   function outcomeLabel(outcome) { return { huge_success: '大获成功', moderate_success: '稳步增长', breakeven: '勉强保本', failure: '投资失败' }[outcome] || outcome; }
   function outcomeMark(outcome) { return { huge_success: '★', moderate_success: '✓', breakeven: '—', failure: '×' }[outcome] || '·'; }
+  function roundLabel(round) { return { angel: '天使轮', seed: '种子轮', series_a: 'A轮', series_b: 'B轮', series_c: 'C轮', series_d: 'D轮', pre_ipo: 'Pre-IPO' }[round] || round || '融资轮'; }
+  function moneyLabel(value) {
+    if (value >= 100) return `${Number(value / 100).toFixed(value % 100 ? 1 : 0)}亿`;
+    return `${Math.round(value * 100)}万`;
+  }
 
   function initGame() {
     const seed = Math.floor(Math.random() * 2147483647) + 1;
-    game = { ...Ce(), seed, rng: new xe(seed), logs: [], pendingView: null };
+    game = { ...Ce(), seed, rng: new xe(seed), logs: [], pendingView: null, view: 'intro' };
     game.gamePhase = 'PROJECT_SELECTION';
+    els.titleScreen.hidden = true;
+    els.gameShell.hidden = false;
     prepareYear();
-    showToast('新游戏开始', `Seed ${seed}`);
     render();
   }
 
@@ -5278,6 +5708,7 @@ function Ce() {
     game.insiderProjectId = projectPack.insider?.id || null;
     game.recentProjectIds = [...game.recentProjectIds, ...projects.map((project) => project.id)].slice(-9);
     selectedProjectIds = [];
+    game.view = 'intro';
   }
 
   function chooseProject(projectId) {
@@ -5412,6 +5843,11 @@ function Ce() {
   }
 
   function render() {
+    els.turnLabel.textContent = `第 ${game.currentTurn} / 20 回合`;
+    els.topYearLabel.textContent = game.currentYear;
+    els.topEraLabel.textContent = game.currentMarketBrief?.eraName || oe(game.currentYear).name;
+    els.topFirmLabel.textContent = game.firmName;
+    els.topStageLabel.textContent = stageLabel();
     els.cashMetric.textContent = fmt(game.aum);
     els.navMetric.textContent = String(game.investmentHistory.filter((item) => item.status === 'pending').length);
     els.dpiMetric.textContent = stageLabel();
@@ -5426,7 +5862,19 @@ function Ce() {
     els.choiceGrid.hidden = false;
     if (game.pendingView) return renderPendingView();
     if (game.currentRandomEvent) return renderEvent();
+    if (game.view === 'intro') return renderYearIntro();
     renderProjects();
+  }
+
+  function renderYearIntro() {
+    const brief = game.currentMarketBrief;
+    els.yearPill.textContent = game.currentYear;
+    els.phaseTag.textContent = brief.eraName;
+    els.cycleTag.textContent = `${game.currentTurn}/20`;
+    els.eventTitle.textContent = `${game.currentYear} 年 · ${brief.eraName}`;
+    els.eventCopy.textContent = brief.backgroundText;
+    els.choiceGrid.innerHTML = '<button class="button narrative-action" type="button" data-start-projects="1">开始看项目</button>';
+    els.choiceGrid.querySelector('[data-start-projects]').addEventListener('click', () => { game.view = 'projects'; renderProjects(); });
   }
 
   function renderPendingView() {
@@ -5441,7 +5889,7 @@ function Ce() {
       els.eventTitle.textContent = `${game.currentYear} 年项目退出`;
       els.eventCopy.textContent = view.results.map((item) => `${item.projectName}：${outcomeLabel(item.outcome)}，回款 ${fmt(item.returned)}。${item.outcomeText}`).join('\n');
     }
-    els.choiceGrid.innerHTML = '<button class="choice" type="button" data-continue="1"><span class="choice-top"><span class="choice-title">继续</span><span class="tag">下一步</span></span><p class="choice-copy">进入下一阶段。</p></button>';
+    els.choiceGrid.innerHTML = '<button class="button narrative-action" type="button" data-continue="1">继续</button>';
     els.choiceGrid.querySelector('[data-continue]').addEventListener('click', () => { game.pendingView = null; render(); });
   }
 
@@ -5453,9 +5901,7 @@ function Ce() {
     els.eventTitle.textContent = event.title;
     els.eventCopy.textContent = event.description;
     els.choiceGrid.innerHTML = event.choices.map((choice, index) => {
-      const changes = choice.outcome.statChanges || {};
-      const impact = [`AUM ${signed(changes.aum || 0)}`, `业绩 ${signed(changes.trackRecord || 0)}`, `人脉 ${signed(changes.network || 0)}`, `健康 ${signed(changes.health || 0)}`];
-      return `<button class="choice" type="button" data-event-choice="${index}"><span class="choice-top"><span class="choice-title">${choice.text}</span><span class="tag">可选</span></span><p class="choice-copy">${choice.requirement ? '需要满足条件。' : '选择后立即生效。'}</p><span class="choice-impact">${impact.map((item) => `<span class="impact">${item}</span>`).join('')}</span></button>`;
+      return `<button class="choice" type="button" data-event-choice="${index}"><span class="choice-title">${choice.text}</span></button>`;
     }).join('');
     els.choiceGrid.querySelectorAll('[data-event-choice]').forEach((button) => button.addEventListener('click', () => resolveCurrentEvent(Number(button.dataset.eventChoice))));
   }
@@ -5466,12 +5912,12 @@ function Ce() {
     els.phaseTag.textContent = '投资选择';
     els.cycleTag.textContent = `${game.currentTurn}/20`;
     els.eventTitle.textContent = `${brief.eraName} · ${brief.theme}`;
-    els.eventCopy.textContent = brief.backgroundText;
+    els.eventCopy.textContent = `作为${stageLabel()}，你每回合${maxInvestments() === 1 ? '只能选择 1 个项目进行投资' : `最多可以选择 ${maxInvestments()} 个项目进行投资`}`;
     const cards = game.currentProjects.map((project) => {
       const selected = selectedProjectIds.includes(project.id);
-      return `<button class="choice" type="button" data-project-id="${project.id}" aria-pressed="${selected}"><span class="choice-top"><span class="choice-title">${project.name}</span><span class="tag">${sectorNames[project.sector] || project.sector}</span></span><p class="choice-copy">${project.tagline}</p><p class="choice-copy">风险：${project.riskHint}</p><span class="choice-impact"><span class="impact">投入 ${project.investmentAmount}</span><span class="impact">成功率 ${Math.round(project.successBaseRate * 100)}%</span><span class="impact">潜在 ${project.potentialMultiplier}x</span>${selected ? '<span class="impact">已选择</span>' : ''}</span></button>`;
+      return `<button class="choice project-choice ${selected ? 'is-selected' : ''}" type="button" data-project-id="${project.id}" aria-pressed="${selected}"><span class="tag">${sectorNames[project.sector] || project.sector}</span><span class="choice-title">${project.name}</span><p class="choice-copy">“${project.tagline}”</p><div class="project-meta"><span>轮次<b>${roundLabel(project.round)}</b></span><span>估值<b>${moneyLabel(project.valuation)}</b></span><span>投资额<b>${moneyLabel(project.investmentAmount)}</b></span></div><p class="risk-copy">⚠ ${project.riskHint}</p>${selected ? '<span class="selected-mark">✓</span>' : ''}</button>`;
     }).join('');
-    els.choiceGrid.innerHTML = `${cards}<button class="button" type="button" id="confirmInvestments">确认投资（${selectedProjectIds.length}/${maxInvestments()}）</button>`;
+    els.choiceGrid.innerHTML = `${cards}<button class="button" type="button" id="confirmInvestments" ${selectedProjectIds.length ? '' : 'disabled'}>${selectedProjectIds.length ? `确认投资（${selectedProjectIds.length}/${maxInvestments()}）` : '请选择至少一个项目'}</button>`;
     els.choiceGrid.querySelectorAll('[data-project-id]').forEach((button) => button.addEventListener('click', () => chooseProject(button.dataset.projectId)));
     document.getElementById('confirmInvestments').addEventListener('click', confirmProjects);
   }
@@ -5532,8 +5978,8 @@ function Ce() {
 
   document.getElementById('restartTop').addEventListener('click', initGame);
   document.getElementById('restartEnding').addEventListener('click', initGame);
+  els.titleStart.addEventListener('click', initGame);
   document.getElementById('howToPlay').addEventListener('click', () => showToast('玩法说明', '每年先处理行业/职业事件，再选择项目投资。投资项目会在多年后退出，影响 AUM、业绩、人脉和健康。'));
-  initGame();
 })();
   </script>
 </body>
