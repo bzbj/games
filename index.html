@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>中国VC投资模拟器 - 优化复刻版</title>
+  <meta name="description" content="一个关于中国VC投资、周期、退出和运气的文字策略模拟器。">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f4ee;
+      --surface: #ffffff;
+      --surface-2: #f9faf7;
+      --ink: #161616;
+      --muted: #626a73;
+      --line: #d9ddd6;
+      --line-strong: #bdc5bc;
+      --primary: #134e4a;
+      --primary-strong: #0f3f3b;
+      --blue: #2563eb;
+      --green: #16835b;
+      --amber: #b26a00;
+      --red: #b42318;
+      --violet: #6d28d9;
+      --cash: #0f766e;
+      --shadow: 0 16px 42px rgba(22, 22, 22, 0.09);
+      --shadow-sm: 0 8px 22px rgba(22, 22, 22, 0.07);
+      --radius: 8px;
+      --focus: 0 0 0 3px rgba(37, 99, 235, 0.25);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      font-family: var(--sans);
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(19, 78, 74, 0.08), transparent 320px),
+        radial-gradient(circle at 10% 0%, rgba(178, 106, 0, 0.1), transparent 320px),
+        var(--bg);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    button:focus-visible,
+    [tabindex]:focus-visible {
+      outline: none;
+      box-shadow: var(--focus);
+    }
+
+    .page {
+      width: min(1480px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 40px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+
+    .eyebrow svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: 0;
+      max-width: 900px;
+    }
+
+    .subtitle {
+      margin: 12px 0 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      min-height: 44px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      color: #fff;
+      background: var(--primary);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 700;
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+      touch-action: manipulation;
+    }
+
+    .button:hover {
+      background: var(--primary-strong);
+      transform: translateY(-1px);
+    }
+
+    .button:active {
+      transform: translateY(0);
+    }
+
+    .button.secondary {
+      color: var(--ink);
+      background: var(--surface);
+      border-color: var(--line);
+    }
+
+    .button.secondary:hover {
+      background: var(--surface-2);
+      border-color: var(--line-strong);
+    }
+
+    .button svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    .status-strip {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .metric {
+      min-height: 94px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .metric-value {
+      font-family: var(--mono);
+      font-size: clamp(20px, 2vw, 28px);
+      font-weight: 800;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .metric-note {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr) 340px;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .panel {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .panel-header {
+      min-height: 52px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(249, 250, 247, 0.84);
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #e7f4ef;
+      color: var(--primary);
+      border: 1px solid rgba(19, 78, 74, 0.16);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .panel-body {
+      padding: 16px;
+    }
+
+    .market-visual {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 250 / 136;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #fbfcf8;
+      margin-bottom: 16px;
+    }
+
+    .market-visual text {
+      font-family: var(--mono);
+      font-size: 10px;
+      fill: #626a73;
+    }
+
+    .market-visual .axis {
+      stroke: #d9ddd6;
+      stroke-width: 1;
+    }
+
+    .market-visual .curve {
+      fill: none;
+      stroke: var(--primary);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .market-visual .curve-alt {
+      fill: none;
+      stroke: var(--amber);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 5 5;
+    }
+
+    .heat-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .heat-row {
+      display: grid;
+      grid-template-columns: 70px minmax(0, 1fr) 42px;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .bar-track {
+      height: 9px;
+      border-radius: 999px;
+      background: #e8ebe5;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      width: 50%;
+      border-radius: inherit;
+      background: var(--blue);
+      transition: width 220ms ease;
+    }
+
+    .heat-row:nth-child(2n) .bar-fill {
+      background: var(--green);
+    }
+
+    .heat-row:nth-child(3n) .bar-fill {
+      background: var(--amber);
+    }
+
+    .heat-value {
+      text-align: right;
+      font-family: var(--mono);
+      color: var(--muted);
+    }
+
+    .main-stage {
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event {
+      padding: clamp(18px, 3vw, 28px);
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(19, 78, 74, 0.08), transparent 55%),
+        var(--surface);
+    }
+
+    .event-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .year-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: #fff;
+      font-family: var(--mono);
+      font-weight: 800;
+    }
+
+    .event h2 {
+      margin: 0;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.15;
+      letter-spacing: 0;
+      max-width: 840px;
+    }
+
+    .event-copy {
+      margin: 16px 0 0;
+      color: #333b42;
+      font-size: 17px;
+      max-width: 860px;
+    }
+
+    .choice-grid {
+      display: grid;
+      gap: 12px;
+      padding: 16px;
+    }
+
+    .choice {
+      width: 100%;
+      text-align: left;
+      min-height: 118px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 16px;
+      color: var(--ink);
+      cursor: pointer;
+      display: grid;
+      gap: 10px;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+      touch-action: manipulation;
+    }
+
+    .choice:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+      box-shadow: var(--shadow);
+    }
+
+    .choice:disabled {
+      cursor: not-allowed;
+      opacity: 0.55;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .choice-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .choice-title {
+      font-weight: 850;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+
+    .choice-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .choice-impact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .impact {
+      min-height: 24px;
+      border-radius: 999px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: var(--muted);
+      font-size: 12px;
+      font-family: var(--mono);
+      white-space: nowrap;
+    }
+
+    .portfolio-list,
+    .log-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .deal,
+    .log-entry {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 12px;
+    }
+
+    .deal-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .deal-name {
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .deal-sector {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .deal-mark {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .deal-progress {
+      height: 7px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #e8ebe5;
+    }
+
+    .deal-progress span {
+      display: block;
+      height: 100%;
+      width: 40%;
+      background: var(--primary);
+      border-radius: inherit;
+    }
+
+    .log-entry {
+      font-size: 13px;
+      color: #343b42;
+    }
+
+    .log-year {
+      font-family: var(--mono);
+      font-weight: 800;
+      color: var(--primary);
+      margin-right: 6px;
+    }
+
+    .empty {
+      min-height: 96px;
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--radius);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--muted);
+      padding: 16px;
+      background: rgba(249, 250, 247, 0.72);
+    }
+
+    .ending {
+      display: none;
+      padding: clamp(18px, 3vw, 28px);
+      background: var(--surface);
+    }
+
+    .ending.is-visible {
+      display: block;
+    }
+
+    .ending h2 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: 0;
+    }
+
+    .ending p {
+      margin: 0;
+      color: #333b42;
+      max-width: 880px;
+      font-size: 17px;
+    }
+
+    .ending-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .ending-stat {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px;
+      background: var(--surface-2);
+    }
+
+    .ending-stat strong {
+      display: block;
+      font-family: var(--mono);
+      font-size: 24px;
+      margin-top: 4px;
+    }
+
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: min(420px, calc(100% - 36px));
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--ink);
+      color: #fff;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+      transform: translateY(120%);
+      opacity: 0;
+      transition: transform 200ms ease, opacity 200ms ease;
+      z-index: 10;
+    }
+
+    .toast.is-visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .toast strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .toast span {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+    }
+
+    @media (max-width: 1180px) {
+      .status-strip {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .workspace {
+        grid-template-columns: 250px minmax(0, 1fr);
+      }
+
+      .side-right {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .page {
+        width: min(100% - 20px, 720px);
+        padding-top: 16px;
+      }
+
+      .topbar {
+        grid-template-columns: 1fr;
+      }
+
+      .top-actions {
+        justify-content: flex-start;
+      }
+
+      .status-strip,
+      .workspace,
+      .side-right,
+      .ending-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metric {
+        min-height: 78px;
+      }
+
+      .main-stage {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .top-actions,
+      .button {
+        width: 100%;
+      }
+
+      .choice-top {
+        display: grid;
+      }
+
+      .heat-row {
+        grid-template-columns: 64px minmax(0, 1fr) 38px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 1ms !important;
+        scroll-behavior: auto !important;
+        transition-duration: 1ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 19V5m0 14h16M8 16l3-4 3 2 5-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Investment Committee Simulator
+        </p>
+        <h1>中国VC投资模拟器</h1>
+        <p class="subtitle">按 reference 路线复刻：从 2005 年开始，在项目投资、行业事件、人脉和健康之间做选择。</p>
+      </div>
+      <div class="top-actions">
+        <button class="button secondary" type="button" id="howToPlay">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 17h.01M9.1 9a3 3 0 1 1 4.8 2.4c-.9.6-1.4 1.2-1.4 2.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          玩法
+        </button>
+        <button class="button" type="button" id="restartTop">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 3-6.7M3 4v6h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          重开基金
+        </button>
+      </div>
+    </header>
+
+    <section class="status-strip" aria-label="基金状态">
+      <article class="metric">
+        <span class="metric-label">AUM</span>
+        <span class="metric-value" id="cashMetric">100</span>
+        <span class="metric-note">基金管理资产规模</span>
+      </article>
+      <article class="metric">
+        <span class="metric-label">待退出项目</span>
+        <span class="metric-value" id="navMetric">0</span>
+        <span class="metric-note">仍在运作中的投资</span>
+      </article>
+      <article class="metric">
+        <span class="metric-label">阶段</span>
+        <span class="metric-value" id="dpiMetric">0.00x</span>
+        <span class="metric-note">投资经理 / 合伙人</span>
+      </article>
+      <article class="metric">
+        <span class="metric-label">投资业绩</span>
+        <span class="metric-value" id="lpMetric">55</span>
+        <span class="metric-note">业绩与行业声誉</span>
+      </article>
+      <article class="metric">
+        <span class="metric-label">人脉网络</span>
+        <span class="metric-value" id="repMetric">50</span>
+        <span class="metric-note">项目来源质量</span>
+      </article>
+      <article class="metric">
+        <span class="metric-label">健康</span>
+        <span class="metric-value" id="disciplineMetric">48</span>
+        <span class="metric-note">身心状态与续航</span>
+      </article>
+    </section>
+
+    <section class="workspace" aria-label="游戏工作台">
+      <aside class="panel side-left">
+        <div class="panel-header">
+          <h2 class="panel-title">职业状态</h2>
+          <span class="tag" id="cycleTag">上行周期</span>
+        </div>
+        <div class="panel-body">
+          <svg class="market-visual" viewBox="0 0 250 136" role="img" aria-label="资本市场周期示意图">
+            <line class="axis" x1="20" y1="108" x2="232" y2="108"/>
+            <line class="axis" x1="20" y1="24" x2="20" y2="108"/>
+            <path class="curve-alt" d="M24 88 C58 72, 66 42, 98 46 S142 96, 178 62 S210 44, 230 34"/>
+            <path class="curve" id="cycleCurve" d="M24 90 C56 84, 76 62, 98 58 S140 48, 166 56 S206 78, 230 66"/>
+            <circle id="cycleDot" cx="24" cy="90" r="5" fill="#134e4a"/>
+            <text x="18" y="124">2014</text>
+            <text x="210" y="124">2026</text>
+            <text x="28" y="22">热度</text>
+          </svg>
+          <div class="heat-list" id="heatList"></div>
+        </div>
+      </aside>
+
+      <section class="panel main-stage">
+        <div class="event" id="eventPane">
+          <div class="event-meta">
+            <span class="year-pill" id="yearPill">2014</span>
+            <span class="tag" id="phaseTag">基金成立</span>
+          </div>
+          <h2 id="eventTitle"></h2>
+          <p class="event-copy" id="eventCopy"></p>
+        </div>
+        <div class="choice-grid" id="choiceGrid"></div>
+        <div class="ending" id="endingPane" aria-live="polite">
+          <h2 id="endingTitle"></h2>
+          <p id="endingCopy"></p>
+          <div class="ending-grid" id="endingStats"></div>
+          <div class="top-actions" style="justify-content:flex-start;margin-top:18px">
+            <button class="button" type="button" id="restartEnding">再开一期基金</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side-right">
+        <section class="panel">
+          <div class="panel-header">
+            <h2 class="panel-title">Portfolio</h2>
+            <span class="tag" id="portfolioCount">0 家</span>
+          </div>
+          <div class="panel-body">
+            <div class="portfolio-list" id="portfolioList"></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2 class="panel-title">过程记录</h2>
+            <span class="tag" id="logCount">0 条</span>
+          </div>
+          <div class="panel-body">
+            <div class="log-list" id="logList"></div>
+          </div>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+(function gameScript() {
+  const referenceLog = [{"year":2005,"type":"invest","options":[{"index":0,"id":"p_2008_adnetwork","name":"狐流汇","tagline":"PC端流量聚合，广告变现平台新玩家","sector":"pc_internet","amount":8,"successBaseRate":0.3,"potentialMultiplier":5,"riskHint":"百度、谷歌之联盟，已据八成之市。"},{"index":1,"id":"p_2007_cafe","name":"瑞巢平台","tagline":"SaaS模式覆盖网吧场景，线下上网服务新生态","sector":"saas","amount":8,"successBaseRate":0.35,"potentialMultiplier":3,"riskHint":"网吧之业，正值衰退之期。"},{"index":2,"id":"p_2008_email","name":"浪邮科技","tagline":"安全加密企业邮箱，企业服务新拓展","sector":"saas","amount":5,"successBaseRate":0.3,"potentialMultiplier":4,"riskHint":"网易、腾讯之企业邮，免费化乃大势所趋。"}],"chosenIds":["p_2008_adnetwork"],"projects":[{"id":"p_2008_adnetwork","name":"狐流汇","amount":8,"outcome":"failure","multiple":0,"maturityYear":2006}],"statsAfterInvest":{"aum":42,"trackRecord":6,"network":10,"health":80,"stage":"investment_manager"}},{"year":2006,"type":"event","title":"Restroom Encounter","options":[{"index":0,"text":"\"是的。你觉得现在最被低估的赛道是什么？\"","statChanges":{"trackRecord":5},"specialEffect":null},{"index":1,"text":"快速报出你最近投的最好的项目","statChanges":{},"specialEffect":null}],"chosenIndex":0,"choice":"\"是的。你觉得现在最被低估的赛道是什么？\"","stats":{"aum":42,"trackRecord":11,"network":10,"health":79}},{"year":2006,"type":"invest","options":[{"index":0,"id":"p_2008_ecom","name":"京汇购","tagline":"尾货闪购模式，抢占下沉市场电商蓝海","sector":"ecommerce","amount":10,"successBaseRate":0.4,"potentialMultiplier":8,"riskHint":"金市动荡，百姓消费之心日减。"},{"index":1,"id":"p_2008_virtual","name":"安盾易宝","tagline":"虚拟资产交易服务，游戏生态延伸新方向","sector":"gaming","amount":5,"successBaseRate":0.4,"potentialMultiplier":6,"riskHint":"游戏商禁虚拟交易之政令，风险难测。"},{"index":2,"id":"p_2006_job","name":"猎才网","tagline":"专注互联网人才，垂直招聘平台新选择","sector":"pc_internet","amount":5,"successBaseRate":0.4,"potentialMultiplier":5,"riskHint":"传统招贤之网，已据主流之流量。"}],"chosenIds":["p_2008_ecom"],"projects":[{"id":"p_2008_ecom","name":"京汇购","amount":10,"outcome":"failure","multiple":0,"maturityYear":2008}],"statsAfterInvest":{"aum":32,"trackRecord":12,"network":10,"health":79,"stage":"investment_manager"}},{"year":2007,"type":"matured","results":[{"name":"狐流汇","investedYear":2005,"outcome":"failure","multiple":0,"returned":0}],"stats":{"aum":40,"trackRecord":4,"network":7,"health":76}},{"year":2007,"type":"event","title":"Awkward Panel","options":[{"index":0,"text":"坦诚回答——\"就是坐在我旁边的这位创始人\"","statChanges":{"network":13},"specialEffect":null},{"index":1,"text":"转移话题——聊一个安全的不痛不痒的答案","statChanges":{},"specialEffect":null}],"chosenIndex":0,"choice":"坦诚回答——\"就是坐在我旁边的这位创始人\"","stats":{"aum":40,"trackRecord":4,"network":20,"health":76}},{"year":2007,"type":"invest","options":[{"index":0,"id":"p_2006_travel","name":"遨游历","tagline":"机票酒店一站式比价，在线旅游新尝试","sector":"ecommerce","amount":8,"successBaseRate":0.3,"potentialMultiplier":6,"riskHint":"携程、艺龙已登市，流量之差，天壤之别。"},{"index":1,"id":"p_2005_sp","name":"盛讯互动","tagline":"盛大系SP业务布局，依托短信网关构建互动娱乐生态","sector":"pc_internet","amount":5,"successBaseRate":0.5,"potentialMultiplier":5,"riskHint":"运营商之政令，变幻莫测，稍有不慎，满盘皆输。"},{"index":2,"id":"p_2008_blog","name":"豆荚公园","tagline":"精英圈层博客社区，高质量内容生态建设","sector":"pc_internet","amount":5,"successBaseRate":0.3,"potentialMultiplier":4,"riskHint":"新浪博客已据主流，小众之社，盈利维艰。"}],"chosenIds":["p_2005_sp"],"projects":[{"id":"p_2005_sp","name":"盛讯互动","amount":5,"outcome":"failure","multiple":0,"maturityYear":2009}],"statsAfterInvest":{"aum":35,"trackRecord":5,"network":20,"health":76,"stage":"investment_manager"}},{"year":2008,"type":"event","title":"Founder's WeChat","options":[{"index":0,"text":"马上飞过去，亲自介入调解","statChanges":{"health":-12,"network":8},"specialEffect":null},{"index":1,"text":"让律师处理，你保持距离","statChanges":{"network":-7},"specialEffect":null}],"chosenIndex":0,"choice":"马上飞过去，亲自介入调解","stats":{"aum":35,"trackRecord":5,"network":28,"health":63}},{"year":2008,"type":"invest","options":[{"index":0,"id":"p_2007_antivirus","name":"滴盾安全","tagline":"免费安全模式，构建PC端流量新入口","sector":"pc_internet","amount":15,"successBaseRate":0.45,"potentialMultiplier":12,"riskHint":"免费之策，能否久持以获利，实未可知。"},{"index":1,"id":"p_2007_b2b","name":"大众商贸","tagline":"连接工厂与外贸商，B2B电商平台新机遇","sector":"ecommerce","amount":10,"successBaseRate":0.4,"potentialMultiplier":7,"riskHint":"线下之习，积重难返，信任之基，尚未筑牢。"},{"index":2,"id":"p_2008_edtech","name":"优学在线","tagline":"K12在线辅导，教育赛道新探索","sector":"ai","amount":5,"successBaseRate":0.3,"potentialMultiplier":15,"riskHint":"在线教育之市，尚未成形，带宽之费不菲。"}],"chosenIds":["p_2007_antivirus"],"projects":[{"id":"p_2007_antivirus","name":"滴盾安全","amount":15,"outcome":"huge_success","multiple":10.11,"maturityYear":2014}],"statsAfterInvest":{"aum":20,"trackRecord":6,"network":28,"health":63,"stage":"investment_manager"}},{"year":2009,"type":"matured","results":[{"name":"京汇购","investedYear":2006,"outcome":"failure","multiple":0,"returned":0}],"stats":{"aum":30,"trackRecord":0,"network":25,"health":60}},{"year":2009,"type":"event","title":"CCTV News","options":[{"index":0,"text":"紧急联系创始人，制定应对方案","statChanges":{"aum":-6,"health":-7},"specialEffect":null},{"index":1,"text":"观望——也许只是短期舆论风波","statChanges":{"aum":-12},"specialEffect":null}],"chosenIndex":0,"choice":"紧急联系创始人，制定应对方案","stats":{"aum":24,"trackRecord":0,"network":25,"health":53}},{"year":2009,"type":"invest","options":[{"index":0,"id":"p_2009_mobilead","name":"盛指传媒","tagline":"多年广告经验沉淀，移动端开发者变现平台","sector":"mobile","amount":8,"successBaseRate":0.45,"potentialMultiplier":7,"riskHint":"移动广告之市，方兴未艾，广告主认可度寥寥。"},{"index":1,"id":"p_2012_analytics","name":"数飞科技","tagline":"App数据分析平台，帮助开发者理解用户行为","sector":"saas","amount":5,"successBaseRate":0.4,"potentialMultiplier":5,"riskHint":"友盟、TalkingData已占先机。"},{"index":2,"id":"p_2012_office","name":"企业办","tagline":"移动办公套件：云盘+文档+IM，企业协作","sector":"saas","amount":10,"successBaseRate":0.2,"potentialMultiplier":8,"riskHint":"钉钉与企微即将发布。"},{"index":3,"id":"p_2009_appstore","name":"米果宝盒","tagline":"第三方安卓应用商店，应用分发布局新尝试","sector":"mobile","amount":5,"successBaseRate":0.4,"potentialMultiplier":5,"riskHint":"谷歌应用市迟早入华，且手机厂商皆自建店。"}],"chosenIds":["p_2009_mobilead"],"projects":[{"id":"p_2009_mobilead","name":"盛指传媒","amount":8,"outcome":"breakeven","multiple":0.91,"maturityYear":2011}],"statsAfterInvest":{"aum":16,"trackRecord":1,"network":25,"health":53,"stage":"investment_manager"}},{"year":2010,"type":"matured","results":[{"name":"盛讯互动","investedYear":2007,"outcome":"failure","multiple":0,"returned":0}],"stats":{"aum":21,"trackRecord":0,"network":22,"health":50}},{"year":2010,"type":"event","title":"The Offer You Can't Refuse","options":[{"index":0,"text":"Accept Offer，加入Wonolith","statChanges":{"network":-18,"aum":12,"trackRecord":13},"specialEffect":null},{"index":1,"text":"婉拒，留在风念资本","statChanges":{"trackRecord":13,"network":8},"specialEffect":null},{"index":2,"text":"跟现老板negotiate，谈terms","statChanges":{"aum":10,"trackRecord":-12},"specialEffect":null}],"chosenIndex":1,"choice":"婉拒，留在风念资本","stats":{"aum":21,"trackRecord":13,"network":30,"health":50}},{"year":2010,"type":"invest","options":[{"index":0,"id":"p_2010_mobilegame","name":"星手游戏","tagline":"休闲手游研发发行，移动游戏新探索","sector":"gaming","amount":5,"successBaseRate":0.45,"potentialMultiplier":12,"riskHint":"手游之市，方起步，盈利唯赖付费下载。"},{"index":1,"id":"p_2012_payment","name":"红付通","tagline":"移动支付解决方案，扫码+ NFC双模","sector":"fintech","amount":18,"successBaseRate":0.2,"potentialMultiplier":10,"riskHint":"支付宝与微信支付，即将入局。"},{"index":2,"id":"p_2011_cloud","name":"绿帆科技","tagline":"企业级云计算基础设施，帮传统企业上云","sector":"saas","amount":12,"successBaseRate":0.3,"potentialMultiplier":20,"riskHint":"阿里、亚马逊之云已起，初创之机窗狭。"}],"chosenIds":["p_2011_cloud"],"projects":[{"id":"p_2011_cloud","name":"绿帆科技","amount":12,"outcome":"huge_success","multiple":16.95,"maturityYear":2015}],"statsAfterInvest":{"aum":9,"trackRecord":14,"network":30,"health":50,"stage":"investment_manager"}},{"year":2011,"type":"event","title":"The One That Got Away","options":[{"index":0,"text":"算了，谁还没Pass过错的项目呢","statChanges":{},"specialEffect":null},{"index":1,"text":"托人问创始人，看能不能现在投进去","statChanges":{"network":8},"specialEffect":null}],"chosenIndex":1,"choice":"托人问创始人，看能不能现在投进去","stats":{"aum":9,"trackRecord":14,"network":38,"health":49}},{"year":2011,"type":"invest","options":[{"index":0,"id":"p_2010_groupbuy","name":"团团拼","tagline":"本地生活团购业务，O2O战略新试水","sector":"o2o","amount":20,"successBaseRate":0.2,"potentialMultiplier":30,"riskHint":"团购之途，已有五千余竞争者。"},{"index":1,"id":"p_2011_taxi","name":"风车宝","tagline":"电话叫车+App预约，整合出租车调度，快达出行的早期竞品","sector":"o2o","amount":5,"successBaseRate":0.35,"potentialMultiplier":8,"riskHint":"打车App之途尚属小众，用户之习未养成。"},{"index":2,"id":"p_2012_weibo","name":"天言","tagline":"面向年轻用户的新型社交产品，主打短内容和兴趣社区","sector":"mobile","amount":15,"successBaseRate":0.25,"potentialMultiplier":15,"riskHint":"微博正值鼎盛，差异化之余地无多。"},{"index":3,"id":"p_2012_ecom_mobile","name":"金袋购物","tagline":"移动端电商特卖App，主打限时闪购","sector":"ecommerce","amount":15,"successBaseRate":0.3,"potentialMultiplier":8,"riskHint":"淘宝、京东已发力于移动之端。"}],"chosenIds":["p_2010_groupbuy"],"projects":[{"id":"p_2010_groupbuy","name":"团团拼","amount":20,"outcome":"breakeven","multiple":1.02,"maturityYear":2014}],"statsAfterInvest":{"aum":0,"trackRecord":15,"network":38,"health":49,"stage":"investment_manager"}},{"year":2012,"type":"matured","results":[{"name":"盛指传媒","investedYear":2009,"outcome":"breakeven","multiple":0.91,"returned":7.3}],"stats":{"aum":7.3,"trackRecord":17,"network":39,"health":48}},{"year":2012,"type":"event","title":"Policy Tailwind","options":[{"index":0,"text":"趁热打铁，帮公司对接政策资源","statChanges":{"aum":12,"trackRecord":13},"specialEffect":null},{"index":1,"text":"提醒创始人不要过度依赖政策红利","statChanges":{"trackRecord":8},"specialEffect":null}],"chosenIndex":0,"choice":"趁热打铁，帮公司对接政策资源","stats":{"aum":19.3,"trackRecord":30,"network":39,"health":48}},{"year":2012,"type":"invest","options":[{"index":0,"id":"p_2011_med","name":"安平医通","tagline":"在线挂号+轻问诊，缓解看病难","sector":"healthcare","amount":10,"successBaseRate":0.3,"potentialMultiplier":10,"riskHint":"医院信息化之度低，接入之难甚巨。"},{"index":1,"id":"p_2011_social","name":"书语社交","tagline":"兴趣驱动社交平台，年轻用户社交新尝试","sector":"mobile","amount":12,"successBaseRate":0.25,"potentialMultiplier":25,"riskHint":"社交之途，微信、QQ已分而治之。"},{"index":2,"id":"p_2012_analytics","name":"数飞科技","tagline":"App数据分析平台，帮助开发者理解用户行为","sector":"saas","amount":5,"successBaseRate":0.4,"potentialMultiplier":5,"riskHint":"友盟、TalkingData已占先机。"}],"chosenIds":["p_2011_social"],"projects":[{"id":"p_2011_social","name":"书语社交","amount":12,"outcome":"moderate_success","multiple":7.9,"maturityYear":2014}],"statsAfterInvest":{"aum":7.3,"trackRecord":31,"network":39,"health":48,"stage":"investment_manager"}},{"year":2013,"type":"event","title":"CNY Greetings","options":[{"index":0,"text":"给真正重要的3个人手写了新年祝福","statChanges":{"network":8},"specialEffect":null},{"index":1,"text":"群发一个红包表情包完事","statChanges":{},"specialEffect":null}],"chosenIndex":0,"choice":"给真正重要的3个人手写了新年祝福","stats":{"aum":7.3,"trackRecord":31,"network":47,"health":47}},{"year":2013,"type":"invest","options":[{"index":0,"id":"p_2013_taxi","name":"盛达出行","tagline":"手机叫车平台，已在一线城市运营，日均万单","sector":"o2o","amount":22,"successBaseRate":0.25,"potentialMultiplier":15,"riskHint":"补贴之战烧钱之速惊人，政策之险甚巨。"},{"index":1,"id":"p_2017_blockchain","name":"火链科技","tagline":"区块链底层协议，号称要做\"中国版以太坊\"","sector":"fintech","amount":15,"successBaseRate":0.1,"potentialMultiplier":50,"riskHint":"白皮书甚厚然代码寥寥，代币经济模型存疑。"},{"index":2,"id":"p_2013_food","name":"饱了么","tagline":"校园外卖平台，学生兼职配送，覆盖50所大学城，与拼拼网的外卖业务直接竞争","sector":"o2o","amount":12,"successBaseRate":0.2,"potentialMultiplier":12,"riskHint":"美团、饿了么正疯狂烧钱扩张。"}],"chosenIds":["p_2017_blockchain"],"projects":[{"id":"p_2017_blockchain","name":"火链科技","amount":15,"outcome":"moderate_success","multiple":18.83,"maturityYear":2017}],"statsAfterInvest":{"aum":0,"trackRecord":32,"network":47,"health":47,"stage":"investment_manager"}}];
+  const sectorNames = { pc_internet: 'PC互联网', ecommerce: '电商', saas: '企业服务', gaming: '游戏', ai: 'AI/教育', mobile: '移动互联网', fintech: '金融科技', o2o: 'O2O', healthcare: '医疗健康' };
+  const endingText = { title: '资本弃儿', copy: '你的AUM缩水到接近零，IRR一塌糊涂。最后一个LP的撤资邮件只有一句话：我们决定不再续约了。你在办公室坐到凌晨，回邮件只写了两个字：理解。然后关灯、关电脑、走到街上。北京的夜风很冷，你终于自由了，虽然是被迫的。' };
+  const turns = referenceLog.map((entry, index) => {
+    if (entry.type === 'event') return { index, type: 'event', year: entry.year, title: entry.title, copy: '行业事件会改变你的管理规模、投资业绩、人脉网络或健康。这里的选项来自 reference 网站同一局记录。', options: entry.options.map((option) => ({ ...option, label: option.text })), referenceChoice: entry.chosenIndex };
+    if (entry.type === 'invest') return { index, type: 'invest', year: entry.year, title: `${entry.year} 年看项目`, copy: '作为投资经理，本回合只能选择 1 个项目。项目结果会在若干年后到期退出；部分结果来自 reference 同一局的隐藏预计算。', options: entry.options.map((option) => ({ ...option, label: option.name })), referenceChoice: entry.options.findIndex((option) => entry.chosenIds.includes(option.id)), referenceResults: entry.projects };
+    return { index, type: 'update', year: entry.year, title: `${entry.year} 年 Portfolio Update`, copy: '本年有历史项目到期。退出结果会影响 AUM、投资业绩、人脉和健康。', options: [{ label: '查看退出并进入下一回合', text: '查看退出并进入下一回合' }], results: entry.results || [] };
+  });
+  const initialState = () => ({ turn: 0, aum: 50, trackRecord: 5, network: 10, health: 80, careerStage: '投资经理', portfolio: [], log: [], ended: false });
+  let state = initialState();
+  let toastTimer = null;
+  const els = { cashMetric: document.getElementById('cashMetric'), navMetric: document.getElementById('navMetric'), dpiMetric: document.getElementById('dpiMetric'), lpMetric: document.getElementById('lpMetric'), repMetric: document.getElementById('repMetric'), disciplineMetric: document.getElementById('disciplineMetric'), heatList: document.getElementById('heatList'), yearPill: document.getElementById('yearPill'), phaseTag: document.getElementById('phaseTag'), cycleTag: document.getElementById('cycleTag'), eventTitle: document.getElementById('eventTitle'), eventCopy: document.getElementById('eventCopy'), choiceGrid: document.getElementById('choiceGrid'), portfolioList: document.getElementById('portfolioList'), logList: document.getElementById('logList'), portfolioCount: document.getElementById('portfolioCount'), logCount: document.getElementById('logCount'), endingPane: document.getElementById('endingPane'), endingTitle: document.getElementById('endingTitle'), endingCopy: document.getElementById('endingCopy'), endingStats: document.getElementById('endingStats'), toast: document.getElementById('toast'), cycleDot: document.getElementById('cycleDot') };
+  function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
+  function fmt(value) { return Number.isInteger(value) ? String(value) : Number(value).toFixed(1); }
+  function signed(value) { if (!value) return '0'; return `${value > 0 ? '+' : ''}${value}`; }
+  function currentTurn() { return turns[state.turn]; }
+  function projectOutcome(option, turn) {
+    const reference = turn.referenceResults?.find((item) => item.id === option.id);
+    if (reference) return reference;
+    const expected = option.successBaseRate * option.potentialMultiplier;
+    let outcome = 'failure'; let multiple = 0;
+    if (expected >= 4.5) { outcome = 'huge_success'; multiple = Math.min(18, option.potentialMultiplier * 0.82); }
+    else if (expected >= 2.2) { outcome = 'moderate_success'; multiple = Math.min(8, option.potentialMultiplier * 0.42); }
+    else if (option.successBaseRate >= 0.3) { outcome = 'breakeven'; multiple = 1; }
+    return { id: option.id, name: option.name, amount: option.amount, outcome, multiple, maturityYear: turn.year + 3 };
+  }
+  function outcomeLabel(outcome) { return { huge_success: '大获成功', moderate_success: '稳步增长', breakeven: '勉强保本', failure: '投资失败' }[outcome] || outcome; }
+  function applyChoice(index) {
+    if (state.ended) return;
+    const turn = currentTurn(); const option = turn.options[index]; if (!turn || !option) return;
+    if (turn.type === 'event') {
+      const changes = option.statChanges || {};
+      state.aum = Math.max(0, state.aum + (changes.aum || 0)); state.trackRecord = clamp(state.trackRecord + (changes.trackRecord || 0), 0, 100); state.network = clamp(state.network + (changes.network || 0), 0, 100); state.health = clamp(state.health + (changes.health || 0), 0, 100);
+      state.log.unshift({ year: turn.year, text: `${turn.title}：选择「${option.text}」。AUM ${signed(changes.aum || 0)}，业绩 ${signed(changes.trackRecord || 0)}，人脉 ${signed(changes.network || 0)}，健康 ${signed(changes.health || 0)}。` });
+      showToast('事件选择完成', option.text);
+    }
+    if (turn.type === 'invest') {
+      const result = projectOutcome(option, turn);
+      state.aum = Math.max(0, state.aum - option.amount); state.trackRecord = clamp(state.trackRecord + 1, 0, 100);
+      state.portfolio.push({ id: option.id, name: option.name, sector: option.sector, amount: option.amount, year: turn.year, outcome: result.outcome, multiple: result.multiple, maturityYear: result.maturityYear, status: 'pending' });
+      state.log.unshift({ year: turn.year, text: `投资「${option.name}」，投入 ${option.amount}。隐藏结果：${outcomeLabel(result.outcome)}，${Number(result.multiple).toFixed(2)}x，预计 ${result.maturityYear} 年到期。` });
+      showToast('投资确认', `${option.name} / ${sectorNames[option.sector] || option.sector}`);
+    }
+    if (turn.type === 'update') {
+      const resolved = [];
+      const applyExit = (holding, returned) => {
+        holding.status = 'resolved';
+        state.aum = Math.max(0, state.aum + returned);
+        if (holding.outcome === 'failure') { state.trackRecord = clamp(state.trackRecord - 8, 0, 100); state.network = clamp(state.network - 3, 0, 100); state.health = clamp(state.health - 2, 0, 100); }
+        else if (holding.outcome === 'breakeven') { state.trackRecord = clamp(state.trackRecord + 2, 0, 100); state.network = clamp(state.network + 1, 0, 100); }
+        else if (holding.outcome === 'moderate_success') { state.trackRecord = clamp(state.trackRecord + 10, 0, 100); state.network = clamp(state.network + 3, 0, 100); state.health = clamp(state.health + 2, 0, 100); }
+        else if (holding.outcome === 'huge_success') { state.trackRecord = clamp(state.trackRecord + 18, 0, 100); state.network = clamp(state.network + 5, 0, 100); state.health = clamp(state.health + 3, 0, 100); }
+        resolved.push(`${holding.name} ${outcomeLabel(holding.outcome)}，回款 ${fmt(returned)}`);
+      };
+      for (const result of turn.results) {
+        const holding = state.portfolio.find((item) => item.name === result.name && item.year === result.investedYear && item.status === 'pending');
+        if (!holding) continue;
+        holding.outcome = result.outcome; holding.multiple = result.multiple;
+        applyExit(holding, result.returned);
+      }
+      for (const holding of state.portfolio.filter((item) => item.status === 'pending' && item.maturityYear <= turn.year)) {
+        applyExit(holding, holding.amount * holding.multiple);
+      }
+      state.log.unshift({ year: turn.year, text: resolved.length ? resolved.join('；') : '本年没有你实际持有的项目到期。' });
+      showToast('Portfolio Update', resolved.length ? resolved[0] : '无到期项目');
+    }
+    const nextTurn = turns[state.turn + 1];
+    if (!nextTurn || nextTurn.year > turn.year) state.health = clamp(state.health - 1, 0, 100);
+    if (state.aum < 5 && state.trackRecord < 40 && turn.year >= 2013) { finishGame('capital_orphan'); return; }
+    state.turn += 1;
+    if (state.turn >= turns.length) finishGame('complete'); else render();
+  }
+  function finishGame(reason) {
+    state.ended = true; render(); els.choiceGrid.hidden = true; els.endingPane.classList.add('is-visible');
+    if (reason === 'capital_orphan') { els.endingTitle.textContent = `结局：${endingText.title}`; els.endingCopy.textContent = endingText.copy; }
+    else { els.endingTitle.textContent = '结局：幸存者'; els.endingCopy.textContent = '你走完了这条 reference 路线，没有被提前淘汰。虽然过程充满波动，但至少还留在牌桌上。'; }
+    els.endingStats.innerHTML = [['AUM', fmt(state.aum)], ['投资业绩', fmt(state.trackRecord)], ['人脉网络', fmt(state.network)], ['健康', fmt(state.health)], ['投资项目', `${state.portfolio.length} 个`], ['完成回合', `${Math.min(state.turn + 1, turns.length)}/${turns.length}`]].map(([label, value]) => `<div class="ending-stat"><span class="metric-label">${label}</span><strong>${value}</strong></div>`).join('');
+  }
+  function render() {
+    const turn = currentTurn(); const pending = state.portfolio.filter((item) => item.status === 'pending');
+    els.cashMetric.textContent = fmt(state.aum); els.navMetric.textContent = String(pending.length); els.dpiMetric.textContent = state.careerStage; els.lpMetric.textContent = fmt(state.trackRecord); els.repMetric.textContent = fmt(state.network); els.disciplineMetric.textContent = fmt(state.health);
+    renderProgress(); renderPortfolio(); renderLog(); if (!turn || state.ended) return;
+    els.yearPill.textContent = turn.year; els.phaseTag.textContent = turn.type === 'event' ? '时代事件' : turn.type === 'invest' ? '投资选择' : '退出更新'; els.cycleTag.textContent = `${state.turn + 1}/${turns.length}`; els.eventTitle.textContent = turn.title; els.eventCopy.textContent = turn.copy; els.choiceGrid.hidden = false; els.endingPane.classList.remove('is-visible');
+    els.choiceGrid.innerHTML = turn.options.map((option, index) => choiceMarkup(turn, option, index)).join('');
+    els.choiceGrid.querySelectorAll('.choice').forEach((button) => button.addEventListener('click', () => applyChoice(Number(button.dataset.choice))));
+  }
+  function choiceMarkup(turn, option, index) {
+    const isReference = index === turn.referenceChoice;
+    if (turn.type === 'invest') {
+      const impact = [`投入 -${option.amount}`, `成功率 ${Math.round(option.successBaseRate * 100)}%`, `潜在 ${option.potentialMultiplier}x`];
+      return `<button class="choice" type="button" data-choice="${index}"><span class="choice-top"><span class="choice-title">${option.name}</span><span class="tag">${isReference ? 'Reference选择' : (sectorNames[option.sector] || option.sector)}</span></span><p class="choice-copy">${option.tagline}</p><p class="choice-copy">风险：${option.riskHint}</p><span class="choice-impact">${impact.map((item) => `<span class="impact">${item}</span>`).join('')}</span></button>`;
+    }
+    const changes = option.statChanges || {}; const impact = [`AUM ${signed(changes.aum || 0)}`, `业绩 ${signed(changes.trackRecord || 0)}`, `人脉 ${signed(changes.network || 0)}`, `健康 ${signed(changes.health || 0)}`];
+    return `<button class="choice" type="button" data-choice="${index}"><span class="choice-top"><span class="choice-title">${option.text}</span><span class="tag">${isReference ? 'Reference选择' : '可选'}</span></span><p class="choice-copy">选择后立即影响职业状态。</p><span class="choice-impact">${impact.map((item) => `<span class="impact">${item}</span>`).join('')}</span></button>`;
+  }
+  function renderProgress() {
+    const progress = turns.length <= 1 ? 0 : state.turn / (turns.length - 1);
+    els.heatList.innerHTML = [['路线进度', Math.round(progress * 100)], ['AUM', clamp(state.aum, 0, 100)], ['投资业绩', state.trackRecord], ['人脉网络', state.network], ['健康', state.health]].map(([label, value]) => `<div class="heat-row"><span>${label}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:${clamp(value, 0, 100)}%"></span></span><span class="heat-value">${fmt(value)}</span></div>`).join('');
+    const x = 24 + progress * 206; const y = 90 - Math.sin(progress * Math.PI * 1.15) * 34 + progress * 8; els.cycleDot.setAttribute('cx', String(clamp(x, 24, 230))); els.cycleDot.setAttribute('cy', String(clamp(y, 28, 108)));
+  }
+  function renderPortfolio() {
+    const pending = state.portfolio.filter((item) => item.status === 'pending'); els.portfolioCount.textContent = `${pending.length} 个`;
+    if (!state.portfolio.length) { els.portfolioList.innerHTML = '<div class="empty">暂无投资。选择项目后会显示在这里。</div>'; return; }
+    els.portfolioList.innerHTML = state.portfolio.slice().reverse().slice(0, 9).map((item) => { const width = clamp((Number(item.multiple) || 0) * 8, 6, 100); return `<article class="deal"><div class="deal-head"><div><div class="deal-name">${item.name}</div><div class="deal-sector">${sectorNames[item.sector] || item.sector} / ${item.year} 投 / ${item.maturityYear} 到期</div></div><div class="deal-mark">${item.status === 'resolved' ? '已退出' : `${Number(item.multiple).toFixed(1)}x`}</div></div><div class="deal-progress"><span style="width:${width}%"></span></div></article>`; }).join('');
+  }
+  function renderLog() {
+    els.logCount.textContent = `${state.log.length} 条`; if (!state.log.length) { els.logList.innerHTML = '<div class="empty">选择和退出会记录在这里。</div>'; return; }
+    els.logList.innerHTML = state.log.slice(0, 10).map((entry) => `<article class="log-entry"><span class="log-year">${entry.year}</span>${entry.text}</article>`).join('');
+  }
+  function resetGame() { state = initialState(); els.endingPane.classList.remove('is-visible'); showToast('重新开始', 'Reference 路线已重置。'); render(); }
+  function showToast(title, body) { window.clearTimeout(toastTimer); els.toast.innerHTML = `<strong>${title}</strong><span>${body}</span>`; els.toast.classList.add('is-visible'); toastTimer = window.setTimeout(() => els.toast.classList.remove('is-visible'), 3200); }
+  document.getElementById('restartTop').addEventListener('click', resetGame); document.getElementById('restartEnding').addEventListener('click', resetGame); document.getElementById('howToPlay').addEventListener('click', () => showToast('玩法说明', '项目和事件选项来自 reference 同一局记录。带 Reference选择 标签的是我那局实际点的选项，你可以照走，也可以改走其他路线。'));
+  render();
+})();
+  </script>
+</body>
+</html>
