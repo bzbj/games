@@ -697,7 +697,7 @@
           Investment Committee Simulator
         </p>
         <h1>中国VC投资模拟器</h1>
-        <p class="subtitle">从 2005 年开始，在项目投资、行业事件、人脉和健康之间做选择。</p>
+        <p class="subtitle">从 2005 到 2025，作为风念资本投资人经历中国创投二十年。看项目、做选择、等退出，也管理自己的声誉、人脉和健康。</p>
       </div>
       <div class="top-actions">
         <button class="button secondary" type="button" id="howToPlay">
@@ -817,120 +817,4723 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
-(function gameScript() {
-  const referenceLog = [{"year":2005,"type":"invest","options":[{"index":0,"id":"p_2008_adnetwork","name":"狐流汇","tagline":"PC端流量聚合，广告变现平台新玩家","sector":"pc_internet","amount":8,"successBaseRate":0.3,"potentialMultiplier":5,"riskHint":"百度、谷歌之联盟，已据八成之市。"},{"index":1,"id":"p_2007_cafe","name":"瑞巢平台","tagline":"SaaS模式覆盖网吧场景，线下上网服务新生态","sector":"saas","amount":8,"successBaseRate":0.35,"potentialMultiplier":3,"riskHint":"网吧之业，正值衰退之期。"},{"index":2,"id":"p_2008_email","name":"浪邮科技","tagline":"安全加密企业邮箱，企业服务新拓展","sector":"saas","amount":5,"successBaseRate":0.3,"potentialMultiplier":4,"riskHint":"网易、腾讯之企业邮，免费化乃大势所趋。"}],"chosenIds":["p_2008_adnetwork"],"projects":[{"id":"p_2008_adnetwork","name":"狐流汇","amount":8,"outcome":"failure","multiple":0,"maturityYear":2006}],"statsAfterInvest":{"aum":42,"trackRecord":6,"network":10,"health":80,"stage":"investment_manager"}},{"year":2006,"type":"event","title":"Restroom Encounter","options":[{"index":0,"text":"\"是的。你觉得现在最被低估的赛道是什么？\"","statChanges":{"trackRecord":5},"specialEffect":null},{"index":1,"text":"快速报出你最近投的最好的项目","statChanges":{},"specialEffect":null}],"chosenIndex":0,"choice":"\"是的。你觉得现在最被低估的赛道是什么？\"","stats":{"aum":42,"trackRecord":11,"network":10,"health":79}},{"year":2006,"type":"invest","options":[{"index":0,"id":"p_2008_ecom","name":"京汇购","tagline":"尾货闪购模式，抢占下沉市场电商蓝海","sector":"ecommerce","amount":10,"successBaseRate":0.4,"potentialMultiplier":8,"riskHint":"金市动荡，百姓消费之心日减。"},{"index":1,"id":"p_2008_virtual","name":"安盾易宝","tagline":"虚拟资产交易服务，游戏生态延伸新方向","sector":"gaming","amount":5,"successBaseRate":0.4,"potentialMultiplier":6,"riskHint":"游戏商禁虚拟交易之政令，风险难测。"},{"index":2,"id":"p_2006_job","name":"猎才网","tagline":"专注互联网人才，垂直招聘平台新选择","sector":"pc_internet","amount":5,"successBaseRate":0.4,"potentialMultiplier":5,"riskHint":"传统招贤之网，已据主流之流量。"}],"chosenIds":["p_2008_ecom"],"projects":[{"id":"p_2008_ecom","name":"京汇购","amount":10,"outcome":"failure","multiple":0,"maturityYear":2008}],"statsAfterInvest":{"aum":32,"trackRecord":12,"network":10,"health":79,"stage":"investment_manager"}},{"year":2007,"type":"matured","results":[{"name":"狐流汇","investedYear":2005,"outcome":"failure","multiple":0,"returned":0}],"stats":{"aum":40,"trackRecord":4,"network":7,"health":76}},{"year":2007,"type":"event","title":"Awkward Panel","options":[{"index":0,"text":"坦诚回答——\"就是坐在我旁边的这位创始人\"","statChanges":{"network":13},"specialEffect":null},{"index":1,"text":"转移话题——聊一个安全的不痛不痒的答案","statChanges":{},"specialEffect":null}],"chosenIndex":0,"choice":"坦诚回答——\"就是坐在我旁边的这位创始人\"","stats":{"aum":40,"trackRecord":4,"network":20,"health":76}},{"year":2007,"type":"invest","options":[{"index":0,"id":"p_2006_travel","name":"遨游历","tagline":"机票酒店一站式比价，在线旅游新尝试","sector":"ecommerce","amount":8,"successBaseRate":0.3,"potentialMultiplier":6,"riskHint":"携程、艺龙已登市，流量之差，天壤之别。"},{"index":1,"id":"p_2005_sp","name":"盛讯互动","tagline":"盛大系SP业务布局，依托短信网关构建互动娱乐生态","sector":"pc_internet","amount":5,"successBaseRate":0.5,"potentialMultiplier":5,"riskHint":"运营商之政令，变幻莫测，稍有不慎，满盘皆输。"},{"index":2,"id":"p_2008_blog","name":"豆荚公园","tagline":"精英圈层博客社区，高质量内容生态建设","sector":"pc_internet","amount":5,"successBaseRate":0.3,"potentialMultiplier":4,"riskHint":"新浪博客已据主流，小众之社，盈利维艰。"}],"chosenIds":["p_2005_sp"],"projects":[{"id":"p_2005_sp","name":"盛讯互动","amount":5,"outcome":"failure","multiple":0,"maturityYear":2009}],"statsAfterInvest":{"aum":35,"trackRecord":5,"network":20,"health":76,"stage":"investment_manager"}},{"year":2008,"type":"event","title":"Founder's WeChat","options":[{"index":0,"text":"马上飞过去，亲自介入调解","statChanges":{"health":-12,"network":8},"specialEffect":null},{"index":1,"text":"让律师处理，你保持距离","statChanges":{"network":-7},"specialEffect":null}],"chosenIndex":0,"choice":"马上飞过去，亲自介入调解","stats":{"aum":35,"trackRecord":5,"network":28,"health":63}},{"year":2008,"type":"invest","options":[{"index":0,"id":"p_2007_antivirus","name":"滴盾安全","tagline":"免费安全模式，构建PC端流量新入口","sector":"pc_internet","amount":15,"successBaseRate":0.45,"potentialMultiplier":12,"riskHint":"免费之策，能否久持以获利，实未可知。"},{"index":1,"id":"p_2007_b2b","name":"大众商贸","tagline":"连接工厂与外贸商，B2B电商平台新机遇","sector":"ecommerce","amount":10,"successBaseRate":0.4,"potentialMultiplier":7,"riskHint":"线下之习，积重难返，信任之基，尚未筑牢。"},{"index":2,"id":"p_2008_edtech","name":"优学在线","tagline":"K12在线辅导，教育赛道新探索","sector":"ai","amount":5,"successBaseRate":0.3,"potentialMultiplier":15,"riskHint":"在线教育之市，尚未成形，带宽之费不菲。"}],"chosenIds":["p_2007_antivirus"],"projects":[{"id":"p_2007_antivirus","name":"滴盾安全","amount":15,"outcome":"huge_success","multiple":10.11,"maturityYear":2014}],"statsAfterInvest":{"aum":20,"trackRecord":6,"network":28,"health":63,"stage":"investment_manager"}},{"year":2009,"type":"matured","results":[{"name":"京汇购","investedYear":2006,"outcome":"failure","multiple":0,"returned":0}],"stats":{"aum":30,"trackRecord":0,"network":25,"health":60}},{"year":2009,"type":"event","title":"CCTV News","options":[{"index":0,"text":"紧急联系创始人，制定应对方案","statChanges":{"aum":-6,"health":-7},"specialEffect":null},{"index":1,"text":"观望——也许只是短期舆论风波","statChanges":{"aum":-12},"specialEffect":null}],"chosenIndex":0,"choice":"紧急联系创始人，制定应对方案","stats":{"aum":24,"trackRecord":0,"network":25,"health":53}},{"year":2009,"type":"invest","options":[{"index":0,"id":"p_2009_mobilead","name":"盛指传媒","tagline":"多年广告经验沉淀，移动端开发者变现平台","sector":"mobile","amount":8,"successBaseRate":0.45,"potentialMultiplier":7,"riskHint":"移动广告之市，方兴未艾，广告主认可度寥寥。"},{"index":1,"id":"p_2012_analytics","name":"数飞科技","tagline":"App数据分析平台，帮助开发者理解用户行为","sector":"saas","amount":5,"successBaseRate":0.4,"potentialMultiplier":5,"riskHint":"友盟、TalkingData已占先机。"},{"index":2,"id":"p_2012_office","name":"企业办","tagline":"移动办公套件：云盘+文档+IM，企业协作","sector":"saas","amount":10,"successBaseRate":0.2,"potentialMultiplier":8,"riskHint":"钉钉与企微即将发布。"},{"index":3,"id":"p_2009_appstore","name":"米果宝盒","tagline":"第三方安卓应用商店，应用分发布局新尝试","sector":"mobile","amount":5,"successBaseRate":0.4,"potentialMultiplier":5,"riskHint":"谷歌应用市迟早入华，且手机厂商皆自建店。"}],"chosenIds":["p_2009_mobilead"],"projects":[{"id":"p_2009_mobilead","name":"盛指传媒","amount":8,"outcome":"breakeven","multiple":0.91,"maturityYear":2011}],"statsAfterInvest":{"aum":16,"trackRecord":1,"network":25,"health":53,"stage":"investment_manager"}},{"year":2010,"type":"matured","results":[{"name":"盛讯互动","investedYear":2007,"outcome":"failure","multiple":0,"returned":0}],"stats":{"aum":21,"trackRecord":0,"network":22,"health":50}},{"year":2010,"type":"event","title":"The Offer You Can't Refuse","options":[{"index":0,"text":"Accept Offer，加入Wonolith","statChanges":{"network":-18,"aum":12,"trackRecord":13},"specialEffect":null},{"index":1,"text":"婉拒，留在风念资本","statChanges":{"trackRecord":13,"network":8},"specialEffect":null},{"index":2,"text":"跟现老板negotiate，谈terms","statChanges":{"aum":10,"trackRecord":-12},"specialEffect":null}],"chosenIndex":1,"choice":"婉拒，留在风念资本","stats":{"aum":21,"trackRecord":13,"network":30,"health":50}},{"year":2010,"type":"invest","options":[{"index":0,"id":"p_2010_mobilegame","name":"星手游戏","tagline":"休闲手游研发发行，移动游戏新探索","sector":"gaming","amount":5,"successBaseRate":0.45,"potentialMultiplier":12,"riskHint":"手游之市，方起步，盈利唯赖付费下载。"},{"index":1,"id":"p_2012_payment","name":"红付通","tagline":"移动支付解决方案，扫码+ NFC双模","sector":"fintech","amount":18,"successBaseRate":0.2,"potentialMultiplier":10,"riskHint":"支付宝与微信支付，即将入局。"},{"index":2,"id":"p_2011_cloud","name":"绿帆科技","tagline":"企业级云计算基础设施，帮传统企业上云","sector":"saas","amount":12,"successBaseRate":0.3,"potentialMultiplier":20,"riskHint":"阿里、亚马逊之云已起，初创之机窗狭。"}],"chosenIds":["p_2011_cloud"],"projects":[{"id":"p_2011_cloud","name":"绿帆科技","amount":12,"outcome":"huge_success","multiple":16.95,"maturityYear":2015}],"statsAfterInvest":{"aum":9,"trackRecord":14,"network":30,"health":50,"stage":"investment_manager"}},{"year":2011,"type":"event","title":"The One That Got Away","options":[{"index":0,"text":"算了，谁还没Pass过错的项目呢","statChanges":{},"specialEffect":null},{"index":1,"text":"托人问创始人，看能不能现在投进去","statChanges":{"network":8},"specialEffect":null}],"chosenIndex":1,"choice":"托人问创始人，看能不能现在投进去","stats":{"aum":9,"trackRecord":14,"network":38,"health":49}},{"year":2011,"type":"invest","options":[{"index":0,"id":"p_2010_groupbuy","name":"团团拼","tagline":"本地生活团购业务，O2O战略新试水","sector":"o2o","amount":20,"successBaseRate":0.2,"potentialMultiplier":30,"riskHint":"团购之途，已有五千余竞争者。"},{"index":1,"id":"p_2011_taxi","name":"风车宝","tagline":"电话叫车+App预约，整合出租车调度，快达出行的早期竞品","sector":"o2o","amount":5,"successBaseRate":0.35,"potentialMultiplier":8,"riskHint":"打车App之途尚属小众，用户之习未养成。"},{"index":2,"id":"p_2012_weibo","name":"天言","tagline":"面向年轻用户的新型社交产品，主打短内容和兴趣社区","sector":"mobile","amount":15,"successBaseRate":0.25,"potentialMultiplier":15,"riskHint":"微博正值鼎盛，差异化之余地无多。"},{"index":3,"id":"p_2012_ecom_mobile","name":"金袋购物","tagline":"移动端电商特卖App，主打限时闪购","sector":"ecommerce","amount":15,"successBaseRate":0.3,"potentialMultiplier":8,"riskHint":"淘宝、京东已发力于移动之端。"}],"chosenIds":["p_2010_groupbuy"],"projects":[{"id":"p_2010_groupbuy","name":"团团拼","amount":20,"outcome":"breakeven","multiple":1.02,"maturityYear":2014}],"statsAfterInvest":{"aum":0,"trackRecord":15,"network":38,"health":49,"stage":"investment_manager"}},{"year":2012,"type":"matured","results":[{"name":"盛指传媒","investedYear":2009,"outcome":"breakeven","multiple":0.91,"returned":7.3}],"stats":{"aum":7.3,"trackRecord":17,"network":39,"health":48}},{"year":2012,"type":"event","title":"Policy Tailwind","options":[{"index":0,"text":"趁热打铁，帮公司对接政策资源","statChanges":{"aum":12,"trackRecord":13},"specialEffect":null},{"index":1,"text":"提醒创始人不要过度依赖政策红利","statChanges":{"trackRecord":8},"specialEffect":null}],"chosenIndex":0,"choice":"趁热打铁，帮公司对接政策资源","stats":{"aum":19.3,"trackRecord":30,"network":39,"health":48}},{"year":2012,"type":"invest","options":[{"index":0,"id":"p_2011_med","name":"安平医通","tagline":"在线挂号+轻问诊，缓解看病难","sector":"healthcare","amount":10,"successBaseRate":0.3,"potentialMultiplier":10,"riskHint":"医院信息化之度低，接入之难甚巨。"},{"index":1,"id":"p_2011_social","name":"书语社交","tagline":"兴趣驱动社交平台，年轻用户社交新尝试","sector":"mobile","amount":12,"successBaseRate":0.25,"potentialMultiplier":25,"riskHint":"社交之途，微信、QQ已分而治之。"},{"index":2,"id":"p_2012_analytics","name":"数飞科技","tagline":"App数据分析平台，帮助开发者理解用户行为","sector":"saas","amount":5,"successBaseRate":0.4,"potentialMultiplier":5,"riskHint":"友盟、TalkingData已占先机。"}],"chosenIds":["p_2011_social"],"projects":[{"id":"p_2011_social","name":"书语社交","amount":12,"outcome":"moderate_success","multiple":7.9,"maturityYear":2014}],"statsAfterInvest":{"aum":7.3,"trackRecord":31,"network":39,"health":48,"stage":"investment_manager"}},{"year":2013,"type":"event","title":"CNY Greetings","options":[{"index":0,"text":"给真正重要的3个人手写了新年祝福","statChanges":{"network":8},"specialEffect":null},{"index":1,"text":"群发一个红包表情包完事","statChanges":{},"specialEffect":null}],"chosenIndex":0,"choice":"给真正重要的3个人手写了新年祝福","stats":{"aum":7.3,"trackRecord":31,"network":47,"health":47}},{"year":2013,"type":"invest","options":[{"index":0,"id":"p_2013_taxi","name":"盛达出行","tagline":"手机叫车平台，已在一线城市运营，日均万单","sector":"o2o","amount":22,"successBaseRate":0.25,"potentialMultiplier":15,"riskHint":"补贴之战烧钱之速惊人，政策之险甚巨。"},{"index":1,"id":"p_2017_blockchain","name":"火链科技","tagline":"区块链底层协议，号称要做\"中国版以太坊\"","sector":"fintech","amount":15,"successBaseRate":0.1,"potentialMultiplier":50,"riskHint":"白皮书甚厚然代码寥寥，代币经济模型存疑。"},{"index":2,"id":"p_2013_food","name":"饱了么","tagline":"校园外卖平台，学生兼职配送，覆盖50所大学城，与拼拼网的外卖业务直接竞争","sector":"o2o","amount":12,"successBaseRate":0.2,"potentialMultiplier":12,"riskHint":"美团、饿了么正疯狂烧钱扩张。"}],"chosenIds":["p_2017_blockchain"],"projects":[{"id":"p_2017_blockchain","name":"火链科技","amount":15,"outcome":"moderate_success","multiple":18.83,"maturityYear":2017}],"statsAfterInvest":{"aum":0,"trackRecord":32,"network":47,"health":47,"stage":"investment_manager"}}];
-  const sectorNames = { pc_internet: 'PC互联网', ecommerce: '电商', saas: '企业服务', gaming: '游戏', ai: 'AI/教育', mobile: '移动互联网', fintech: '金融科技', o2o: 'O2O', healthcare: '医疗健康' };
-  const endingText = { title: '资本弃儿', copy: '你的AUM缩水到接近零，IRR一塌糊涂。最后一个LP的撤资邮件只有一句话：我们决定不再续约了。你在办公室坐到凌晨，回邮件只写了两个字：理解。然后关灯、关电脑、走到街上。北京的夜风很冷，你终于自由了，虽然是被迫的。' };
-  const turns = referenceLog.map((entry, index) => {
-    if (entry.type === 'event') return { index, type: 'event', year: entry.year, title: entry.title, copy: '行业事件会改变你的管理规模、投资业绩、人脉网络或健康。', options: entry.options.map((option) => ({ ...option, label: option.text })), referenceChoice: entry.chosenIndex };
-    if (entry.type === 'invest') return { index, type: 'invest', year: entry.year, title: `${entry.year} 年看项目`, copy: '作为投资经理，本回合只能选择 1 个项目。项目结果会在若干年后到期退出。', options: entry.options.map((option) => ({ ...option, label: option.name })), referenceChoice: entry.options.findIndex((option) => entry.chosenIds.includes(option.id)), referenceResults: entry.projects };
-    return { index, type: 'update', year: entry.year, title: `${entry.year} 年 Portfolio Update`, copy: '本年有历史项目到期。退出结果会影响 AUM、投资业绩、人脉和健康。', options: [{ label: '查看退出并进入下一回合', text: '查看退出并进入下一回合' }], results: entry.results || [] };
-  });
-  const initialState = () => ({ turn: 0, aum: 50, trackRecord: 5, network: 10, health: 80, careerStage: '投资经理', portfolio: [], log: [], ended: false });
-  let state = initialState();
+var te = e => {
+        let t = C(e),
+            n = e => ee(t, e);
+        return Object.assign(n, t), n
+    },
+    ne = (e => e ? te(e) : te),
+    re = 2005,
+    ie = {
+        aum: 50,
+        trackRecord: 5,
+        network: 10,
+        health: 80
+    },
+    ae = [{
+        id: `era_pc_internet`,
+        name: `PC互联网时代`,
+        yearRange: [2005, 2008],
+        theme: `美元基金独大，投资靠关系和嗅觉`,
+        marketBackgrounds: [`2005年。中国互联网元年，门户鼎盛，SP造富神话遍地开花。百度登临纳斯达克，华尔街目光初至东方。VC尚属顶级圈层秘事，从业者寥寥数十，彼此心照不宣。你自常青藤与清北交织的精英网络中脱颖而出，入职风念资本——彼时全华VC从业者不过百人之数，皆是手握亿元支票的少数人。`, `2006年。Web 2.0风潮自硅谷东渐，博客、视频、社交三驾马车并起。Google初入华，与百度暗战已启。至于移动互联网？不过是华尔街尚未觉醒的沉睡巨兽。你开始独立source项目，然每一笔deal仍需投委会层层把关——那是属于old money的审慎与傲慢。`, `2007年。A股疯牛，然VC圈层视若无睹——美元基金方显正统血统。iPhone初诞，无人料其将重塑东方消费图景。电商尚在烧钱换增长，LP们最常问的是"何时见到carry"。你开始悟得VC的第一性原理：今日之布局，五年后方见真章。`, `2008年。雷曼崩塌，金融海啸席卷全球。美元LP们惊慌失措，capital call电话彻夜不息。中概股IPO窗口紧闭，你portfolio中数个pre-IPO项目估值腰斩。然真正的猎手在寒冬中嗅到春息——3G牌照落地，移动互联网的种子正在冰层下悄然破土。那是属于先知者的布局时刻。`]
+    }, {
+        id: `era_mobile_dawn`,
+        name: `移动互联网黎明`,
+        yearRange: [2009, 2012],
+        theme: `智能手机渗透，App创业潮起`,
+        marketBackgrounds: [`2009年。金融海啸余波渐消，然创投圈层已悄然回血。Android开源，华强北山寨智能机横扫市场。微博横空出世，移动社交时代启幕。你开始流连于三里屯与各精品咖啡馆，每一位创始人都手持iPhone为你演示demo——那是属于early adopter的骄傲与仪式。`, `2010年。雷军携小米入局，以互联网思维重塑手机行业。美团、快手相继诞世。这一年被载入史册——"移动互联网元年"。VC圈层流行起新术语："blitzscaling"——以资本换规模。你察觉source项目者日渐增多，新基金如雨后春笋，然真正的alpha仍属少数人的游戏。`, `2011年。微信问世，彼时无人料其将成为亿万人之数字基础设施。中概股遭遇集体做空，诚信阴霾笼罩，然一级市场热钱依旧汹涌。你开始感知一丝隐忧——优质项目供不应求，估值日渐背离fundamentals。那是属于非理性繁荣的前奏。`, `2012年。补贴大战正式启幕。滴滴与快的于街头巷尾烧钱抢司机，饿了么与美团在外卖战场短兵相接。VC圈层流传一句箴言："你若不投，对手必投"。这一年，你深刻领悟FOMO的真谛——Fear Of Missing Out，那是属于顶级猎手的焦虑与贪婪。`]
+    }, {
+        id: `era_o2o_goldrush`,
+        name: `双创&O2O狂潮`,
+        yearRange: [2013, 2017],
+        theme: `钱多到烫手，项目靠补贴烧出GMV`,
+        marketBackgrounds: [`2013年。4G牌照落地，移动支付普及，万物皆可O2O。上门美甲、上门洗车、上门私厨——但凡能上门服务，皆有资本追捧。你开始质疑这些business model的unit economics，然LP的dry powder亟待部署，deploy capital乃是GP的天职。市场上热钱烫手，那是属于泡沫时期的甜蜜负担。`, `2014年。"双创"号角吹响，中关村创业大街成为全京城最拥挤的绅士俱乐部。新三板开闸，退出通道再添一条。你的朋友圈每日皆有announcement："完成新一轮融资"。估值？不过是供人赏玩的数字游戏。那是属于paper rich的时代。`, `2015年。A股断崖式下跌，然一级市场尚处温水之中。共享经济成为万能标签——单车、充电宝、雨伞、篮球，万物皆可共享。你内心深知某些项目荒诞不经，然它们皆获资本加持。你开始怀疑自己的conviction——抑或，这才是新世界的规则？`, `2016年。O2O泡沫次第破裂。上门洗车公司批量清算，那些曾估值十亿的独角兽，一夜归零。你portfolio中两个项目相继倒下，创始人发出最后一条朋友圈：创业维艰。VC圈层开始集体soul searching——我们究竟在追逐什么？是价值，还是幻象？`, `2017年。AI成为新信仰，每一份BP必提"深度学习"。比特币狂飙，ICO frenzy席卷而来，区块链项目方开始在三里屯精品咖啡馆堵门。你恍然惊觉——自己已亲历完整cycle：从greed到fear，复归greed。那是属于crypto与AI的信仰之年。`]
+    }, {
+        id: `era_hardtech_consumer`,
+        name: `硬科技转型·消费狂欢`,
+        yearRange: [2018, 2021],
+        theme: `资管新规落地，消费赛道意外爆发，美元基金感到寒意`,
+        marketBackgrounds: [`2018年。资管新规落地，募资进入地狱模式。人民币LP大面积default，"资本寒冬"成为年度关键词。共享单车的惨烈溃败令所有人清醒——补贴堆砌的GMV不过是镜花水月。你开始将目光投向硬科技，然坦诚而言，那些semiconductor的技术细节令你望而生畏。`, `2019年。新消费赛道突然爆发。完美日记、泡泡玛特、喜茶、元气森林——新一代DTC品牌以互联网打法横扫市场。VC圈层从未想过"卖奶茶"亦可成就百亿估值。美元基金all in消费，疯狂程度不亚于当年O2O之役。你开始恶补消费品投资方法论——那是属于brand equity与omnichannel的精致游戏。`, `2020年。疫情重塑世界秩序。线下商业停摆，线上经济暴涨。Zoom、在线教育、社区团购——疫情红利赛道成为最hot的标的。然真正的寒冬正在逼近美元基金——中美关系恶化，美元LP对China exposure愈发犹豫。你开始思考geopolitical risk与portfolio construction的微妙平衡。`, `2021年。消费赛道的末日狂欢。"双减"政策落地，教培赛道一夜清零。滴滴上市后即遭审查，中概股赴美IPO窗口轰然关闭。反垄断监管趋严，互联网平台经济告别高增长时代。消费的余温尚存，然smart money已开始exit。你听到越来越多同僚私语：美元基金在中国是否还有future？`]
+    }, {
+        id: `era_aigc_newcycle`,
+        name: `AIGC新周期`,
+        yearRange: [2022, 2025],
+        theme: `消费一地鸡毛，美元退潮，人民币走上舞台中央，AIGC成全村希望`,
+        marketBackgrounds: [`2022年。消费泡沫彻底破裂。那些一年前估值数十亿的新消费品牌，如今四处找钱续命而无人问津。美元基金大规模downsizing中国团队，政府引导基金成为市场最大LP。你开始学习与新金主打交道——他们关心的是industrial policy与local employment，而非GMV或valuation。`, `2023年。ChatGPT横空出世，AIGC成为全村唯一的希望。每一位VC都在问同一个问题："你们integrate大模型了吗？"硅谷银行暴雷，美元LP再度惊慌。中国VC圈层撕裂为两派：一派all in AI转型，一派坚守hard tech。你决定出手一个AI视频生成团队——仅三人，估值两亿。那是属于generative AI的疯狂时代。`, `2024年。大模型进入淘汰赛。"百模大战"演变为"十模生死局"。DeepSeek以开源模式震撼全球。国资基金管理规模首超美元基金，中国VC行业的geopolitical格局彻底改变。你环顾四周，发现同期入行的老同事，已有三分之一转行——或是加入被投企业，或是归隐山林。那是属于old guard的谢幕时刻。`, `2025年。AI应用开始在各行各业落地，具身智能、AI制药、AI编程成为新风口。二十年前你入行时，全中国的VC从业者不到一百人。如今，仅北京注册的私募基金管理人就超过两千家。你翻看自己二十年的投资记录，每一个项目都是一个时代的注脚。`]
+    }];
+
+function oe(e) {
+    return ae.find(t => e >= t.yearRange[0] && e <= t.yearRange[1]) || ae[0]
+}
+
+function se(e, t) {
+    let n = t - e.yearRange[0],
+        r = Math.min(n, e.marketBackgrounds.length - 1);
+    return e.marketBackgrounds[Math.max(0, r)] || e.marketBackgrounds[0]
+}
+var ce = [{
+    id: `p_2005_sp`,
+    name: `盛讯互动`,
+    tagline: `盛大系SP业务布局，依托短信网关构建互动娱乐生态`,
+    sector: `pc_internet`,
+    round: `angel`,
+    valuation: 33,
+    investmentAmount: 5,
+    riskHint: `运营商之政令，变幻莫测，稍有不慎，满盘皆输。`,
+    era: `era_pc_internet`,
+    successBaseRate: .5,
+    potentialMultiplier: 5,
+    chainEventTags: [`regulatory_risk`, `early_exit`],
+    outcomes: {
+        hugeSuccess: `运营商政策松绑，飞讯互动用户量爆发，三年后被腾讯收购，回报15倍。`,
+        moderateSuccess: `业务稳定增长，在功能机时代占据一席之地，被一家SP巨头合并，回报3倍。`,
+        breakeven: `公司勉强盈亏平衡，但始终无法突破天花板，最终以成本价卖给了一家网游公司。`,
+        failure: `运营商突然收紧SP政策，所有业务线一夜归零，公司清盘。`
+    }
+}, {
+    id: `p_2005_game`,
+    name: `云龙世纪`,
+    tagline: `自研游戏引擎技术，打造3D大型网游核心动力`,
+    sector: `gaming`,
+    round: `series_a`,
+    valuation: 83,
+    investmentAmount: 10,
+    min人脉网络: 15,
+    riskHint: `铸器之期漫漫，尚无成形之货，恐难以为继。`,
+    era: `era_pc_internet`,
+    successBaseRate: .4,
+    potentialMultiplier: 15,
+    chainEventTags: [`tech_breakthrough`, `acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `引擎技术被网易看中，授权金+投资回报超过20倍，公司独立上市。`,
+        moderateSuccess: `自研网游上线后表现中规中矩，年收入过亿，被腾讯战略投资，回报4倍。`,
+        breakeven: `产品多次跳票，上线时市场已被《魔兽世界》统治，勉强回本。`,
+        failure: `引擎开发失败，核心团队被挖走，公司名存实亡。`
+    }
+}, {
+    id: `p_2005_portal`,
+    name: `潮门户`,
+    tagline: `智能算法驱动的内容聚合平台，重塑信息分发体验`,
+    sector: `pc_internet`,
+    round: `angel`,
+    valuation: 60,
+    investmentAmount: 8,
+    riskHint: `巨擘已据要津，用户迁徙之费甚巨。`,
+    era: `era_pc_internet`,
+    successBaseRate: .35,
+    potentialMultiplier: 6,
+    chainEventTags: [`early_exit`],
+    outcomes: {
+        hugeSuccess: `差异化的个性化推荐切中用户痛点，三年后被新浪收购，回报8倍。`,
+        moderateSuccess: `在垂直领域积累忠实用户，广告收入稳定，被并购回报2倍。`,
+        breakeven: `用户增长到百万级遇到瓶颈，资金耗尽前以成本价出让。`,
+        failure: `四大门户同时推出类似功能，创业公司毫无还手之力。`
+    }
+}, {
+    id: `p_2006_video`,
+    name: `云度视频`,
+    tagline: `原创视频社区生态，对标国际主流平台的本土创新`,
+    sector: `pc_internet`,
+    round: `series_a`,
+    valuation: 75,
+    investmentAmount: 15,
+    min人脉网络: 20,
+    riskHint: `带宽之费浩繁，尚无盈利之术。`,
+    era: `era_pc_internet`,
+    successBaseRate: .3,
+    potentialMultiplier: 20,
+    chainEventTags: [`high_burn`, `acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `用户量突破一亿，品牌广告收入爆发，赴美IPO，回报25倍。`,
+        moderateSuccess: `被门户巨头收购，整合进其视频业务，回报2倍。`,
+        breakeven: `流量可观但始终无法盈利，以接近成本的价格被收购。`,
+        failure: `带宽成本拖垮现金流，竞争不过背靠巨头的竞品，公司倒闭。`
+    }
+}, {
+    id: `p_2006_search`,
+    name: `星节搜索`,
+    tagline: `深耕中文知识图谱，探索下一代搜索技术`,
+    sector: `pc_internet`,
+    round: `series_a`,
+    valuation: 107,
+    investmentAmount: 12,
+    riskHint: `搜索之市，百度与谷歌已分而食之。`,
+    era: `era_pc_internet`,
+    successBaseRate: .25,
+    potentialMultiplier: 8,
+    chainEventTags: [`acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `在垂直搜索细分做到第一，被百度收购补强知识图谱，回报10倍。`,
+        moderateSuccess: `学术搜索口碑极佳，虽用户量不大但变现稳定，回报2倍。`,
+        breakeven: `Google退出中国后市场格局固化，公司转型企业搜索，勉力维持。`,
+        failure: `搜索是赢家通吃的游戏，第二名什么都不是。`
+    }
+}, {
+    id: `p_2007_b2b`,
+    name: `大众商贸`,
+    tagline: `连接工厂与外贸商，B2B电商平台新机遇`,
+    sector: `ecommerce`,
+    round: `series_a`,
+    valuation: 83,
+    investmentAmount: 10,
+    riskHint: `线下之习，积重难返，信任之基，尚未筑牢。`,
+    era: `era_pc_internet`,
+    successBaseRate: .4,
+    potentialMultiplier: 7,
+    chainEventTags: [`ecommerce_boom`],
+    outcomes: {
+        hugeSuccess: `中国加入WTO红利爆发，外贸B2B需求井喷，港股上市回报12倍。`,
+        moderateSuccess: `在长三角和珠三角站稳，年GMV破百亿，被阿里系并购回报3倍。`,
+        breakeven: `2008年金融危机重创外贸，公司转型内贸，艰难保本。`,
+        failure: `金融危机+巨头入场双重打击，资金链断裂。`
+    }
+}, {
+    id: `p_2007_antivirus`,
+    name: `滴盾安全`,
+    tagline: `免费安全模式，构建PC端流量新入口`,
+    sector: `pc_internet`,
+    round: `series_b`,
+    valuation: 75,
+    investmentAmount: 15,
+    riskHint: `免费之策，能否久持以获利，实未可知。`,
+    era: `era_pc_internet`,
+    successBaseRate: .45,
+    potentialMultiplier: 12,
+    chainEventTags: [`tech_breakthrough`],
+    outcomes: {
+        hugeSuccess: `免费策略迅速占领市场，软件管家成为PC标配入口，美股上市回报18倍。`,
+        moderateSuccess: `用户量巨大但变现效率一般，被安全巨头并购回报3倍。`,
+        breakeven: `免费模式烧钱太快，广告收入跟不上，估值缩水至成本线。`,
+        failure: `与杀毒巨头陷入公关战，被对手免费策略反噬，用户流失殆尽。`
+    }
+}, {
+    id: `p_2008_ecom`,
+    name: `京汇购`,
+    tagline: `尾货闪购模式，抢占下沉市场电商蓝海`,
+    sector: `ecommerce`,
+    round: `series_a`,
+    valuation: 83,
+    investmentAmount: 10,
+    riskHint: `金市动荡，百姓消费之心日减。`,
+    era: `era_pc_internet`,
+    successBaseRate: .4,
+    potentialMultiplier: 8,
+    chainEventTags: [`financial_crisis`, `ecommerce_boom`],
+    outcomes: {
+        hugeSuccess: `金融危机反而刺激了尾货需求，GMV暴增，纳斯达克上市回报12倍。`,
+        moderateSuccess: `在经济下行期保持增长，站稳细分赛道，被阿里收购回报3倍。`,
+        breakeven: `增长乏力，品类扩张失败，勉强被整合进另一家电商平台。`,
+        failure: `供应链断裂，用户体验恶化，在电商大乱斗中消失。`
+    }
+}, {
+    id: `p_2008_music`,
+    name: `易音在线`,
+    tagline: `正版化战略先行，在线音乐平台新玩家`,
+    sector: `pc_internet`,
+    round: `series_a`,
+    valuation: 60,
+    investmentAmount: 8,
+    min人脉网络: 20,
+    riskHint: `盗版横行，用户愿付银两者，几无矣。`,
+    era: `era_pc_internet`,
+    successBaseRate: .2,
+    potentialMultiplier: 15,
+    chainEventTags: [`regulatory_risk`],
+    outcomes: {
+        hugeSuccess: `版权保护政策突然收紧，正版平台成唯一选择，被腾讯音乐高价收购回报20倍。`,
+        moderateSuccess: `靠广告+会员勉强维持，被整合进大平台生态回报2倍。`,
+        breakeven: `版权成本吃掉所有收入，长期亏损后被低价接盘。`,
+        failure: `盗版打不完，用户不愿付费，版权方坐地起价，三重夹击下倒闭。`
+    }
+}, {
+    id: `p_2008_game2`,
+    name: `翔龙游戏`,
+    tagline: `即点即玩轻游戏，页游发行平台新势力`,
+    sector: `gaming`,
+    round: `angel`,
+    valuation: 33,
+    investmentAmount: 5,
+    riskHint: `页游之寿短暂，赖渠道以引流。`,
+    era: `era_pc_internet`,
+    successBaseRate: .5,
+    potentialMultiplier: 6,
+    chainEventTags: [`early_exit`],
+    outcomes: {
+        hugeSuccess: `首款页游月流水破亿，公司连推三款爆款，被上市游戏公司收购回报8倍。`,
+        moderateSuccess: `精品页游在细分玩家群中站稳，稳定盈利回报3倍。`,
+        breakeven: `一款爆款后无以为继，团队被挖去大厂，公司名存实亡。`,
+        failure: `第一款产品上线即遇冷，资金耗尽，团队解散。`
+    }
+}, {
+    id: `p_2005_im`,
+    name: `盛讯通`,
+    tagline: `企业IM赛道探索，安全加密的通讯解决方案`,
+    sector: `pc_internet`,
+    round: `angel`,
+    valuation: 33,
+    investmentAmount: 5,
+    riskHint: `个人即时通讯之市，QQ已独占鳌头。`,
+    era: `era_pc_internet`,
+    successBaseRate: .35,
+    potentialMultiplier: 5,
+    chainEventTags: [`acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `被腾讯企业QQ部门收购，整合进企业IM产品线回报6倍。`,
+        moderateSuccess: `在政府和央企市场站稳，成为信创目录产品回报3倍。`,
+        breakeven: `功能被钉钉/企微免费覆盖，付费客户流失殆尽。`,
+        failure: `企业市场付费意愿太低，从未达到盈亏平衡。`
+    }
+}, {
+    id: `p_2006_job`,
+    name: `猎才网`,
+    tagline: `专注互联网人才，垂直招聘平台新选择`,
+    sector: `pc_internet`,
+    round: `angel`,
+    valuation: 33,
+    investmentAmount: 5,
+    riskHint: `传统招贤之网，已据主流之流量。`,
+    era: `era_pc_internet`,
+    successBaseRate: .4,
+    potentialMultiplier: 5,
+    chainEventTags: [`early_exit`],
+    outcomes: {
+        hugeSuccess: `互联网人才缺口爆发，被前程无忧高价收购回报7倍。`,
+        moderateSuccess: `在技术圈建立口碑，小而美但无法规模化回报2倍。`,
+        breakeven: `巨头招聘业务免费化，垂直招聘空间被挤压殆尽。`,
+        failure: `流量获取成本远超预期，资金耗尽。`
+    }
+}, {
+    id: `p_2006_travel`,
+    name: `遨游历`,
+    tagline: `机票酒店一站式比价，在线旅游新尝试`,
+    sector: `ecommerce`,
+    round: `series_a`,
+    valuation: 60,
+    investmentAmount: 8,
+    riskHint: `携程、艺龙已登市，流量之差，天壤之别。`,
+    era: `era_pc_internet`,
+    successBaseRate: .3,
+    potentialMultiplier: 6,
+    chainEventTags: [`acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `被携程收购，作为独立品牌运营回报5倍。`,
+        moderateSuccess: `在比价细分做到第一，广告收入稳定回报2倍。`,
+        breakeven: `OTA巨头自建比价功能，第三方比价失去存在价值。`,
+        failure: `烧钱获客无法盈利，携程直接封杀其爬虫，流量归零。`
+    }
+}, {
+    id: `p_2007_novel`,
+    name: `阅云书院`,
+    tagline: `付费阅读模式，网文创作平台新势力`,
+    sector: `pc_internet`,
+    round: `series_a`,
+    valuation: 60,
+    investmentAmount: 8,
+    riskHint: `版权之争一触即发，内容之价水涨船高。`,
+    era: `era_pc_internet`,
+    successBaseRate: .4,
+    potentialMultiplier: 10,
+    chainEventTags: [`acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `IP改编热潮中多部作品被影视化，被腾讯文学收购回报12倍。`,
+        moderateSuccess: `在男频/都市品类积累忠实作者群，被阅文集团收购回报3倍。`,
+        breakeven: `头部作者被竞品高价挖走，内容质量下滑用户流失。`,
+        failure: `资金烧完时仍无爆款IP，公司清盘。`
+    }
+}, {
+    id: `p_2007_cafe`,
+    name: `瑞巢平台`,
+    tagline: `SaaS模式覆盖网吧场景，线下上网服务新生态`,
+    sector: `saas`,
+    round: `series_a`,
+    valuation: 60,
+    investmentAmount: 8,
+    riskHint: `网吧之业，正值衰退之期。`,
+    era: `era_pc_internet`,
+    successBaseRate: .35,
+    potentialMultiplier: 3,
+    chainEventTags: [`early_exit`],
+    outcomes: {
+        hugeSuccess: `转型为游戏分发+电竞平台，被网鱼网咖收购回报4倍。`,
+        moderateSuccess: `网吧增值服务(点卡/外设)贡献稳定利润回报2倍。`,
+        breakeven: `网吧数量持续萎缩，SaaS收入逐年下降勉强保本。`,
+        failure: `移动互联网普及，网吧行业雪崩式下滑。`
+    }
+}, {
+    id: `p_2008_edtech`,
+    name: `优学在线`,
+    tagline: `K12在线辅导，教育赛道新探索`,
+    sector: `ai`,
+    round: `angel`,
+    valuation: 33,
+    investmentAmount: 5,
+    riskHint: `在线教育之市，尚未成形，带宽之费不菲。`,
+    era: `era_pc_internet`,
+    successBaseRate: .3,
+    potentialMultiplier: 15,
+    chainEventTags: [`edtech`, `early_exit`],
+    outcomes: {
+        hugeSuccess: `被好未来收购，成为其在线业务核心回报18倍。`,
+        moderateSuccess: `在三四线城市找到市场需求，稳步增长回报3倍。`,
+        breakeven: `录播课效果不如预期，付费转化率极低。`,
+        failure: `技术基础设施跟不上，视频卡顿严重口碑崩盘。`
+    }
+}, {
+    id: `p_2008_email`,
+    name: `浪邮科技`,
+    tagline: `安全加密企业邮箱，企业服务新拓展`,
+    sector: `saas`,
+    round: `series_a`,
+    valuation: 33,
+    investmentAmount: 5,
+    riskHint: `网易、腾讯之企业邮，免费化乃大势所趋。`,
+    era: `era_pc_internet`,
+    successBaseRate: .3,
+    potentialMultiplier: 4,
+    chainEventTags: [`early_exit`],
+    outcomes: {
+        hugeSuccess: `被263收购，整合进企业通信产品线回报5倍。`,
+        moderateSuccess: `外贸企业刚需，付费客户稳定增长回报2倍。`,
+        breakeven: `免费企业邮产品上线后付费客户断崖下跌。`,
+        failure: `数据安全事件导致大客户集体解约。`
+    }
+}, {
+    id: `p_2008_adnetwork`,
+    name: `狐流汇`,
+    tagline: `PC端流量聚合，广告变现平台新玩家`,
+    sector: `pc_internet`,
+    round: `series_a`,
+    valuation: 60,
+    investmentAmount: 8,
+    riskHint: `百度、谷歌之联盟，已据八成之市。`,
+    era: `era_pc_internet`,
+    successBaseRate: .3,
+    potentialMultiplier: 5,
+    chainEventTags: [`acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `被阿里巴巴收购整合进阿里妈妈回报6倍。`,
+        moderateSuccess: `在游戏和电商垂直广告做到第一回报3倍。`,
+        breakeven: `移动时代来临，PC流量持续萎缩。`,
+        failure: `虚假流量问题被广告主集体诉讼，赔偿金拖垮了公司。`
+    }
+}, {
+    id: `p_2008_virtual`,
+    name: `安盾易宝`,
+    tagline: `虚拟资产交易服务，游戏生态延伸新方向`,
+    sector: `gaming`,
+    round: `angel`,
+    valuation: 33,
+    investmentAmount: 5,
+    riskHint: `游戏商禁虚拟交易之政令，风险难测。`,
+    era: `era_pc_internet`,
+    successBaseRate: .4,
+    potentialMultiplier: 6,
+    chainEventTags: [`regulatory_risk`],
+    outcomes: {
+        hugeSuccess: `被5173收购，整合后成为最大虚拟交易平台回报8倍。`,
+        moderateSuccess: `在几款头部游戏中建立垄断地位回报3倍。`,
+        breakeven: `游戏厂商自建交易平台，第三方被挤出。`,
+        failure: `游戏公司联合封杀，所有交易渠道被切断。`
+    }
+}, {
+    id: `p_2008_blog`,
+    name: `豆荚公园`,
+    tagline: `精英圈层博客社区，高质量内容生态建设`,
+    sector: `pc_internet`,
+    round: `angel`,
+    valuation: 33,
+    investmentAmount: 5,
+    riskHint: `新浪博客已据主流，小众之社，盈利维艰。`,
+    era: `era_pc_internet`,
+    successBaseRate: .3,
+    potentialMultiplier: 4,
+    chainEventTags: [`early_exit`],
+    outcomes: {
+        hugeSuccess: `被搜狐收购作为其媒体矩阵的高端内容源回报5倍。`,
+        moderateSuccess: `精英圈层口碑极佳，广告主认可度高但规模有限回报2倍。`,
+        breakeven: `微博兴起后长文博客用户大量流失，社区活跃度骤降。`,
+        failure: `内容审核成本+服务器成本远超收入，关门大吉。`
+    }
+}, {
+    id: `p_2009_mobilead`,
+    name: `盛指传媒`,
+    tagline: `多年广告经验沉淀，移动端开发者变现平台`,
+    sector: `mobile`,
+    round: `angel`,
+    valuation: 60,
+    investmentAmount: 8,
+    riskHint: `移动广告之市，方兴未艾，广告主认可度寥寥。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .45,
+    potentialMultiplier: 7,
+    chainEventTags: [`mobile_boom`],
+    outcomes: {
+        hugeSuccess: `智能手机爆发带动移动广告市场井喷，成为最大独立平台，被百度收购回报10倍。`,
+        moderateSuccess: `业务跟随市场稳步增长，在细分领域建立壁垒回报3倍。`,
+        breakeven: `巨头入场碾压，公司差异化不足，回报接近成本。`,
+        failure: `广告主预算始终没从PC转移过来，资金耗尽。`
+    }
+}, {
+    id: `p_2009_appstore`,
+    name: `米果宝盒`,
+    tagline: `第三方安卓应用商店，应用分发布局新尝试`,
+    sector: `mobile`,
+    round: `angel`,
+    valuation: 46,
+    investmentAmount: 5,
+    riskHint: `谷歌应用市迟早入华，且手机厂商皆自建店。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .4,
+    potentialMultiplier: 5,
+    chainEventTags: [`mobile_boom`, `early_exit`],
+    outcomes: {
+        hugeSuccess: `踩中Android用户爆发红利，日活破千万，被腾讯应用宝并购回报6倍。`,
+        moderateSuccess: `在工具类分发领域站稳，稳定盈利回报2倍。`,
+        breakeven: `手机厂商预装商店成为主流，第三方商店边缘化。`,
+        failure: `被曝传播恶意软件，口碑崩塌，用户一夜跑光。`
+    }
+}, {
+    id: `p_2010_groupbuy`,
+    name: `团团拼`,
+    tagline: `本地生活团购业务，O2O战略新试水`,
+    sector: `o2o`,
+    round: `series_b`,
+    valuation: 189,
+    investmentAmount: 20,
+    min人脉网络: 30,
+    riskHint: `团购之途，已有五千余竞争者。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .2,
+    potentialMultiplier: 30,
+    chainEventTags: [`groupbuy_war`, `high_burn`],
+    outcomes: {
+        hugeSuccess: `在千团大战中胜出成功IPO——但你得在最高点及时退出才行回报50倍。`,
+        moderateSuccess: `销量排名前三被腾讯系团购平台合并回报3倍。`,
+        breakeven: `烧光了钱但没烧出规模，被收购时估值缩水。`,
+        failure: `千团大战中资金链断裂，公司倒闭，创始人回老家做小生意。`
+    }
+}, {
+    id: `p_2010_mobilegame`,
+    name: `星手游戏`,
+    tagline: `休闲手游研发发行，移动游戏新探索`,
+    sector: `gaming`,
+    round: `angel`,
+    valuation: 46,
+    investmentAmount: 5,
+    riskHint: `手游之市，方起步，盈利唯赖付费下载。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .45,
+    potentialMultiplier: 12,
+    chainEventTags: [`mobile_boom`],
+    outcomes: {
+        hugeSuccess: `连续三款游戏进入畅销榜前十，被腾讯收购回报15倍。`,
+        moderateSuccess: `稳定产出中等体量游戏，年利润过亿回报4倍。`,
+        breakeven: `一款大作失败后元气大伤，被收购仅收回成本。`,
+        failure: `创意枯竭+大厂碾压，再也没有做出第二款成功的游戏。`
+    }
+}, {
+    id: `p_2011_social`,
+    name: `书语社交`,
+    tagline: `兴趣驱动社交平台，年轻用户社交新尝试`,
+    sector: `mobile`,
+    round: `series_a`,
+    valuation: 150,
+    investmentAmount: 12,
+    min人脉网络: 25,
+    riskHint: `社交之途，微信、QQ已分而治之。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .25,
+    potentialMultiplier: 25,
+    chainEventTags: [`social_network`, `acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `独特产品机制在年轻人中病毒增长，被字节收购回报30倍。`,
+        moderateSuccess: `细分用户群稳定，被腾讯收购补强QQ回报4倍。`,
+        breakeven: `用户增长到千万级停滞，商业化困难被低价收购。`,
+        failure: `微信推出类似功能，用户大量流失，公司关停。`
+    }
+}, {
+    id: `p_2011_lbs`,
+    name: `图途导航`,
+    tagline: `位置驱动本地生活，LBS生态新布局`,
+    sector: `mobile`,
+    round: `series_a`,
+    valuation: 116,
+    investmentAmount: 10,
+    riskHint: `位置服务之说甚嚣尘上，然盈利之道未明。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .3,
+    potentialMultiplier: 8,
+    chainEventTags: [`mobile_boom`],
+    outcomes: {
+        hugeSuccess: `签到数据成为本地商家营销金矿，转型本地广告平台后爆发回报10倍。`,
+        moderateSuccess: `被大众点评收购整合进其POI体系回报3倍。`,
+        breakeven: `签到热度退潮后用户活跃度骤降，勉强转型但已失先机。`,
+        failure: `签到行为缺乏持续激励，用户新鲜感过后活跃度归零。`
+    }
+}, {
+    id: `p_2011_cloud`,
+    name: `绿帆科技`,
+    tagline: `企业级云计算基础设施，帮传统企业上云`,
+    sector: `saas`,
+    round: `series_a`,
+    valuation: 150,
+    investmentAmount: 12,
+    min人脉网络: 20,
+    riskHint: `阿里、亚马逊之云已起，初创之机窗狭。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .3,
+    potentialMultiplier: 20,
+    chainEventTags: [`tech_breakthrough`, `saas_growth`],
+    outcomes: {
+        hugeSuccess: `在垂直行业做到极致，被阿里云收购回报25倍。`,
+        moderateSuccess: `专注服务金融和政务客户，壁垒深厚回报5倍。`,
+        breakeven: `大厂云服务降价倾销，创业公司利润被挤压殆尽。`,
+        failure: `数据中心建设烧光融资，客户获取成本远超预期。`
+    }
+}, {
+    id: `p_2012_payment`,
+    name: `红付通`,
+    tagline: `移动支付解决方案，扫码+ NFC双模`,
+    sector: `fintech`,
+    round: `series_b`,
+    valuation: 152,
+    investmentAmount: 18,
+    riskHint: `支付宝与微信支付，即将入局。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .2,
+    potentialMultiplier: 10,
+    chainEventTags: [`fintech`],
+    outcomes: {
+        hugeSuccess: `被银联收编成为其移动支付技术供应商，回报8倍。`,
+        moderateSuccess: `在B端支付解决方案领域找到立足之地回报3倍。`,
+        breakeven: `支付宝和微信的二维码横扫市场，NFC路线被边缘化。`,
+        failure: `两大巨头的支付战争中没有第三方的位置。`
+    }
+}, {
+    id: `p_2012_weibo`,
+    name: `天言`,
+    tagline: `面向年轻用户的新型社交产品，主打短内容和兴趣社区`,
+    sector: `mobile`,
+    round: `series_a`,
+    valuation: 105,
+    investmentAmount: 15,
+    riskHint: `微博正值鼎盛，差异化之余地无多。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .25,
+    potentialMultiplier: 15,
+    chainEventTags: [`social_network`, `acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `产品形态创新被验证，成为微博最大的竞争对手之一回报18倍。`,
+        moderateSuccess: `在大学生群体中爆发，被字节跳动着中收购回报4倍。`,
+        breakeven: `用户增长到三千万后遇到天花板，产品改版失败流失用户。`,
+        failure: `被大厂像素级抄袭，差异化优势三个月内消失。`
+    }
+}, {
+    id: `p_2012_ecom_mobile`,
+    name: `金袋购物`,
+    tagline: `移动端电商特卖App，主打限时闪购`,
+    sector: `ecommerce`,
+    round: `series_b`,
+    valuation: 105,
+    investmentAmount: 15,
+    riskHint: `淘宝、京东已发力于移动之端。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .3,
+    potentialMultiplier: 8,
+    chainEventTags: [`ecommerce_boom`, `mobile_boom`],
+    outcomes: {
+        hugeSuccess: `移动电商红利+闪购模式爆发，被京东收购回报10倍。`,
+        moderateSuccess: `在三四线城市做透，独立发展至IPO回报4倍。`,
+        breakeven: `巨头补贴战烧钱太狠，独立平台无力跟进。`,
+        failure: `供应链和物流投入不足，用户复购率持续走低。`
+    }
+}, {
+    id: `p_2009_im2`,
+    name: `钉聊办公`,
+    tagline: `免费移动IM+语音通话，蚕食运营商短信收入，与闪讯通的消费级产品正面竞争`,
+    sector: `mobile`,
+    round: `series_a`,
+    valuation: 150,
+    investmentAmount: 12,
+    riskHint: `腾讯即将发布微信，巨头碾压之险甚高。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .2,
+    potentialMultiplier: 20,
+    chainEventTags: [`social_network`, `mobile_boom`],
+    outcomes: {
+        hugeSuccess: `被腾讯收购——他们买的是你的用户群和技术团队回报18倍。`,
+        moderateSuccess: `在垂直人群（游戏/校园）中找到差异化空间回报3倍。`,
+        breakeven: `微信发布后DAU断崖下跌，百万用户一夜迁移。`,
+        failure: `微信上线语音通话功能的那一天，你的核心卖点消失了。`
+    }
+}, {
+    id: `p_2009_browser`,
+    name: `闪雷浏览器`,
+    tagline: `手机浏览器，主打极速+省流量80%`,
+    sector: `mobile`,
+    round: `series_a`,
+    valuation: 85,
+    investmentAmount: 8,
+    riskHint: `UC浏览器已据大半壁江山。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .3,
+    potentialMultiplier: 5,
+    chainEventTags: [`mobile_boom`, `acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `被阿里巴巴收购整合进UC体系回报6倍。`,
+        moderateSuccess: `在低端机和山寨机市场做到第一回报3倍。`,
+        breakeven: `智能手机自带浏览器体验改善，第三方浏览器需求萎缩。`,
+        failure: `被曝窃取用户浏览记录卖给广告商，口碑崩塌。`
+    }
+}, {
+    id: `p_2010_reading`,
+    name: `银香阅读`,
+    tagline: `移动阅读App，海量正版图书+社区评论`,
+    sector: `mobile`,
+    round: `series_a`,
+    valuation: 85,
+    investmentAmount: 8,
+    riskHint: `Kindle与多看已据高端阅读之市。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .4,
+    potentialMultiplier: 5,
+    chainEventTags: [`acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `被掌阅收购，成为其UGC社区模块回报5倍。`,
+        moderateSuccess: `网文+出版双引擎，被阅文入股回报3倍。`,
+        breakeven: `短视频崛起蚕食阅读时间，用户时长持续下降。`,
+        failure: `版权采购烧光融资，付费用户增长远不及预期。`
+    }
+}, {
+    id: `p_2010_map`,
+    name: `地途导航`,
+    tagline: `手机地图+实时路况，离线地图下载量第一`,
+    sector: `mobile`,
+    round: `series_b`,
+    valuation: 105,
+    investmentAmount: 15,
+    riskHint: `高德、百度地图免费后，商业模式崩塌矣。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .25,
+    potentialMultiplier: 6,
+    chainEventTags: [`acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `被阿里全资收购作为高德的补充数据源回报7倍。`,
+        moderateSuccess: `专注商用车导航细分市场，稳定盈利回报3倍。`,
+        breakeven: `高德免费策略冲击下C端用户骤降，转型B端艰难。`,
+        failure: `地图数据采集成本太高，融资烧完时仍无盈利模式。`
+    }
+}, {
+    id: `p_2011_taxi`,
+    name: `风车宝`,
+    tagline: `电话叫车+App预约，整合出租车调度，快达出行的早期竞品`,
+    sector: `o2o`,
+    round: `angel`,
+    valuation: 46,
+    investmentAmount: 5,
+    riskHint: `打车App之途尚属小众，用户之习未养成。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .35,
+    potentialMultiplier: 8,
+    chainEventTags: [`sharing_economy`],
+    outcomes: {
+        hugeSuccess: `被快的收购作为其技术团队，换股后回报10倍。`,
+        moderateSuccess: `在几个二线城市做到区域第一，被滴滴合并回报3倍。`,
+        breakeven: `补贴大战打不起，区域优势被巨头补贴砸穿。`,
+        failure: `交管部门认定App叫车违规，产品被勒令下架。`
+    }
+}, {
+    id: `p_2011_med`,
+    name: `安平医通`,
+    tagline: `在线挂号+轻问诊，缓解看病难`,
+    sector: `healthcare`,
+    round: `series_a`,
+    valuation: 116,
+    investmentAmount: 10,
+    riskHint: `医院信息化之度低，接入之难甚巨。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .3,
+    potentialMultiplier: 10,
+    chainEventTags: [`regulatory_risk`],
+    outcomes: {
+        hugeSuccess: `被平安好医生收购整合，乘医改东风回报12倍。`,
+        moderateSuccess: `在部分三甲医院打通预约通道，用户体验极佳回报4倍。`,
+        breakeven: `医院关系维护成本极高，扩展速度远慢于预期。`,
+        failure: `卫计委出台政策禁止第三方平台挂号，业务一夜归零。`
+    }
+}, {
+    id: `p_2012_shortvideo`,
+    name: `极拍达人`,
+    tagline: `15秒短视频拍摄+滤镜特效，一键分享微博`,
+    sector: `mobile`,
+    round: `angel`,
+    valuation: 46,
+    investmentAmount: 5,
+    min人脉网络: 30,
+    riskHint: `短视频之途狭小，无人信其能成为主流。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .2,
+    potentialMultiplier: 40,
+    chainEventTags: [`mobile_boom`, `acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `被字节跳动收购，成为抖音的前身技术积累回报50倍。`,
+        moderateSuccess: `作为微博视频功能的技术供应商被收购回报4倍。`,
+        breakeven: `工具属性太强缺乏社区，用户拍完就走留不下来。`,
+        failure: `4G普及前短视频太超前了，市场还没准备好。`
+    }
+}, {
+    id: `p_2012_office`,
+    name: `企业办`,
+    tagline: `移动办公套件：云盘+文档+IM，企业协作`,
+    sector: `saas`,
+    round: `series_a`,
+    valuation: 116,
+    investmentAmount: 10,
+    riskHint: `钉钉与企微即将发布。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .2,
+    potentialMultiplier: 8,
+    chainEventTags: [`saas_growth`],
+    outcomes: {
+        hugeSuccess: `在钉钉发布前被阿里收购作为其技术底子回报10倍。`,
+        moderateSuccess: `专注中小企业的移动办公需求，在细分市场盈利回报3倍。`,
+        breakeven: `钉钉免费策略横扫市场，创业公司无力抗衡。`,
+        failure: `功能被钉钉/企微完全覆盖，客户零成本迁移。`
+    }
+}, {
+    id: `p_2012_analytics`,
+    name: `数飞科技`,
+    tagline: `App数据分析平台，帮助开发者理解用户行为`,
+    sector: `saas`,
+    round: `series_a`,
+    valuation: 46,
+    investmentAmount: 5,
+    riskHint: `友盟、TalkingData已占先机。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .4,
+    potentialMultiplier: 5,
+    chainEventTags: [`acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `被友盟收购整合，借力阿里生态爆发回报6倍。`,
+        moderateSuccess: `在游戏行业数据分析做到No.1回报3倍。`,
+        breakeven: `友盟被阿里收购后开始免费化，第三方工具边缘化。`,
+        failure: `App开发者付费意愿极低，SaaS模式在中国水土不服。`
+    }
+}, {
+    id: `p_2012_push`,
+    name: `极推网络`,
+    tagline: `App消息推送SDK，提升用户留存和活跃`,
+    sector: `mobile`,
+    round: `series_a`,
+    valuation: 46,
+    investmentAmount: 5,
+    riskHint: `手机厂商自建推送通道，乃大势所趋。`,
+    era: `era_mobile_dawn`,
+    successBaseRate: .4,
+    potentialMultiplier: 4,
+    chainEventTags: [`early_exit`],
+    outcomes: {
+        hugeSuccess: `被腾讯信鸽收购整合进腾讯云回报5倍。`,
+        moderateSuccess: `在游戏推送领域做到第一，日推送量过十亿回报2倍。`,
+        breakeven: `华为/小米自建推送，第三方SDK被逐步替代。`,
+        failure: `服务稳定性问题导致一次大规模推送事故，客户集体流失。`
+    }
+}, {
+    id: `p_2013_washcar`,
+    name: `盛洗侠`,
+    tagline: `上门洗车O2O，一键下单，15分钟到达`,
+    sector: `o2o`,
+    round: `series_a`,
+    valuation: 105,
+    investmentAmount: 15,
+    riskHint: `客单价低，洗车之工成本高，每单皆亏。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .15,
+    potentialMultiplier: 0,
+    chainEventTags: [`o2o_bubble`, `high_burn`],
+    outcomes: {
+        hugeSuccess: `不可能。O2O上门洗车的单位经济学从未成立。`,
+        moderateSuccess: `运气好在泡沫破裂前被下一轮接盘成功退出回报2倍——但接盘机构亏惨了。`,
+        breakeven: `转型汽车后市场B2B，活了下来但不再是明星项目回报1倍。`,
+        failure: `O2O泡沫破裂，洗洗侠成为上门经济经典反面教材，投资清零。`
+    }
+}, {
+    id: `p_2013_taxi`,
+    name: `盛达出行`,
+    tagline: `手机叫车平台，已在一线城市运营，日均万单`,
+    sector: `o2o`,
+    round: `series_b`,
+    valuation: 100,
+    investmentAmount: 22,
+    min人脉网络: 25,
+    riskHint: `补贴之战烧钱之速惊人，政策之险甚巨。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .25,
+    potentialMultiplier: 15,
+    chainEventTags: [`high_burn`, `sharing_economy`],
+    outcomes: {
+        hugeSuccess: `与竞争对手合并后垄断市场，超级平台诞生回报20倍。`,
+        moderateSuccess: `在合并中作为小股东被稀释，但最终IPO让早期投资仍有回报5倍。`,
+        breakeven: `补贴大战烧光融资，在合并谈判中筹码尽失勉强保本。`,
+        failure: `政策突变，各地交管部门联合整治，运营资质被吊销。`
+    }
+}, {
+    id: `p_2014_bike`,
+    name: `翼驰出行`,
+    tagline: `无桩共享单车，扫码即走，解决最后三公里`,
+    sector: `o2o`,
+    round: `series_b`,
+    valuation: 200,
+    investmentAmount: 28,
+    riskHint: `单车投放与运维之费极高，盈利之道未明。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .2,
+    potentialMultiplier: 10,
+    chainEventTags: [`sharing_economy`, `high_burn`],
+    outcomes: {
+        hugeSuccess: `融资速度赶上烧钱速度被阿里系高估值收购回报8倍。`,
+        moderateSuccess: `行业整合时被合并进头部平台换股退出回报2倍。`,
+        breakeven: `被收购但估值大幅缩水，作为早期投资者仅勉强保本。`,
+        failure: `押金挤兑+资金链断裂，单车坟场遍布全国，投资清零。`
+    }
+}, {
+    id: `p_2014_p2p`,
+    name: `盛融在线`,
+    tagline: `P2P网贷平台，对接个人投资者和消费信贷需求`,
+    sector: `fintech`,
+    round: `series_b`,
+    valuation: 60,
+    investmentAmount: 18,
+    riskHint: `监管真空之境，随时可能被叫停。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .2,
+    potentialMultiplier: 8,
+    chainEventTags: [`fintech`, `regulatory_risk`],
+    outcomes: {
+        hugeSuccess: `在监管收紧前成功上市，你在高点套现回报12倍——但二级市场的投资者后来血本无归。`,
+        moderateSuccess: `平台平稳运营至备案制落地，被持牌机构收购回报2倍。`,
+        breakeven: `监管风暴中平台清退，作为股东拿回本金。`,
+        failure: `资金池爆雷，创始人入狱，投资者血本无归，你也成了行业反面教材。`
+    }
+}, {
+    id: `p_2015_ai`,
+    name: `商舟智能`,
+    tagline: `AI驱动的企业客服SaaS，已签约30家付费客户`,
+    sector: `ai`,
+    round: `series_a`,
+    valuation: 50,
+    investmentAmount: 15,
+    min人脉网络: 25,
+    riskHint: `技术壁垒不高，巨头有自研替代之力。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .35,
+    potentialMultiplier: 12,
+    chainEventTags: [`ai_boom`, `saas_growth`],
+    outcomes: {
+        hugeSuccess: `AI概念爆发+产品力扎实，ARR三年增长40倍，科创板上市回报15倍。`,
+        moderateSuccess: `细分赛道站稳，ARR稳定在2亿，被Salesforce中国收购回报4倍。`,
+        breakeven: `产品和销售遇到瓶颈增长放缓，被国内云厂商低价收购。`,
+        failure: `大厂推出免费竞品，客户大量流失无力回天。`
+    }
+}, {
+    id: `p_2015_live`,
+    name: `盛星直播`,
+    tagline: `移动直播平台，主打才艺表演和互动打赏`,
+    sector: `mobile`,
+    round: `series_b`,
+    valuation: 70,
+    investmentAmount: 20,
+    riskHint: `直播之途已有数十竞争者，内容监管之险。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .3,
+    potentialMultiplier: 10,
+    chainEventTags: [`mobile_boom`, `regulatory_risk`],
+    outcomes: {
+        hugeSuccess: `秀场+游戏双引擎驱动，营收爆发赴美上市回报12倍。`,
+        moderateSuccess: `被头部直播平台合并，整合后流量翻倍回报3倍。`,
+        breakeven: `内容监管收紧+头部主播流失，营收腰斩后艰难保本。`,
+        failure: `头部主播集体跳槽，用户跟着走了，平台空壳化。`
+    }
+}, {
+    id: `p_2016_newretail`,
+    name: `叮鲜生`,
+    tagline: `生鲜电商+线下体验店，30分钟配送`,
+    sector: `ecommerce`,
+    round: `series_c`,
+    valuation: 150,
+    investmentAmount: 25,
+    riskHint: `生鲜损耗之率极高，物流之费吃掉毛利。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .2,
+    potentialMultiplier: 12,
+    chainEventTags: [`ecommerce_boom`, `high_burn`],
+    outcomes: {
+        hugeSuccess: `新零售风口+阿里加持，全国扩张开店估值暴涨回报15倍。`,
+        moderateSuccess: `在一线城市跑通单城模型，被腾讯系收购回报3倍。`,
+        breakeven: `疯狂扩张后单店模型恶化，关店裁员潮中估值跌回B轮。`,
+        failure: `生鲜损耗+冷链物流+门店租金=不可持续的烧钱模型，资金断裂。`
+    }
+}, {
+    id: `p_2016_overseas_shop`,
+    name: `洋码头淘`,
+    tagline: `跨境电商平台，海外直邮+保税仓模式`,
+    sector: `ecommerce`,
+    round: `series_b`,
+    valuation: 55,
+    investmentAmount: 18,
+    riskHint: `跨境电商税率之政策极不稳定。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .35,
+    potentialMultiplier: 6,
+    chainEventTags: [`regulatory_risk`],
+    outcomes: {
+        hugeSuccess: `踩中消费升级+海淘爆发红利，被考拉收购回报8倍。`,
+        moderateSuccess: `在母婴和美妆垂类做到第一，稳定盈利回报3倍。`,
+        breakeven: `跨境电商税率调整压缩毛利空间，增速放缓后估值停滞。`,
+        failure: `新政策要求全品类加征关税，商业模型瞬间崩塌。`
+    }
+}, {
+    id: `p_2017_blockchain`,
+    name: `火链科技`,
+    tagline: `区块链底层协议，号称要做"中国版以太坊"`,
+    sector: `fintech`,
+    round: `angel`,
+    valuation: 100,
+    investmentAmount: 15,
+    min人脉网络: 35,
+    riskHint: `白皮书甚厚然代码寥寥，代币经济模型存疑。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .1,
+    potentialMultiplier: 50,
+    chainEventTags: [`regulatory_risk`, `high_burn`],
+    outcomes: {
+        hugeSuccess: `ICO狂潮中代币暴涨百倍，你在高点套现回报80倍——但后续代币归零了。`,
+        moderateSuccess: `赶在监管禁令前完成合规转型，技术服务业务活了下来回报2倍。`,
+        breakeven: `监管突然出手禁止ICO，项目方跑路前你勉强拿回了本金。`,
+        failure: `白皮书上的东西从来没做出来过。团队在巴厘岛团建后就再没回过办公室。`
+    }
+}, {
+    id: `p_2017_saas_crm`,
+    name: `销售客云`,
+    tagline: `面向中小企业的移动CRM，钉钉生态合作伙伴`,
+    sector: `saas`,
+    round: `series_a`,
+    valuation: 228,
+    investmentAmount: 12,
+    riskHint: `依赖钉钉平台之生态，平台之险甚高。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .4,
+    potentialMultiplier: 6,
+    chainEventTags: [`saas_growth`],
+    outcomes: {
+        hugeSuccess: `企业微信和钉钉双平台布局，ARR突破5亿港股上市回报8倍。`,
+        moderateSuccess: `在制造业CRM细分做到第一，被用友收购回报3倍。`,
+        breakeven: `SaaS订阅模式在国内变现困难，增长不及预期勉强保本。`,
+        failure: `钉钉上线竞品功能，生态合作伙伴秒变竞争对手。`
+    }
+}, {
+    id: `p_2013_food`,
+    name: `饱了么`,
+    tagline: `校园外卖平台，学生兼职配送，覆盖50所大学城，与拼拼网的外卖业务直接竞争`,
+    sector: `o2o`,
+    round: `series_a`,
+    valuation: 228,
+    investmentAmount: 12,
+    riskHint: `美团、饿了么正疯狂烧钱扩张。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .2,
+    potentialMultiplier: 12,
+    chainEventTags: [`high_burn`],
+    outcomes: {
+        hugeSuccess: `被饿了么收购整合进校园业务线回报15倍。`,
+        moderateSuccess: `在高校市场做到第一，被美团全资收购回报4倍。`,
+        breakeven: `补贴大战打不起，校园市场被巨头分食。`,
+        failure: `食品安全事故+学生中毒事件，品牌崩塌。`
+    }
+}, {
+    id: `p_2014_car_share`,
+    name: `一诺租车`,
+    tagline: `分时租赁汽车，手机开门即开即走`,
+    sector: `o2o`,
+    round: `series_b`,
+    valuation: 449,
+    investmentAmount: 25,
+    riskHint: `车辆购置、保险、运维之费极高。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .15,
+    potentialMultiplier: 5,
+    chainEventTags: [`sharing_economy`, `high_burn`],
+    outcomes: {
+        hugeSuccess: `被首汽约车整合进其新能源出行板块回报4倍。`,
+        moderateSuccess: `在几个旅游城市跑通模型后稳健运营回报2倍。`,
+        breakeven: `车辆损坏率和运维成本远超预期，单车模型始终未跑通。`,
+        failure: `重资产+低周转率=慢性死亡，资金耗尽时停车场堆满落灰的车。`
+    }
+}, {
+    id: `p_2014_cowork`,
+    name: `盛创空间`,
+    tagline: `共享办公+创业者社区，二线城市布局`,
+    sector: `o2o`,
+    round: `series_b`,
+    valuation: 217,
+    investmentAmount: 18,
+    riskHint: `WeWork入华，优客工场已据一线城市。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .3,
+    potentialMultiplier: 5,
+    chainEventTags: [`high_burn`],
+    outcomes: {
+        hugeSuccess: `被优客工场收购整合二线城市网络回报4倍。`,
+        moderateSuccess: `在成都/武汉/西安等新一线城市做到区域第一回报2倍。`,
+        breakeven: `疫情爆发后企业退租潮，入住率腰斩估值崩塌。`,
+        failure: `二房东模式的根本问题：长期租约+短期出租，现金流永远紧绷。`
+    }
+}, {
+    id: `p_2015_knowledge`,
+    name: `授课堂`,
+    tagline: `知识付费平台，行业专家直播+录播课`,
+    sector: `mobile`,
+    round: `series_a`,
+    valuation: 174,
+    investmentAmount: 10,
+    riskHint: `得到、知乎Live、喜马拉雅三大平台夹击。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .35,
+    potentialMultiplier: 6,
+    chainEventTags: [`acquisition_possible`],
+    outcomes: {
+        hugeSuccess: `被知乎收购整合进盐选会员体系回报8倍。`,
+        moderateSuccess: `在职业技能培训细分做到第一回报3倍。`,
+        breakeven: `知识付费退潮+盗版泛滥，GMV持续走低。`,
+        failure: `头部讲师被竞品高价挖走，内容质量断崖下降。`
+    }
+}, {
+    id: `p_2016_crossborder`,
+    name: `敦煌购通`,
+    tagline: `B2B跨境采购平台，对接中国工厂与海外零售商，与海淘帮的B2C模式互补竞争`,
+    sector: `ecommerce`,
+    round: `series_b`,
+    valuation: 217,
+    investmentAmount: 18,
+    riskHint: `中美贸易摩擦可能颠覆跨境链路。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .3,
+    potentialMultiplier: 7,
+    chainEventTags: [`geopolitics`, `overseas`],
+    outcomes: {
+        hugeSuccess: `被阿里巴巴国际站收购作为海外B端入口回报8倍。`,
+        moderateSuccess: `在家具/灯饰/小家电三大品类做到第一回报3倍。`,
+        breakeven: `关税加征后跨境成本飙升，利润率被吃掉一半。`,
+        failure: `国际物流成本暴涨+供应链中断，订单大量取消。`
+    }
+}, {
+    id: `p_2016_newretail2`,
+    name: `盛果达`,
+    tagline: `社区水果生鲜连锁+30分钟配送，与鲜享生活差异化竞争中低端市场`,
+    sector: `ecommerce`,
+    round: `series_b`,
+    valuation: 143,
+    investmentAmount: 15,
+    riskHint: `每日优鲜、叮咚买菜已跑在前头。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .25,
+    potentialMultiplier: 6,
+    chainEventTags: [`high_burn`],
+    outcomes: {
+        hugeSuccess: `被叮咚买菜收购补强线下门店布局回报5倍。`,
+        moderateSuccess: `在社区店模型跑通后稳健扩张回报3倍。`,
+        breakeven: `前置仓+门店双模式成本太高，单城模型未跑通就全国扩张。`,
+        failure: `水果损耗+门店租金+配送成本=三重毒药。`
+    }
+}, {
+    id: `p_2017_crowdfunding`,
+    name: `盛梦网`,
+    tagline: `产品众筹+股权众筹双平台，科技产品首发`,
+    sector: `fintech`,
+    round: `series_b`,
+    valuation: 143,
+    investmentAmount: 15,
+    riskHint: `监管层正酝酿众筹新规。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .2,
+    potentialMultiplier: 5,
+    chainEventTags: [`regulatory_risk`, `fintech`],
+    outcomes: {
+        hugeSuccess: `率先获得股权众筹试点牌照，合规红利下爆发回报6倍。`,
+        moderateSuccess: `产品众筹+电商模式跑通，被京东金融收购回报3倍。`,
+        breakeven: `监管突然收紧，股权众筹业务被叫停估值腰斩。`,
+        failure: `一个明星项目众筹后跑路，平台声誉扫地用户清空。`
+    }
+}, {
+    id: `p_2017_insurtech`,
+    name: `众安盾科`,
+    tagline: `互联网保险经纪平台，AI智能推荐保险方案`,
+    sector: `fintech`,
+    round: `series_a`,
+    valuation: 228,
+    investmentAmount: 12,
+    riskHint: `传统保险公司线上化正加速。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .35,
+    potentialMultiplier: 6,
+    chainEventTags: [`fintech`],
+    outcomes: {
+        hugeSuccess: `被蚂蚁保险看中战略合作+入股回报8倍。`,
+        moderateSuccess: `在健康险和旅行险细分做到第一回报3倍。`,
+        breakeven: `互联网保险新规出台，经纪牌照门槛提高。`,
+        failure: `大数据杀熟被315曝光，用户信任崩塌。`
+    }
+}, {
+    id: `p_2017_vr`,
+    name: `大衍科技`,
+    tagline: `VR线下体验馆+内容分发平台，商场连锁`,
+    sector: `pc_internet`,
+    round: `series_a`,
+    valuation: 228,
+    investmentAmount: 12,
+    riskHint: `VR之消费者普及至少尚需五年。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .15,
+    potentialMultiplier: 8,
+    chainEventTags: [`high_burn`],
+    outcomes: {
+        hugeSuccess: `被字节跳动收购作为PICO的线下渠道回报6倍。`,
+        moderateSuccess: `在商场VR体验馆做到连锁第一回报2倍。`,
+        breakeven: `VR热潮退去后客流断崖下跌，大量店面关停。`,
+        failure: `VR头显体验差+内容稀缺=用户不会来第二次。`
+    }
+}, {
+    id: `p_2017_edu`,
+    name: `编玩边学`,
+    tagline: `青少年编程教育+在线1v1,Scratch到Python`,
+    sector: `ai`,
+    round: `series_a`,
+    valuation: 174,
+    investmentAmount: 10,
+    riskHint: `少儿编程之途正快速拥挤。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .4,
+    potentialMultiplier: 6,
+    chainEventTags: [`edtech`, `early_exit`],
+    outcomes: {
+        hugeSuccess: `被好未来收购，编程纳入K12刚需回报8倍。`,
+        moderateSuccess: `在线1v1模式口碑极佳但规模化困难回报2倍。`,
+        breakeven: `双减政策冲击所有K12赛道，少儿编程也未能幸免。`,
+        failure: `获客成本飙升+续费率低，烧钱模型崩塌。`
+    }
+}, {
+    id: `p_2018_consumer`,
+    name: `元森饮品`,
+    tagline: `新式茶饮品牌，主打健康+国潮，小红书爆款`,
+    sector: `consumer`,
+    round: `series_b`,
+    valuation: 150,
+    investmentAmount: 25,
+    riskHint: `茶饮之途极度拥挤，消费者口味变化疾。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .3,
+    potentialMultiplier: 10,
+    chainEventTags: [`consumer_boom`, `consumer_bust`],
+    outcomes: {
+        hugeSuccess: `踩中国潮红利全国开店3000家，港股上市市值破千亿回报15倍。`,
+        moderateSuccess: `在区域市场站稳保持盈利，被雀巢收购回报3倍。`,
+        breakeven: `疫情冲击线下外卖利润薄，上市计划搁置估值缩水。`,
+        failure: `食品安全事故+竞争加剧+疫情三连击，大量关店投资大幅减值。`
+    }
+}, {
+    id: `p_2018_group_buying`,
+    name: `十惠团`,
+    tagline: `社区团购平台，宝妈团长+次日自提`,
+    sector: `ecommerce`,
+    round: `series_b`,
+    valuation: 80,
+    investmentAmount: 20,
+    riskHint: `互联网巨头已重兵投入，补贴之战一触即发。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .2,
+    potentialMultiplier: 8,
+    chainEventTags: [`high_burn`, `consumer_boom`],
+    outcomes: {
+        hugeSuccess: `在下沉市场精细化运营胜出，被拼多多收购回报10倍。`,
+        moderateSuccess: `聚焦区域市场做深做透，盈利后被美团收购回报3倍。`,
+        breakeven: `巨头补贴战烧不起，退守区域市场估值腰斩。`,
+        failure: `巨头1分钱补贴碾压，团长被高额佣金挖走，业务全面溃败。`
+    }
+}, {
+    id: `p_2019_semi`,
+    name: `寒武之芯`,
+    tagline: `国产替代GPU芯片，团队来自英伟达/AMD`,
+    sector: `semiconductor`,
+    round: `series_b`,
+    valuation: 300,
+    investmentAmount: 30,
+    min人脉网络: 30,
+    riskHint: `芯片研发之期五年起，技术之险极高。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .25,
+    potentialMultiplier: 25,
+    chainEventTags: [`chip_war`, `national_support`],
+    outcomes: {
+        hugeSuccess: `国产替代东风+技术突破，成功流片获国家大基金加持科创板上市回报30倍。`,
+        moderateSuccess: `产品在细分领域落地被华为哈勃战略投资回报3倍。`,
+        breakeven: `技术路线验证但商业化缓慢，被产业链整合回报接近成本。`,
+        failure: `被美国列入实体清单，无法获得EDA工具授权，研发中断投资大幅减值。`
+    }
+}, {
+    id: `p_2019_beauty`,
+    name: `盛颜纪`,
+    tagline: `国货美妆品牌，主打成分党和Z世代`,
+    sector: `consumer`,
+    round: `series_b`,
+    valuation: 60,
+    investmentAmount: 18,
+    riskHint: `美妆之途拥挤，依赖线上营销投放。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .35,
+    potentialMultiplier: 8,
+    chainEventTags: [`consumer_boom`],
+    outcomes: {
+        hugeSuccess: `抖音+小红书种草矩阵爆发，年营收破50亿，港股上市回报10倍。`,
+        moderateSuccess: `在细分品类建立口碑，被欧莱雅收购回报3倍。`,
+        breakeven: `流量红利消退后增长乏力，ROI持续走低估值停滞。`,
+        failure: `代工厂被曝质量问题，品牌声誉崩塌，退货率飙升。`
+    }
+}, {
+    id: `p_2020_edtech`,
+    name: `猿学辅导`,
+    tagline: `AI驱动的K12在线教育平台，疫情期间DAU增长10倍`,
+    sector: `ai`,
+    round: `series_c`,
+    valuation: 500,
+    investmentAmount: 30,
+    min人脉网络: 20,
+    riskHint: `政策之险——教育监管正收紧。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .2,
+    potentialMultiplier: 5,
+    chainEventTags: [`edtech`, `policy_risk`],
+    outcomes: {
+        hugeSuccess: `在被监管前完成IPO在窗口期套现退出回报8倍——但接盘的二级投资者遭遇了后来的暴跌。`,
+        moderateSuccess: `公司及时转型ToB智慧教育，虽然估值打折但活了下来回报1.5倍。`,
+        breakeven: `双减政策落地前夜你嗅到风险，以成本价转让了股份。`,
+        failure: `双减落地，K12学科培训一夜归零，公司裁员90%，投资清零。这就是政策风险——来得比想象中快得多。`
+    }
+}, {
+    id: `p_2020_medai`,
+    name: `盛医科`,
+    tagline: `AI医学影像辅助诊断，已获三类器械证`,
+    sector: `healthcare`,
+    round: `series_b`,
+    valuation: 80,
+    investmentAmount: 20,
+    riskHint: `医院采购之期漫长，商业化之路漫漫。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .3,
+    potentialMultiplier: 10,
+    chainEventTags: [`ai_boom`, `national_support`],
+    outcomes: {
+        hugeSuccess: `疫情推动医疗AI加速落地，进入医保定价体系，科创板上市回报12倍。`,
+        moderateSuccess: `在肺结节和眼底筛查两大场景建立壁垒回报4倍。`,
+        breakeven: `医院预算收紧，采购决策链过长，商业化远低预期。`,
+        failure: `产品获批后发现医生不愿意用——AI诊断的法律责任归属不明确。`
+    }
+}, {
+    id: `p_2020_secondhand`,
+    name: `爱收宝`,
+    tagline: `二手奢侈品交易平台，C2B2C鉴定模式`,
+    sector: `ecommerce`,
+    round: `series_b`,
+    valuation: 45,
+    investmentAmount: 15,
+    riskHint: `假货鉴定之难甚高，信任建立之期漫长。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .35,
+    potentialMultiplier: 6,
+    chainEventTags: [`consumer_boom`],
+    outcomes: {
+        hugeSuccess: `循环经济+消费降级双风口，交易额突破百亿回报8倍。`,
+        moderateSuccess: `在二手奢侈品品类做到头部，与闲鱼差异化竞争回报3倍。`,
+        breakeven: `假货纠纷引发舆论危机，平台信誉受损增长停滞。`,
+        failure: `鉴定师被曝参与造假，用户信任崩塌，平台交易量断崖下跌。`
+    }
+}, {
+    id: `p_2021_autopilot`,
+    name: `小马驭行`,
+    tagline: `L4级自动驾驶卡车，专注港口和矿区场景`,
+    sector: `ai`,
+    round: `series_b`,
+    valuation: 200,
+    investmentAmount: 28,
+    min人脉网络: 25,
+    riskHint: `自动驾驶商业化远未成熟，烧钱如无底之洞。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .2,
+    potentialMultiplier: 15,
+    chainEventTags: [`ai_boom`, `high_burn`],
+    outcomes: {
+        hugeSuccess: `在封闭场景率先落地，与三一重工战略合作估值翻五倍回报18倍。`,
+        moderateSuccess: `矿区自动驾驶商业化超预期，成为细分龙头回报4倍。`,
+        breakeven: `技术路线多次调整，融资节奏没跟上，被头部公司并购。`,
+        failure: `一起严重安全事故让监管全面收紧，公司无限期停摆。`
+    }
+}, {
+    id: `p_2021_ev_battery`,
+    name: `盛锂科技`,
+    tagline: `下一代固态电池技术，实验室数据超越宁德时代`,
+    sector: `new_energy`,
+    round: `series_a`,
+    valuation: 250,
+    investmentAmount: 25,
+    min人脉网络: 25,
+    riskHint: `从实验室到量产至少尚需五年。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .2,
+    potentialMultiplier: 20,
+    chainEventTags: [`national_support`, `tech_breakthrough`],
+    outcomes: {
+        hugeSuccess: `技术突破+新能源车爆发双驱动，被宁德时代高价收购回报25倍。`,
+        moderateSuccess: `在特定应用场景率先量产，成为电池细分龙头回报5倍。`,
+        breakeven: `量产工艺迟迟无法突破，融资消耗殆尽被低价收购。`,
+        failure: `实验室数据无法在产线上复现——这是硬科技最常见的死法。`
+    }
+}, {
+    id: `p_2021_saas_hr`,
+    name: `北云科服`,
+    tagline: `面向新经济公司的HR SaaS，覆盖招聘到薪酬`,
+    sector: `saas`,
+    round: `series_b`,
+    valuation: 195,
+    investmentAmount: 15,
+    riskHint: `中国企业为SaaS付费之愿远低于美国。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .35,
+    potentialMultiplier: 5,
+    chainEventTags: [`saas_growth`],
+    outcomes: {
+        hugeSuccess: `新经济公司HR数字化需求爆发，ARR破3亿赴港上市回报7倍。`,
+        moderateSuccess: `在互联网和科技行业占据头部份额，被北森收购回报3倍。`,
+        breakeven: `客户流失率高于预期，SaaS模式在中国水土不服。`,
+        failure: `互联网裁员潮来袭，客户批量倒闭，SaaS订阅收入断崖下跌。`
+    }
+}, {
+    id: `p_2018_ev`,
+    name: `蔚宇驱来`,
+    tagline: `新能源物流车+换电网络，解决最后一公里配送`,
+    sector: `new_energy`,
+    round: `series_b`,
+    valuation: 258,
+    investmentAmount: 25,
+    riskHint: `新能源车补贴退坡，竞争白热化矣。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .25,
+    potentialMultiplier: 10,
+    chainEventTags: [`national_support`, `high_burn`],
+    outcomes: {
+        hugeSuccess: `被顺丰战略投资+采购，锁定物流车赛道回报12倍。`,
+        moderateSuccess: `在快递物流场景跑通换电模型回报3倍。`,
+        breakeven: `补贴退坡后单车成本飙升，定价失去竞争力。`,
+        failure: `电池安全事故+大规模召回，公司资金链断裂。`
+    }
+}, {
+    id: `p_2019_chip2`,
+    name: `盛穹半导体`,
+    tagline: `AI推理芯片，边缘计算场景，与芯源微电子的GPU路线差异化竞争`,
+    sector: `semiconductor`,
+    round: `series_b`,
+    valuation: 342,
+    investmentAmount: 28,
+    riskHint: `英伟达生态难以撼动，客户迁移之费极高。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .2,
+    potentialMultiplier: 20,
+    chainEventTags: [`chip_war`, `national_support`],
+    outcomes: {
+        hugeSuccess: `在安防和自动驾驶领域找到杀手场景，被地平线收购回报25倍。`,
+        moderateSuccess: `AI推理芯片在IoT场景量产落地回报4倍。`,
+        breakeven: `流片后性能不达预期，二次流片耗尽融资。`,
+        failure: `国际供应链断裂，无法获得先进制程代工。`
+    }
+}, {
+    id: `p_2019_lowcode`,
+    name: `明道搭云`,
+    tagline: `低代码开发平台，拖拽式搭建企业应用`,
+    sector: `saas`,
+    round: `series_b`,
+    valuation: 195,
+    investmentAmount: 15,
+    riskHint: `阿里宜搭、腾讯微搭正免费化。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .3,
+    potentialMultiplier: 6,
+    chainEventTags: [`saas_growth`],
+    outcomes: {
+        hugeSuccess: `被用友收购作为其低代码战略核心回报8倍。`,
+        moderateSuccess: `在制造业MES低代码细分做到第一回报3倍。`,
+        breakeven: `大厂免费化后付费客户流失，开源社区变现困难。`,
+        failure: `产品被阿里宜搭像素级抄袭，免费策略下毫无还手之力。`
+    }
+}, {
+    id: `p_2020_data_mid`,
+    name: `盛澜科技`,
+    tagline: `企业数据中台，打通数据孤岛`,
+    sector: `saas`,
+    round: `series_b`,
+    valuation: 185,
+    investmentAmount: 22,
+    riskHint: `数据中台之概念火热，然落地之效存疑。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .25,
+    potentialMultiplier: 8,
+    chainEventTags: [`saas_growth`],
+    outcomes: {
+        hugeSuccess: `被阿里收购——他们需要你的政企客户关系回报10倍。`,
+        moderateSuccess: `在政府和金融行业拿下大单回报4倍。`,
+        breakeven: `数据中台概念退潮后需求断崖，项目制模式难以为继。`,
+        failure: `做了两年的中台项目被客户叫停——他们发现数据根本没打通。`
+    }
+}, {
+    id: `p_2020_privacy`,
+    name: `同态隐盾`,
+    tagline: `隐私计算平台，联邦学习+多方安全计算`,
+    sector: `ai`,
+    round: `series_a`,
+    valuation: 134,
+    investmentAmount: 12,
+    riskHint: `隐私计算技术之槛高，然应用场景有限。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .3,
+    potentialMultiplier: 8,
+    chainEventTags: [`national_support`],
+    outcomes: {
+        hugeSuccess: `在金融风控和医疗数据共享两大场景突破，被蚂蚁集团收购回报10倍。`,
+        moderateSuccess: `政府数据开放平台核心供应商回报3倍。`,
+        breakeven: `技术很酷但客户不买单——隐私计算的ROI说不清楚。`,
+        failure: `开源框架成熟化后技术壁垒消失，创业公司被替代。`
+    }
+}, {
+    id: `p_2020_premade`,
+    name: `舌尖懒厨`,
+    tagline: `预制菜品牌，15分钟做出餐厅级大餐`,
+    sector: `consumer`,
+    round: `series_b`,
+    valuation: 268,
+    investmentAmount: 18,
+    riskHint: `预制菜口味之争甚烈，食品安全之险甚高。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .3,
+    potentialMultiplier: 6,
+    chainEventTags: [`consumer_boom`, `consumer_bust`],
+    outcomes: {
+        hugeSuccess: `疫情封控+懒人经济双驱动爆发，被安井食品收购回报8倍。`,
+        moderateSuccess: `在酸菜鱼和小龙虾两大单品做到品类第一回报3倍。`,
+        breakeven: `疫情结束后需求回落，C端增速断崖。`,
+        failure: `食品安全丑闻——某批次检出过量添加剂，全国下架。`
+    }
+}, {
+    id: `p_2021_pet`,
+    name: `盛宠科技`,
+    tagline: `宠物医疗+保险+用品一站式平台`,
+    sector: `consumer`,
+    round: `series_b`,
+    valuation: 195,
+    investmentAmount: 15,
+    riskHint: `宠物经济被炒过热，估值脱离基本面矣。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .35,
+    potentialMultiplier: 5,
+    chainEventTags: [`consumer_boom`],
+    outcomes: {
+        hugeSuccess: `被高瓴资本收购整合进宠物医疗集团回报6倍。`,
+        moderateSuccess: `在一二线城市宠物医院连锁做到头部回报3倍。`,
+        breakeven: `宠物医院监管趋严，合规成本大幅上升侵蚀利润。`,
+        failure: `过度扩张导致医疗事故频发，兽医人才流失严重。`
+    }
+}, {
+    id: `p_2021_toy`,
+    name: `泡泡潮玩`,
+    tagline: `潮流玩具+盲盒+IP孵化，想做中国的泡泡玛特第二`,
+    sector: `consumer`,
+    round: `series_b`,
+    valuation: 143,
+    investmentAmount: 20,
+    riskHint: `盲盒之途已由泡泡玛特垄断，复刻之难甚巨。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .25,
+    potentialMultiplier: 8,
+    chainEventTags: [`consumer_boom`, `consumer_bust`],
+    outcomes: {
+        hugeSuccess: `签约当红设计师+联名款爆火出圈，港股上市回报10倍。`,
+        moderateSuccess: `在二次元和国潮IP细分站稳回报3倍。`,
+        breakeven: `盲盒退潮+IP生命周期短，爆款之后再无爆款。`,
+        failure: `核心设计师被挖走，IP储备枯竭，复购率崩塌。`
+    }
+}, {
+    id: `p_2021_cobot`,
+    name: `盛协同造`,
+    tagline: `协作机器人，工厂产线灵活部署，人机协作`,
+    sector: `ai`,
+    round: `series_b`,
+    valuation: 143,
+    investmentAmount: 20,
+    riskHint: `发那科、ABB等传统巨头正推出协作产品线。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .3,
+    potentialMultiplier: 8,
+    chainEventTags: [`national_support`, `deep_tech`],
+    outcomes: {
+        hugeSuccess: `被美的收购整合进库卡机器人体系回报9倍。`,
+        moderateSuccess: `在3C电子装配场景大量部署回报3倍。`,
+        breakeven: `工业巨头推出更具性价比的协作方案，创业公司无力竞争。`,
+        failure: `核心零部件被卡脖子，供应链危机下无法交付。`
+    }
+}, {
+    id: `p_2021_consumer3`,
+    name: `王饱饱食`,
+    tagline: `健康轻食品牌，代餐奶昔+蛋白棒，和元气伙伴争夺年轻人的胃`,
+    sector: `consumer`,
+    round: `series_a`,
+    valuation: 134,
+    investmentAmount: 12,
+    riskHint: `代餐之途同质化甚重，品牌忠诚度低。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .3,
+    potentialMultiplier: 5,
+    chainEventTags: [`consumer_boom`, `consumer_bust`],
+    outcomes: {
+        hugeSuccess: `被汤臣倍健收购作为年轻化子品牌回报7倍。`,
+        moderateSuccess: `在健身和减脂人群中建立品牌心智回报2倍。`,
+        breakeven: `代餐热度退潮，复购率持续走低估值腰斩。`,
+        failure: `产品同质化严重，价格战下毛利归零。`
+    }
+}, {
+    id: `p_2022_aigc_text`,
+    name: `月言灵科`,
+    tagline: `打造中国版OpenAI，自研百亿参数大语言模型`,
+    sector: `aigc`,
+    round: `angel`,
+    valuation: 200,
+    investmentAmount: 20,
+    min人脉网络: 30,
+    riskHint: `团队仅三人，皆为博士，产品为零，唯余PPT。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .2,
+    potentialMultiplier: 40,
+    chainEventTags: [`aigc_boom`, `deepseek_impact`],
+    outcomes: {
+        hugeSuccess: `技术突破+开源策略获巨大关注成为大模型赛道头部公司回报50倍——但你在估值最高时退出了吗？`,
+        moderateSuccess: `在垂直领域找到PMF被互联网巨头收购回报5倍。`,
+        breakeven: `大模型太烧钱A轮后无法继续融资，团队被大厂收编收回成本。`,
+        failure: `DeepSeek开源后技术路线被完全碾压，投资清零。在一个赢家通吃的赛道里第二名什么都不是。`
+    }
+}, {
+    id: `p_2022_aigc_code`,
+    name: `智谱码灵`,
+    tagline: `AI编程助手，提升程序员50%效率，已沉淀100万行代码库`,
+    sector: `aigc`,
+    round: `series_a`,
+    valuation: 60,
+    investmentAmount: 18,
+    riskHint: `GitHub Copilot已占先机，国内付费之愿待验证。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .35,
+    potentialMultiplier: 12,
+    chainEventTags: [`aigc_boom`],
+    outcomes: {
+        hugeSuccess: `中文编程场景理解领先，企业版被华为和字节采购回报15倍。`,
+        moderateSuccess: `在金融和政务信创市场站稳回报4倍。`,
+        breakeven: `大厂推出免费竞品，独立工具的生存空间被急剧压缩。`,
+        failure: `程序员普遍不信任AI生成的代码，产品使用率始终上不去。`
+    }
+}, {
+    id: `p_2023_overseas`,
+    name: `SHE航电商`,
+    tagline: `中国供应链+TikTok流量=出海DTC品牌矩阵`,
+    sector: `overseas`,
+    round: `series_a`,
+    valuation: 60,
+    investmentAmount: 18,
+    riskHint: `地缘政治之险，随时可能被制裁或封禁。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .35,
+    potentialMultiplier: 12,
+    chainEventTags: [`overseas`, `geopolitics`],
+    outcomes: {
+        hugeSuccess: `TikTok红利+中国供应链效率，品牌在东南亚和中东爆火收入过十亿美元回报15倍。`,
+        moderateSuccess: `东南亚站稳脚跟稳扎稳打年利润过亿回报3倍。`,
+        breakeven: `地缘政治导致主要市场被封，被迫收缩估值缩水。`,
+        failure: `TikTok在关键市场被禁，公司一夜之间失去90%流量来源。`
+    }
+}, {
+    id: `p_2023_energy_storage`,
+    name: `东宁储能`,
+    tagline: `工商业储能解决方案，AI优化充放电策略`,
+    sector: `new_energy`,
+    round: `series_b`,
+    valuation: 120,
+    investmentAmount: 22,
+    riskHint: `储能之途产能过剩，价格之战已然开启。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .3,
+    potentialMultiplier: 8,
+    chainEventTags: [`national_support`],
+    outcomes: {
+        hugeSuccess: `工商业储能政策红利+AI优化效果显著，科创板上市回报10倍。`,
+        moderateSuccess: `在长三角和珠三角园区站稳，年订单破50亿回报3倍。`,
+        breakeven: `储能电芯价格雪崩，在手订单大面积取消估值腰斩。`,
+        failure: `安全事故引发全行业整顿，公司被无限期停产。`
+    }
+}, {
+    id: `p_2023_aidrug`,
+    name: `盛智药科`,
+    tagline: `AI驱动的创新药研发平台，已有一个分子进入临床`,
+    sector: `healthcare`,
+    round: `series_b`,
+    valuation: 180,
+    investmentAmount: 25,
+    min人脉网络: 30,
+    riskHint: `新药研发成功率不及一成，纵有AI加持。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .2,
+    potentialMultiplier: 25,
+    chainEventTags: [`ai_boom`, `national_support`],
+    outcomes: {
+        hugeSuccess: `AI发现的新分子在临床二期数据惊艳，被辉瑞高价授权回报30倍。`,
+        moderateSuccess: `CRO服务模式验证，为药企提供AI筛选服务稳定盈利回报4倍。`,
+        breakeven: `临床数据不如预期，AI制药的光环褪去融资困难。`,
+        failure: `核心管线临床失败——这是制药行业每天都在发生的事，AI并没有改变概率。`
+    }
+}, {
+    id: `p_2024_embodied`,
+    name: `优灵动器`,
+    tagline: `通用人形机器人，具身智能+大模型驱动`,
+    sector: `ai`,
+    round: `series_a`,
+    valuation: 400,
+    investmentAmount: 28,
+    min人脉网络: 35,
+    riskHint: `技术路线未定，商业化至少还需5-10年`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .15,
+    potentialMultiplier: 35,
+    chainEventTags: [`embodied_ai`, `deep_tech`],
+    outcomes: {
+        hugeSuccess: `具身智能赛道被资本狂热追捧一年内三轮融资估值暴涨至50亿美元回报超40倍——公司还没收入。`,
+        moderateSuccess: `专注工业场景机械臂找到PMF稳健增长回报3倍。`,
+        breakeven: `具身智能的ChatGPT时刻迟迟不来，烧完钱后估值腰斩。`,
+        failure: `投资人意识到人形机器人商业化比预期困难得多，赛道估值雪崩清零。`
+    }
+}, {
+    id: `p_2024_metaverse`,
+    name: `盛界空间`,
+    tagline: `企业级元宇宙协作平台，VR会议+虚拟展厅`,
+    sector: `pc_internet`,
+    round: `series_a`,
+    valuation: 80,
+    investmentAmount: 20,
+    riskHint: `元宇宙之概念退潮，企业买单之愿存疑。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .15,
+    potentialMultiplier: 8,
+    chainEventTags: [`high_burn`],
+    outcomes: {
+        hugeSuccess: `在少数行业（汽车设计、房地产）找到刚需场景回报6倍。`,
+        moderateSuccess: `被苹果Vision Pro生态看中纳入合作伙伴回报3倍。`,
+        breakeven: `元宇宙概念降温后融资困难，烧完钱后估值回到起点。`,
+        failure: `没有人真的想在VR里开会。这是典型的"技术找需求"的失败。`
+    }
+}, {
+    id: `p_2024_synbio`,
+    name: `蓝晶合纪`,
+    tagline: `合成生物学平台，微生物发酵生产高价值化合物`,
+    sector: `healthcare`,
+    round: `series_a`,
+    valuation: 90,
+    investmentAmount: 18,
+    riskHint: `从实验室到量产之"死亡之谷"。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .25,
+    potentialMultiplier: 12,
+    chainEventTags: [`deep_tech`, `national_support`],
+    outcomes: {
+        hugeSuccess: `在化妆品原料方向率先量产，成本比化工路线低60%回报15倍。`,
+        moderateSuccess: `与华熙生物战略合作，代工+自有品牌双轮驱动回报4倍。`,
+        breakeven: `量产放大遇到瓶颈，产出效率远低于实验室水平。`,
+        failure: `菌株在工业发酵罐中表现远不如培养皿——这是合成生物学最常见的死法。`
+    }
+}, {
+    id: `p_2025_lowalt`,
+    name: `亿航翼科`,
+    tagline: `eVTOL电动垂直起降飞行器，低空经济核心玩家`,
+    sector: `new_energy`,
+    round: `series_b`,
+    valuation: 350,
+    investmentAmount: 30,
+    riskHint: `适航认证之期漫长，空域管理之政策未明。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .2,
+    potentialMultiplier: 20,
+    chainEventTags: [`national_support`, `deep_tech`],
+    outcomes: {
+        hugeSuccess: `低空经济政策密集出台，深圳-广州航线获批运营回报25倍。`,
+        moderateSuccess: `在物流无人机领域率先商业化回报5倍。`,
+        breakeven: `适航认证进展缓慢，烧钱速度远超预期估值下修。`,
+        failure: `一起事故引发全社会对低空飞行安全的质疑，行业被监管冰封。`
+    }
+}, {
+    id: `p_2025_aigc_video`,
+    name: `盛幻科技`,
+    tagline: `AI视频生成，输入文案自动生成短视频`,
+    sector: `aigc`,
+    round: `series_a`,
+    valuation: 150,
+    investmentAmount: 22,
+    min人脉网络: 25,
+    riskHint: `Sora与国内大厂皆在做，创业公司差异化维艰。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .25,
+    potentialMultiplier: 25,
+    chainEventTags: [`aigc_boom`, `deepseek_impact`],
+    outcomes: {
+        hugeSuccess: `在电商视频生成场景做到极致，被字节收购回报30倍。`,
+        moderateSuccess: `与抖音电商深度合作成为官方工具回报5倍。`,
+        breakeven: `大厂自研视频模型效果超越，创业公司的护城河不够深。`,
+        failure: `视频生成赛道一夜之间变成红海，你的技术优势只维持了三个月。`
+    }
+}, {
+    id: `p_2022_aigc_rival`,
+    name: `千象智能`,
+    tagline: `多模态大模型，文本+图片+视频统一架构，与言灵科技的纯文本路线正面竞争`,
+    sector: `aigc`,
+    round: `series_a`,
+    valuation: 550,
+    investmentAmount: 22,
+    min人脉网络: 35,
+    riskHint: `多模态训练之费比纯文本高一数量级。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .2,
+    potentialMultiplier: 35,
+    chainEventTags: [`aigc_boom`, `deepseek_impact`],
+    outcomes: {
+        hugeSuccess: `视觉+语言多模态能力被市场验证，被阿里高价收购回报40倍。`,
+        moderateSuccess: `在视频理解和生成场景找到PMF回报5倍。`,
+        breakeven: `训练一次模型烧掉一轮融资，算力成本吃掉所有想象空间。`,
+        failure: `DeepSeek开源多模态模型后技术路线被完全覆盖。`
+    }
+}, {
+    id: `p_2022_quantum`,
+    name: `本源子跃`,
+    tagline: `超导量子计算芯片+云平台，目标1000量子比特`,
+    sector: `semiconductor`,
+    round: `series_a`,
+    valuation: 730,
+    investmentAmount: 25,
+    min人脉网络: 40,
+    riskHint: `量子计算商业化至少尚需十年。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .1,
+    potentialMultiplier: 60,
+    chainEventTags: [`deep_tech`, `national_support`],
+    outcomes: {
+        hugeSuccess: `量子优越性实验被Nature收录，估值翻十倍回报80倍——但公司还没收入。`,
+        moderateSuccess: `在量子化学模拟领域找到早期应用场景回报5倍。`,
+        breakeven: `技术路线重大调整，之前的研发投入全部打水漂。`,
+        failure: `MIT团队实现量子纠错突破后，你的技术路线被碾压。`
+    }
+}, {
+    id: `p_2023_fusion`,
+    name: `质能奇点`,
+    tagline: `小型化可控核聚变装置，磁约束路线`,
+    sector: `new_energy`,
+    round: `series_b`,
+    valuation: 486,
+    investmentAmount: 30,
+    min人脉网络: 45,
+    riskHint: `核聚变从实验室到电网至少还需20年`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .05,
+    potentialMultiplier: 100,
+    chainEventTags: [`deep_tech`, `national_support`],
+    outcomes: {
+        hugeSuccess: `等离子体约束时间记录被打破，Nature封面+政府订单回报120倍——但商业发电还差得远。`,
+        moderateSuccess: `聚变衍生技术(中子源/材料测试)意外找到商业应用回报5倍。`,
+        breakeven: `在政府项目和科研经费中勉强生存，商业回报遥遥无期。`,
+        failure: `托卡马克装置爆炸——物理原因至今不明，公司关闭。`
+    }
+}, {
+    id: `p_2023_space`,
+    name: `盛途航天`,
+    tagline: `商业运载火箭，小型卫星拼车发射`,
+    sector: `new_energy`,
+    round: `series_b`,
+    valuation: 375,
+    investmentAmount: 28,
+    min人脉网络: 35,
+    riskHint: `商业航天烧钱之速堪比印钞。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .15,
+    potentialMultiplier: 30,
+    chainEventTags: [`deep_tech`, `national_support`],
+    outcomes: {
+        hugeSuccess: `连续三次成功发射后被国家航天局纳入供应商体系回报35倍。`,
+        moderateSuccess: `在遥感卫星星座组网中找到稳定订单回报4倍。`,
+        breakeven: `一次发射失败炸掉了全年的收入。`,
+        failure: `火箭发射失败+保险拒赔+客户索赔=死亡三重奏。`
+    }
+}, {
+    id: `p_2023_aisafety`,
+    name: `恒安齐智`,
+    tagline: `AI安全与对齐，确保大模型行为可控可解释`,
+    sector: `aigc`,
+    round: `series_a`,
+    valuation: 282,
+    investmentAmount: 10,
+    riskHint: `AI安全之市场需求尚在概念之境。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .3,
+    potentialMultiplier: 15,
+    chainEventTags: [`aigc_boom`, `national_support`],
+    outcomes: {
+        hugeSuccess: `AI监管法规密集出台，成为行业合规标配工具被蚂蚁集团收购回报20倍。`,
+        moderateSuccess: `政府和金融行业AI审计刚需回报5倍。`,
+        breakeven: `AI安全概念大于实质，企业买单意愿有限。`,
+        failure: `OpenAI/Anthropic自研安全方案成为行业标准，第三方工具被边缘化。`
+    }
+}, {
+    id: `p_2024_datalabel`,
+    name: `龙猫标英`,
+    tagline: `AI数据标注众包平台，大模型RLHF核心供应商`,
+    sector: `aigc`,
+    round: `series_b`,
+    valuation: 349,
+    investmentAmount: 18,
+    riskHint: `大模型合成数据正替代人工标注。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .3,
+    potentialMultiplier: 5,
+    chainEventTags: [`aigc_boom`],
+    outcomes: {
+        hugeSuccess: `成为智谱/月之暗面/百川的核心标注供应商，港股上市回报6倍。`,
+        moderateSuccess: `在专业领域标注建立壁垒(医疗/法律/金融)回报3倍。`,
+        breakeven: `GPT-5级别的合成数据质量远超人工，标注需求大幅萎缩。`,
+        failure: `一个标注员被曝恶意污染数据，客户批量解约。`
+    }
+}, {
+    id: `p_2024_digitalhuman`,
+    name: `硅基分身`,
+    tagline: `AI数字人直播+短视频生成，24小时不间断带货`,
+    sector: `aigc`,
+    round: `series_b`,
+    valuation: 228,
+    investmentAmount: 15,
+    riskHint: `平台对数字人直播之政策态度未明。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .3,
+    potentialMultiplier: 8,
+    chainEventTags: [`aigc_boom`, `regulatory_risk`],
+    outcomes: {
+        hugeSuccess: `抖音开放数字人直播权限后需求爆发回报10倍。`,
+        moderateSuccess: `品牌定制数字人+私域运营模式跑通回报3倍。`,
+        breakeven: `平台突然禁止AI数字人直播，所有客户一夜停用。`,
+        failure: `数字人直播被315点名——缺乏真实性和误导消费者。`
+    }
+}, {
+    id: `p_2024_web3`,
+    name: `趣链未来`,
+    tagline: `Web3创作者经济平台，NFT+Token激励`,
+    sector: `fintech`,
+    round: `series_a`,
+    valuation: 132,
+    investmentAmount: 12,
+    riskHint: `Web3之概念在中国面临严格监管。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .1,
+    potentialMultiplier: 20,
+    chainEventTags: [`regulatory_risk`, `overseas`],
+    outcomes: {
+        hugeSuccess: `在海外市场找到PMF，Token被币安上线回报30倍——但你在国内卖不了币。`,
+        moderateSuccess: `合规化转型做数字版权交易平台回报3倍。`,
+        breakeven: `中国明确禁止加密货币相关业务，国内业务全部关停。`,
+        failure: `Token价格归零+黑客攻击盗走用户资产，团队解散跑路。`
+    }
+}, {
+    id: `p_2025_aicustomer`,
+    name: `MiniMax言`,
+    tagline: `基于大模型的智能客服，完全替代传统话术机器人，灵犀智能的下一代竞品`,
+    sector: `aigc`,
+    round: `series_b`,
+    valuation: 349,
+    investmentAmount: 18,
+    riskHint: `大模型幻觉之疾于客服之境可能致命。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .3,
+    potentialMultiplier: 10,
+    chainEventTags: [`aigc_boom`],
+    outcomes: {
+        hugeSuccess: `在银行和保险行业大量部署，替代人工客服50%工作量回报12倍。`,
+        moderateSuccess: `作为传统客服厂商的AI升级方案被集成回报4倍。`,
+        breakeven: `一个AI客服对客户说出了不该说的话，引发舆情危机。`,
+        failure: `大模型幻觉问题始终无法根治，大客户POC后均未签单。`
+    }
+}, {
+    id: `p_2025_embodied2`,
+    name: `越疆铁臂`,
+    tagline: `工业双臂机器人+具身智能，汽车装配场景，与灵动机器人的通用人形路线差异化`,
+    sector: `ai`,
+    round: `series_b`,
+    valuation: 550,
+    investmentAmount: 22,
+    riskHint: `工业机器人四大巨头已垄断汽车产线。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .3,
+    potentialMultiplier: 10,
+    chainEventTags: [`embodied_ai`, `national_support`],
+    outcomes: {
+        hugeSuccess: `被比亚迪战略投资+批量采购，成为其超级工厂核心供应商回报12倍。`,
+        moderateSuccess: `在汽车总装环节实现柔性自动化突破回报4倍。`,
+        breakeven: `工业客户决策周期极长，烧钱速度跟不上签单速度。`,
+        failure: `被发那科的新产品线直接竞争，价格和技术双重碾压。`
+    }
+}, {
+    id: `p_2015_overseas_tool`,
+    name: `店小秘境`,
+    tagline: `跨境电商ERP+物流一站式SaaS，帮助中国卖家管理多平台店铺`,
+    sector: `overseas`,
+    round: `series_a`,
+    valuation: 120,
+    investmentAmount: 12,
+    riskHint: `跨境电商平台自建工具正替代第三方SaaS。`,
+    era: `era_o2o_goldrush`,
+    successBaseRate: .35,
+    potentialMultiplier: 6,
+    chainEventTags: [`overseas`, `saas_growth`],
+    outcomes: {
+        hugeSuccess: `被Shopify收购整合进其中国商家工具回报8倍。`,
+        moderateSuccess: `在亚马逊卖家群体中建立口碑ARR过亿回报3倍。`,
+        breakeven: `亚马逊自建工具免费化，第三方SaaS被边缘化。`,
+        failure: `跨境平台封号潮席卷行业，客户批量流失。`
+    }
+}, {
+    id: `p_2019_overseas_game`,
+    name: `米哈海游`,
+    tagline: `中国手游出海发行商，专注东南亚和中东市场本地化`,
+    sector: `overseas`,
+    round: `series_b`,
+    valuation: 200,
+    investmentAmount: 20,
+    riskHint: `海外用户获取之费持续上升，本地化之难被低估。`,
+    era: `era_hardtech_consumer`,
+    successBaseRate: .3,
+    potentialMultiplier: 10,
+    chainEventTags: [`overseas`],
+    outcomes: {
+        hugeSuccess: `两款SLG游戏进入中东畅销榜前三被腾讯收购回报12倍。`,
+        moderateSuccess: `在印尼和沙特建立本地化壁垒年利润破5亿回报4倍。`,
+        breakeven: `本地化成本远超预期，一款大作的失败抹平了所有利润。`,
+        failure: `文化冲突+政策变化+竞品围剿，三重压力下退出多个市场。`
+    }
+}, {
+    id: `p_2024_overseas_ai`,
+    name: `特看AI`,
+    tagline: `AI配音+字幕+本地化一站式平台，帮中国视频内容走向全球`,
+    sector: `overseas`,
+    round: `series_a`,
+    valuation: 150,
+    investmentAmount: 15,
+    min人脉网络: 20,
+    riskHint: `AI翻译之质仍有差距，文化适配比语言翻译更难。`,
+    era: `era_aigc_newcycle`,
+    successBaseRate: .3,
+    potentialMultiplier: 15,
+    chainEventTags: [`overseas`, `aigc_boom`],
+    outcomes: {
+        hugeSuccess: `成为TikTok创作者首选工具ARR爆发被字节收购回报20倍。`,
+        moderateSuccess: `在短剧出海细分赛道建立垄断地位回报5倍。`,
+        breakeven: `大厂推出免费竞品，独立工具的付费转化率远低于预期。`,
+        failure: `翻译质量被用户群嘲，品牌声誉一落千丈。`
+    }
+}];
+
+function le(e, t) {
+    let n = [...e];
+    for (let e = n.length - 1; e > 0; e--) {
+        let r = Math.floor(t.next() * (e + 1));
+        [n[e], n[r]] = [n[r], n[e]]
+    }
+    return n
+}
+
+function ue(e, t, n, r, i, a, o) {
+    let s = ce.filter(r => !(r.era !== e || r.min人脉网络 && t < r.min人脉网络 || r.minTrackRecord && n < r.minTrackRecord));
+    s = s.filter(e => !a.includes(e.id));
+    let c = s.filter(e => !i.includes(e.id));
+    if (c.length >= 3 && (s = c), s.length === 0) return {
+        regular: le(ce.filter(t => t.era === e), o).slice(0, 3),
+        insider: null
+    };
+    let l = r === `partner` ? 5 : 3,
+        u = Math.floor(t / 15),
+        d = le(s, o).slice(0, l + u);
+    d.sort((e, t) => t.potentialMultiplier - e.potentialMultiplier);
+    let f = le(d.slice(0, l), o),
+        p = null;
+    if (t >= 25 && o.next() < .3) {
+        let e = s.filter(e => e.successBaseRate >= .3 && !f.some(t => t.id === e.id));
+        if (e.length > 0) {
+            let n = le(e, o),
+                r = Math.floor((t - 25) / 20),
+                i = n.slice(0, 1 + r);
+            i.sort((e, t) => t.successBaseRate - e.successBaseRate), p = i[0], p = {
+                ...p,
+                successBoost: .15
+            }
+        }
+    }
+    return {
+        regular: f,
+        insider: p
+    }
+}
+
+function T(e) {
+    return e <= 10 ? 0 : e <= 25 ? 1 : e <= 40 ? 2 : e <= 55 ? 3 : e <= 70 ? 4 : e <= 85 ? 5 : 6
+}
+
+function E(e, t) {
+    let n = T(e);
+    return t ? Math.min(6, n + 1) : n
+}
+var de = {
+    0: [42, 42, 13, 3],
+    1: [35, 44, 16, 5],
+    2: [30, 44, 19, 7],
+    3: [27, 43, 22, 8],
+    4: [25, 41, 24, 10],
+    5: [23, 40, 26, 11],
+    6: [22, 38, 27, 13]
+};
+
+function fe(e, t, n, r) {
+    let [i, a, o] = de[E(t, n)], s = (e.successBaseRate - .35) * .15, c = e.successBoost || 0, l = r.next(), u, d, f = i / 100 - s - c, p = f + a / 100 + c * .4, m = p + o / 100 + c * .4;
+    l < Math.max(.02, f) ? (u = `failure`, d = 0) : l < p ? (u = `breakeven`, d = .8 + r.next() * .4) : l < m ? (u = `moderate_success`, d = e.potentialMultiplier * (.3 + r.next() * .3)) : (u = `huge_success`, d = e.potentialMultiplier * (.8 + r.next() * .4));
+    let h = e.outcomes[u === `huge_success` ? `hugeSuccess` : u === `moderate_success` ? `moderateSuccess` : u === `breakeven` ? `breakeven` : `failure`];
+    return {
+        tier: u,
+        returnMultiple: d,
+        text: h
+    }
+}
+
+function pe(e) {
+    switch (e) {
+        case `huge_success`:
+            return {
+                trackRecord: 18, network: 5
+            };
+        case `moderate_success`:
+            return {
+                trackRecord: 10, network: 3
+            };
+        case `breakeven`:
+            return {
+                trackRecord: 2, network: 1
+            };
+        case `failure`:
+            return {
+                trackRecord: -8, network: -3
+            }
+    }
+}
+var me = [{
+    id: `ev_career_poach`,
+    title: `The Offer You Can't Refuse`,
+    description: `风念资本的rival——Wonolith Capital——通过顶级猎头contact了你。他们正在组建全新的TMT投资团队，诚意邀请你加盟。Package极具诱惑力：base翻倍，carry分配比例提升，外加一笔可观的signing bonus。然而你与现任mentor情谊深厚，且竞业协议尚有两年之期。那是属于精英阶层的甜蜜烦恼。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => n.length >= 5,
+    choices: [{
+        text: `Accept Offer，加入Wonolith`,
+        outcome: {
+            description: `你带着一身本事jump到新平台。老同事不太好再联系，但新基金给了你更大的管理规模和independent decision making。Future充满了新的possibilities。`,
+            statChanges: {
+                network: -18,
+                aum: 12,
+                trackRecord: 13
+            }
+        }
+    }, {
+        text: `婉拒，留在风念资本`,
+        outcome: {
+            description: `你决定loyal于老东家。mentor听说后拍了拍你的肩膀："我没看错你。"投资业绩+5。但夜深人静时，你偶尔会wonder——如果当时选了另一条路呢？`,
+            statChanges: {
+                trackRecord: 13,
+                network: 8
+            }
+        }
+    }, {
+        text: `跟现老板negotiate，谈terms`,
+        outcome: {
+            description: `你把Wonolith的offer放在了老板桌上。这是一场high stakes gamble——要么拿到更好的package，要么被贴上"not loyal"的标签。`,
+            statChanges: {
+                aum: 10,
+                trackRecord: -12
+            }
+        },
+        requirement: {
+            trackRecord: 55
+        }
+    }]
+}, {
+    id: `ev_career_startup`,
+    title: `Entrepreneurial Itch`,
+    description: `你投的一个项目的founder请你喝咖啡。他说："你比我们见过的任何一个investor都更懂这个sector。与其把钱给别人burn，不如你自己来做。"他邀请你做co-founder。这是一个从"investor"变成"operator"的机会。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => n.length >= 4,
+    choices: [{
+        text: `Accept！离开VC，加入startup`,
+        outcome: {
+            description: `你摘下了投资人的标签，走进了创业者的世界。从今天起，你要自己画饼、自己募资、自己面对那些曾经属于你的问题。游戏提前结束——但这不是失败，这是另一条路的开始。`,
+            statChanges: {},
+            specialEffect: `ending_entrepreneur`
+        }
+    }, {
+        text: `Decline，继续做investment`,
+        outcome: {
+            description: `你礼貌地拒绝了。但回到办公室后，你看每一份BP的眼光都变了——你更理解那些数字背后的挣扎。人脉网络+5（创始人们更信任你了）。`,
+            statChanges: {
+                network: 13
+            }
+        }
+    }]
+}, {
+    id: `ev_career_politics`,
+    title: `Office Politics 101`,
+    description: `你在IC上一战成名——连续四个deal都hit home run。但最近你发现，你的partner开始在meeting上微妙地challenge你的view，还把你sourced的deal私下介绍给他portfolio里的一家competitor fund。Office politics，来了。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => e.trackRecord > 70,
+    choices: [{
+        text: `正面confront，找managing partner谈`,
+        outcome: {
+            description: `你直接找到基金的创始合伙人，摊开来说了。大老板欣赏你的勇气，但也警告你：这个行业很小，小心行事。投资业绩+3，但人脉网络-8（有人觉得你不好合作）。`,
+            statChanges: {
+                trackRecord: 8,
+                network: -14
+            }
+        }
+    }, {
+        text: `默默position，伺机而动`,
+        outcome: {
+            description: `你开始为自己的下一步打算。加了几个猎头的微信，也婉转地在几个行业聚会上露了面。人脉网络+5，但投资业绩-3（心思不在deal上了）。`,
+            statChanges: {
+                network: 13,
+                trackRecord: -7
+            }
+        }
+    }, {
+        text: `忍了，专注做好自己的deal`,
+        outcome: {
+            description: `你决定用业绩说话。你更加努力地看项目、做尽调。健康-3（加班太多），但你的下一个deal确实更扎实了。`,
+            statChanges: {
+                health: -7,
+                trackRecord: 5
+            }
+        }
+    }]
+}, {
+    id: `ev_chain_scandal`,
+    title: `The 2AM Call`,
+    description: `凌晨两点，你被手机铃声吵醒。是你两年前投的一个项目的co-founder——他声音发抖："我们被short了。有人发了一篇anonymous report，说我们data造假。明天开盘stock price至少要plummet。"`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.some(e => [`p_2015_ai`, `p_2018_consumer`, `p_2020_edtech`].includes(e.projectId)),
+    choices: [{
+        text: `公开发声support创始人`,
+        outcome: {
+            description: `你发表了一封公开信，表示相信公司的fundamentals。这是一场take sides——如果公司真有问题，你的投资业绩也会跟着一起sink。`,
+            statChanges: {
+                trackRecord: -12,
+                network: 8
+            }
+        }
+    }, {
+        text: `私下协助公司善后，low profile处理`,
+        outcome: {
+            description: `你帮创始人联系了律师和公关团队，没有公开表态。如果风波过去，你既不会受损也不会受益。健康-5（这几天没合眼）。`,
+            statChanges: {
+                health: -12
+            }
+        }
+    }, {
+        text: `果断exit，止损cut loss`,
+        outcome: {
+            description: `你以最快速度在secondary market卖掉了stake，损失惨重但保留了元气。Founder发了条朋友圈："患难见人心"。你的人脉网络-10，但管理规模保住了。`,
+            statChanges: {
+                network: -18,
+                trackRecord: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_chain_acquisition`,
+    title: `Exit Opportunity`,
+    description: `某BAT的战略投资部门发来email：他们想acquire你投的一家公司，offer是你投资成本的8x。Founder很hesitate——他想继续independent发展。你有board seat，需要make a call。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.some(e => e.outcome === `moderate_success` || e.outcome === `huge_success`),
+    choices: [{
+        text: `支持acquisition，落袋为安`,
+        outcome: {
+            description: `你说服了founder接受acquisition。8x return落袋，LP们对你的决策赞不绝口。但你心里清楚——这家公司如果independent发展，可能值20x。管理规模+10，投资业绩+5。`,
+            statChanges: {
+                aum: 15,
+                trackRecord: 13
+            }
+        }
+    }, {
+        text: `支持创始人继续independent发展`,
+        outcome: {
+            description: `你投了信任票。创始人感激涕零，发誓要做出更大的成绩。但你不知道这是加倍的回报，还是加倍的风险。人脉网络+5。`,
+            statChanges: {
+                network: 13
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2008_crisis`,
+    title: `Lehman Moment`,
+    description: `2008年9月，Lehman Brothers破产。Global financial crisis爆发。美元LP的电话此起彼伏——他们在问同一个question："我们的capital还safe吗？"你所在的fund面临LP redemption pressure，IC决定tighten投资。今年的investment quota被cut了一半。`,
+    era: `era_pc_internet`,
+    year: 2008,
+    category: `era_milestone`,
+    choices: [{
+        text: `保守行事，只投safe bets`,
+        outcome: {
+            description: `你在winter中保存了dry powder。危机过后，你的管理规模没有shrink太多，但你也错过了crisis中诞生的最好的deal。管理规模保住了。`,
+            statChanges: {
+                trackRecord: -5
+            }
+        }
+    }, {
+        text: `Contrarian，在别人fear时greedy`,
+        outcome: {
+            description: `你拿出personal资源co-invest了两个early-stage项目。这是一个巨大的bet——如果judgment错了，你在行业的career可能就到此为止了。但如果你是对的……`,
+            statChanges: {
+                aum: -4,
+                trackRecord: 13,
+                health: -12
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2014_innovation`,
+    title: `Mass Innovation Era`,
+    description: `总理在中关村创业大街喝了一杯coffee。第二天，全国人民的WeChat Moments都被"创业"刷屏了。市场上的hot money突然多了三倍，每一个coffee shop里都有人在谈valuation。你收到的BP从每周五份变成了每天五十份。`,
+    era: `era_o2o_goldrush`,
+    year: 2014,
+    category: `era_milestone`,
+    choices: [{
+        text: `拥抱泡沫，accelerate投资节奏`,
+        outcome: {
+            description: `你加入了这场party。投了三个项目——你知道其中至少两个会die，但survive的那个可能改变一切。管理规模+5，投资业绩取决于luck。`,
+            statChanges: {
+                aum: 10,
+                health: -7
+            }
+        }
+    }, {
+        text: `保持冷静，只投看得懂的business`,
+        outcome: {
+            description: `你拒绝了大部分BP，只投了一个扎扎实实的项目。同事笑你太保守。但你说："泡沫总会破的，我等得起。"投资业绩+3，但你在当年的排名下降了。`,
+            statChanges: {
+                trackRecord: 8,
+                network: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2018_capital_winter`,
+    title: `Capital Winter`,
+    description: `资管新规落地，人民币基金的LP大面积违约。共享单车的大败局成了每一个投决会上的反面教材。"寒冬来了"——行业峰会上每个人都在说这四个字。你的基金今年的募资目标还差40%。`,
+    era: `era_hardtech_consumer`,
+    year: 2018,
+    category: `era_milestone`,
+    choices: [{
+        text: `节流——精简团队，降低出手频率`,
+        outcome: {
+            description: `你不得不layoff两位analyst，其中包括你悉心培养两年的门徒。你告诉自己这是为了基金的survival。健康-5（ guilt ），然管理规模得以保全。`,
+            statChanges: {
+                health: -12,
+                network: -12
+            }
+        }
+    }, {
+        text: `开源——硬着头皮去募资`,
+        outcome: {
+            description: `你飞了38个城市，见了超过100个LP。被拒绝了79次。但有两个LP最终答应出资。你的管理规模没有缩水，但健康-10。`,
+            statChanges: {
+                aum: 10,
+                health: -20,
+                trackRecord: 8
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2020_covid`,
+    title: `Black Swan Event`,
+    description: `新冠疫情席卷全球。你的被投公司里有做线下消费的、做旅游的、做线下教育的——都在求救命钱。但同时，你投的线上医疗和远程办公项目突然被各家VC疯狂追捧。你手头还有一笔可调配的资金，但只够救一家。`,
+    era: `era_hardtech_consumer`,
+    year: 2020,
+    category: `era_milestone`,
+    choices: [{
+        text: `追加投资最需要救命钱的被投公司`,
+        outcome: {
+            description: `你把钱给了最艰难的那家公司。创始人哭了。虽然不知道这笔钱能撑多久，但至少你做了你认为对的事情。人脉网络+8（创始人圈口口相传），但管理规模-5。`,
+            statChanges: {
+                network: 14,
+                aum: -10
+            }
+        }
+    }, {
+        text: `把钱投给疫情中爆发的赛道`,
+        outcome: {
+            description: `你冷血地选择了效率最大化的方案。被放弃的那家公司的创始人给你发了很长的一条微信，你没有回复。管理规模+8，但你在行业里的口碑变得微妙。`,
+            statChanges: {
+                aum: 12,
+                network: -14,
+                trackRecord: 8
+            }
+        }
+    }, {
+        text: `两边各给一半，暂时稳住局面`,
+        outcome: {
+            description: `你选择了折中方案。两边都不够，但两边都暂时活了下来。你赢得了时间，但没有解决根本问题。健康-3（巨大的压力）。`,
+            statChanges: {
+                health: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_anecdote_fa_bp`,
+    title: `FA Pitch Storm`,
+    description: `一个圈内有名的FA给你发了一份200页的BP。项目是一个"用区块链改造农业供应链"的公司。BP的第一页写着：TAM（可寻址市场）4万亿美元。你揉了揉眼睛，确认自己没有看错。`,
+    category: `industry_anecdote`,
+    choices: [{
+        text: `认真读完`,
+        outcome: {
+            description: `你花了三个小时读完了200页。第198页上写着免责声明："以上所有数据均为项目方提供，FA未进行独立核实。"健康-2，但你对行业又多了一层理解。`,
+            statChanges: {
+                health: -2
+            }
+        }
+    }, {
+        text: `直接扔进垃圾桶`,
+        outcome: {
+            description: `你收到了一条来自FA的跟进微信："张总，BP看完了吗？这轮马上要close了，现在不投就来不及了。"你没有回复。这是你今年做得最正确的决定。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_anecdote_poker`,
+    title: `LP Due Diligence`,
+    description: `一个潜在LP组织了一场德州扑克局。"看看大家的牌品"——LP的合伙人笑着说。你很清楚，这不是在玩游戏。你拿到的牌不好不坏。`,
+    category: `industry_anecdote`,
+    choices: [{
+        text: `稳健打法，小赢即安`,
+        outcome: {
+            description: `你用教科书般的打法赢了一些小局。LP后来评价你："风格稳健，但有点缺乏想象力。"他们的意思可能是褒也可能是贬。管理规模+2。`,
+            statChanges: {
+                aum: 4
+            }
+        }
+    }, {
+        text: `激进下注，秀一把胆识`,
+        outcome: {
+            description: `你All-in了一把。赢了。LP大笑着拍你的肩膀："有胆色！"但你心里清楚——如果刚才输了，你现在可能已经在打道回府的路上。管理规模+5，投资业绩+3。`,
+            statChanges: {
+                aum: 10,
+                trackRecord: 8
+            }
+        }
+    }]
+}, {
+    id: `ev_anecdote_missed_unicorn`,
+    title: `The One That Got Away`,
+    description: `你翻看旧BP的时候发现了一份熟悉的文件——五年前你Pass掉的一个项目。当时你觉得"市场太小，团队太年轻"。现在它的最新一轮估值是300亿。你盯着屏幕沉默了五分钟。`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => r >= 2010,
+    choices: [{
+        text: `算了，谁还没Pass过错的项目呢`,
+        outcome: {
+            description: `你深吸一口气，关掉了文件。这个行业就是这样——你记住的不是你错过了什么，而是你抓住了什么。继续看下一个BP。`,
+            statChanges: {}
+        }
+    }, {
+        text: `托人问创始人，看能不能现在投进去`,
+        outcome: {
+            description: `你辗转联系到创始人。"我们这轮已经close了。"对方礼貌地回复。但对方又补了一句："不过我有个新项目要启动，你要不要先看看？"人脉网络+3。`,
+            statChanges: {
+                network: 8
+            }
+        }
+    }]
+}, {
+    id: `ev_career_fund`,
+    title: `Start My Own Fund`,
+    description: `你在这个行业已经摸爬滚打了足够久。投资业绩够硬，人脉够广，LP也暗示过愿意支持你。是时候考虑创立自己的品牌了——但这也意味着你要离开现在的平台，从零开始搭建团队。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => t === `partner` && e.trackRecord > 60 && e.network > 50,
+    choices: [{
+        text: `说干就干，自立门户`,
+        outcome: {
+            description: `你在华贸租了一间小办公室，挂上了自己的基金招牌。第一天，你坐在空荡荡的会议室里，给你的第一个潜在LP打电话。害怕吗？当然。但你知道——这是你一直想做的事。进入合伙人路线。管理规模打回初始值，但投资业绩和人脉网络带来了新的可能。`,
+            statChanges: {
+                aum: -20,
+                trackRecord: 13,
+                health: -12,
+                network: 13
+            },
+            specialEffect: `start_own_fund`
+        }
+    }, {
+        text: `时机未到，再等等`,
+        outcome: {
+            description: `你按下了暂停键。也许明年，也许后年。但你知道，这个念头一旦出现，就不会消失。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_career_mentor`,
+    title: `The Mentor's Call`,
+    description: `带你入行的mentor约你吃饭。饭吃到一半，他说："我要退休了。我手里的几个LP关系，我想交给你。"这是他从业二十年积累的最核心的资源。但同时，他也提醒你——这个行业的人情债，最难还。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => e.trackRecord > 55,
+    choices: [{
+        text: `感激地接受，承诺不负所托`,
+        outcome: {
+            description: `你接过了mentor的衣钵。管理规模+10，投资业绩+5。但你从此背上了一份沉甸甸的责任——你不能辜负他的信任。`,
+            statChanges: {
+                aum: 15,
+                trackRecord: 13,
+                network: 13
+            }
+        }
+    }, {
+        text: `婉拒——你想靠自己`,
+        outcome: {
+            description: `"谢谢，但我想自己来。"mentor愣了一下，然后笑了："你确实不需要我了。"他为你感到骄傲，但你也失去了一次跃升的机会。投资业绩+3。`,
+            statChanges: {
+                trackRecord: 8
+            }
+        }
+    }]
+}, {
+    id: `ev_chain_founder_divorce`,
+    title: `Founder's WeChat`,
+    description: `你投的一个项目的CEO发来一条微信："张总，我遇到一点个人问题。我家里的事可能影响公司的股权结构。"你心里一沉——创始人的婚姻危机是VC最头疼的问题之一，因为它完全不可控。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.length >= 3,
+    choices: [{
+        text: `马上飞过去，亲自介入调解`,
+        outcome: {
+            description: `你亲自飞到创始人所在的城市，跟夫妻双方分别谈了四个小时。你暂时稳住了局面。但这一趟把你累得够呛。健康-5，人脉网络+3。`,
+            statChanges: {
+                health: -12,
+                network: 8
+            }
+        }
+    }, {
+        text: `让律师处理，你保持距离`,
+        outcome: {
+            description: `你把问题交给了律师团队。专业的人做专业的事。但创始人觉得你不够关心——在他看来，这不是一个法律问题，是信任问题。人脉网络-3。`,
+            statChanges: {
+                network: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_chain_founder_wechat`,
+    title: `Social Media Crisis`,
+    description: `你投的一家公司CEO在朋友圈发了一条动态："某VC投资人，除了会问'你的壁垒是什么'还会什么？"配图是一张空白的PPT。你盯着屏幕——这条朋友圈是不是仅你可见？`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.length >= 2,
+    choices: [{
+        text: `私聊他，问问怎么回事`,
+        outcome: {
+            description: `你发了一条微信："最近压力大？出来喝一杯？"创始人秒回："不好意思，不是说你。"但你注意到他删除了那条朋友圈。人脉网络+2。`,
+            statChanges: {
+                network: 5
+            }
+        }
+    }, {
+        text: `装没看见`,
+        outcome: {
+            description: `你滑过了那条朋友圈。但你默默地在那个项目的备注里加了一条："注意创始人情绪稳定性。"`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_chain_news`,
+    title: `CCTV News`,
+    description: `你投的一个项目上了新闻联播——但不是什么好事。报道提到该行业存在"无序扩张"和"资本野蛮生长"的问题。虽然没有点名，但你的被投公司明显在射程范围内。你的手机开始响了。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.length >= 4,
+    choices: [{
+        text: `紧急联系创始人，制定应对方案`,
+        outcome: {
+            description: `你和创始人连夜开会，制定了业务收缩和公关策略。虽然痛苦，但主动调整总比被动挨打好。管理规模-3（业务缩水），但避免了更大的损失。`,
+            statChanges: {
+                aum: -6,
+                health: -7
+            }
+        }
+    }, {
+        text: `观望——也许只是短期舆论风波`,
+        outcome: {
+            description: `你决定不做反应。但风向比预期转得更快——三个月后，行业整改正式启动。你失去了最佳窗口期。管理规模-8。`,
+            statChanges: {
+                aum: -12
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2023_dollar_retreat`,
+    title: `Dollar Tide Out`,
+    description: `硅谷银行暴雷了。第二天，你所在的基金的美元LP群陷入了沉默。第三天，最大的那个LP发来邮件：他们需要"重新评估对中国市场的配置"。你清楚地感觉到——一个时代正在落幕。而人民币基金的时代，正在开始。`,
+    era: `era_aigc_newcycle`,
+    year: 2023,
+    category: `era_milestone`,
+    choices: [{
+        text: `全力转型，拥抱人民币基金和国资LP`,
+        outcome: {
+            description: `你开始频繁出入各地政府引导基金的办公室。打交道的方式完全不同——他们关心的是产业链、税收和就业，而不是GMV。你花了大量时间学习新的语言体系。管理规模保住了，但人脉网络-5（老圈子的人觉得你变了）。`,
+            statChanges: {
+                network: -12,
+                trackRecord: -7
+            }
+        }
+    }, {
+        text: `坚守美元基金路线，寻找海外LP`,
+        outcome: {
+            description: `你飞到了中东和新加坡，试图开拓新的美元LP。过程极其艰难，但你的坚持让你的基金保持了独立性。管理规模-5（规模缩小了），但投资业绩+5（行业尊重你的坚持）。`,
+            statChanges: {
+                aum: -10,
+                trackRecord: 13,
+                health: -12
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2025_deepseek`,
+    title: `DeepSeek Shockwave`,
+    description: `DeepSeek开源了。整个AI行业的估值体系在一夜之间被重构。你投的所有AI项目都在重新估值——有的翻倍了，有的直接归零。你的被投公司CEO们同时给你发消息，你都不知道该先回谁的。`,
+    era: `era_aigc_newcycle`,
+    year: 2025,
+    category: `era_milestone`,
+    choices: [{
+        text: `快速评估影响，果断调整仓位`,
+        outcome: {
+            description: `你用三天时间完成了所有AI被投公司的紧急评估。有的你追加了投资，有的你果断割肉。果断的决策帮你最大化了收益、最小化了损失。投资业绩+8。`,
+            statChanges: {
+                trackRecord: 14,
+                health: -7,
+                aum: 10
+            }
+        }
+    }, {
+        text: `观望——让子弹飞一会儿`,
+        outcome: {
+            description: `你觉得市场反应过度了。你没有做任何调整。三个月后，你发现自己的判断既对又错——有些项目确实被低估了，但你错失了最佳的加仓窗口。`,
+            statChanges: {
+                trackRecord: -5
+            }
+        }
+    }]
+}, {
+    id: `ev_career_first_ic`,
+    title: `First IC Meeting`,
+    description: `你的mentor通知你：下周投委会，你来present你的第一个deal。你准备了一百页PPT，但mentor翻了几页就说："太多了。合伙人只看三页——团队、市场、为什么是你。"`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => n.length <= 2,
+    choices: [{
+        text: `熬了三个通宵，做了完美的三页PPT`,
+        outcome: {
+            description: `你的pre得到了三个合伙人一致点头。mentor拍了拍你的肩膀。投资业绩+3，健康-2。`,
+            statChanges: {
+                trackRecord: 8,
+                health: -5
+            }
+        }
+    }, {
+        text: `坚持用一百页——细节决定成败`,
+        outcome: {
+            description: `讲到第20页的时候，大合伙人起身去接了个电话。第40页的时候，第二位合伙人开始刷手机。你的第一个deal被搁置了。`,
+            statChanges: {
+                trackRecord: -5
+            }
+        }
+    }]
+}, {
+    id: `ev_career_ranking`,
+    title: `Year-End Ranking`,
+    description: `年底了，基金内部按投资业绩排名。你排在倒数第三。MD找你谈话："不是你的问题，但你得证明自己。"压力很大。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => t === `investment_manager` && n.length >= 2,
+    choices: [{
+        text: `主动提出明年deal flow翻倍`,
+        outcome: {
+            description: `你立下了军令状。MD欣赏你的态度，但也提醒你：承诺了就要做到。投资业绩+2，健康-3。`,
+            statChanges: {
+                trackRecord: 5,
+                health: -7
+            }
+        }
+    }, {
+        text: `私下跟MD聊聊，看看真实原因`,
+        outcome: {
+            description: `MD坦诚告诉你——不是你不好，是今年的明星项目恰好都在别人手上。耐心等待，机会会来。人脉网络+3。`,
+            statChanges: {
+                network: 8
+            }
+        }
+    }]
+}, {
+    id: `ev_career_mentor_leave`,
+    title: `Mentor's Farewell`,
+    description: `带你入行的mentor突然宣布离职——他要自己去创业做基金了。临走前他找你单独聊了一次："你是我带过最好的年轻人，但你要学会自己判断——不要总是问我的意见。"`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => n.length >= 3,
+    choices: [{
+        text: `争取mentor留下一些LP关系给你`,
+        outcome: {
+            description: `Mentor笑了笑，给了你三个LP的联系方式。"这些都是信任我的人，现在我把他们交给你了。"管理规模+5，投资业绩+3。`,
+            statChanges: {
+                aum: 10,
+                trackRecord: 8
+            }
+        }
+    }, {
+        text: `祝福mentor，靠自己走下去`,
+        outcome: {
+            description: `你明白了——这个行业里没有谁能一直带着你。从今天起，你要自己做决策了。人脉网络+2，但健康-2（焦虑）。`,
+            statChanges: {
+                network: 5,
+                health: -5
+            }
+        }
+    }]
+}, {
+    id: `ev_career_conference`,
+    title: `Industry Summit`,
+    description: `你被邀请在一个行业峰会上做圆桌嘉宾。主题是"下一个十年的投资机会"。同台的还有几位你仰望已久的行业大佬。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => e.trackRecord > 30,
+    choices: [{
+        text: `精心准备，发表有洞察力的观点`,
+        outcome: {
+            description: `你的发言被媒体引用为"本次峰会最有价值的观点之一"。会后有三家基金的合伙人主动来交换名片。人脉网络+8，投资业绩+3。`,
+            statChanges: {
+                network: 14,
+                trackRecord: 8
+            }
+        }
+    }, {
+        text: `低调谦虚，多听大佬说话`,
+        outcome: {
+            description: `你全程很少发言，但认真做了笔记。一位大佬注意到了你认真的态度，会后私下给了你一个deal的线索。人脉网络+5。`,
+            statChanges: {
+                network: 13
+            }
+        }
+    }, {
+        text: `故意发表争议性言论博出位`,
+        outcome: {
+            description: `你的言论确实引来了关注——但大部分是负面的。行业媒体把你评为"年度最哗众取宠投资人"——虽然是调侃，但你的同行们开始对你敬而远之。`,
+            statChanges: {
+                trackRecord: -12,
+                network: 8
+            }
+        }
+    }]
+}, {
+    id: `ev_career_interview`,
+    title: `Media Interview`,
+    description: `一家头部商业媒体想采访你，聊聊你对当前市场的看法。但你最近投的一个项目正在经历舆论风波，记者很可能会问到敏感问题。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => n.length >= 4,
+    choices: [{
+        text: `接受采访，但提前准备好敏感问题的回答`,
+        outcome: {
+            description: `采访效果很好，你的坦诚和逻辑赢得了尊重。文章发出来后，有三个创始人通过朋友联系你想找你融资。人脉网络+5，投资业绩+2。`,
+            statChanges: {
+                network: 13,
+                trackRecord: 5
+            }
+        }
+    }, {
+        text: `婉拒——这个时间点太敏感了`,
+        outcome: {
+            description: `PR团队赞赏你的谨慎。但错过了这次曝光机会，你的同行上了那篇采访。你读完后发现——其实也没什么大不了的。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_career_lp_visit`,
+    title: `LP Surprise Visit`,
+    description: `你的一个主要LP突然说要来办公室坐坐。他很"随意"地想看看你的pipeline和portfolio最新情况——但你最新的几个deal都不好看。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => n.length >= 5,
+    choices: [{
+        text: `坦诚相告——最近确实不好，但长期逻辑没变`,
+        outcome: {
+            description: `LP沉默了很久，最后说了一句："我欣赏你的诚实。"他没有撤资——这次没有。但你从他眼神里看到了犹豫。投资业绩+2。`,
+            statChanges: {
+                trackRecord: 5
+            }
+        }
+    }, {
+        text: `包装一下——把PPT做得漂亮点`,
+        outcome: {
+            description: `LP被你的PPT蒙过去了，但三个月后他发现了真实情况。你的电话他不接了。人脉网络-8，投资业绩-5。`,
+            statChanges: {
+                network: -14,
+                trackRecord: -12
+            }
+        }
+    }]
+}, {
+    id: `ev_career_noncompete`,
+    title: `Non-Compete Drama`,
+    description: `你之前跳槽时签的竞业协议突然被前东家拿出来说事。他们声称你最近投的一个项目侵犯了竞业条款。法务部已经在起草律师函了。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => n.length >= 6,
+    choices: [{
+        text: `请律师正面应对，据理力争`,
+        outcome: {
+            description: `经过三个月的法律较量，你赢了。但律师费花了不少，而且这段时间你完全没法安心看项目。健康-5，管理规模-3。`,
+            statChanges: {
+                health: -12,
+                aum: -6
+            }
+        }
+    }, {
+        text: `私下和解，花钱消灾`,
+        outcome: {
+            description: `你付了一笔和解费。虽然肉疼，但事情很快平息了。管理规模-5。你觉得不值得但也没办法——在VC这行，扯上官司就是输了。`,
+            statChanges: {
+                aum: -10
+            }
+        }
+    }]
+}, {
+    id: `ev_career_salary`,
+    title: `Compensation Negotiation`,
+    description: `年底了，你约了HR谈涨薪。今年你投的项目虽然还没退出，但pipeline不错。你觉得是时候提出要求了。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => e.trackRecord > 25,
+    choices: [{
+        text: `用数据说话——展示你的deal flow和预期回报`,
+        outcome: {
+            description: `HR和合伙人讨论后，给了你一个还不错的数字。你接受了——虽然比心理预期低一点。管理规模+3。`,
+            statChanges: {
+                aum: 6
+            }
+        }
+    }, {
+        text: `拿同行的offer做筹码`,
+        outcome: {
+            description: `你暗示有其他基金在挖你。合伙人当场变了脸色——但不是因为紧张，而是觉得你在威胁他。投资业绩-3。这个圈子比你想的小。`,
+            statChanges: {
+                trackRecord: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_career_succession`,
+    title: `Succession Dilemma`,
+    description: `你的mentor——现在的基金创始合伙人——私下找你聊天："我在考虑退休。我需要一个人来接我的班。"他意味深长地看着你。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => t === `partner` && e.trackRecord > 50,
+    choices: [{
+        text: `主动表态——我愿意接手`,
+        outcome: {
+            description: `你的态度让创始合伙人很满意。他开始有意识地让你参与基金的战略决策——但也意味着更多的工作和更大的压力。管理规模+10，健康-5。`,
+            statChanges: {
+                aum: 15,
+                health: -12
+            }
+        }
+    }, {
+        text: `谦让一下——说还要再积累几年`,
+        outcome: {
+            description: `创始合伙人点了点头，但你在基金内部的地位没有实质变化。也许他需要的不是一个谦虚的人，而是一个有野心的人。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_career_burnout`,
+    title: `Burnout`,
+    description: `你最近开始失眠。每天早上醒来，想到要看几十份BP，要回几十条微信，要见四个创始人，就觉得喘不过气。你的身体在发出警告。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => e.health < 50,
+    choices: [{
+        text: `请一个星期的假，去海边`,
+        outcome: {
+            description: `你关掉了微信通知，在海边发呆了一整周。回来后你觉得自己像换了一个人。健康+15，但管理规模-2（错过了一个deal窗口）。`,
+            statChanges: {
+                health: 15,
+                aum: -4
+            }
+        }
+    }, {
+        text: `硬扛——这个行业没有喘息的机会`,
+        outcome: {
+            description: `你继续高强度运转。两个月后你在一次投决会上突然感到胸闷，被同事送进了急诊。健康-15。医生说你必须减少工作量——但你会听吗？`,
+            statChanges: {
+                health: -15
+            }
+        }
+    }]
+}, {
+    id: `ev_chain_arrest`,
+    title: `Founder Gone MIA`,
+    description: `你投的一个项目的CEO突然失联了——手机关机、微信不回、办公室人去楼空。三天后你在新闻上看到了原因：他因为涉嫌职务侵占被带走调查了。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.length >= 4,
+    choices: [{
+        text: `紧急联系律师和投资人代表，启动保护程序`,
+        outcome: {
+            description: `你第一时间组建了危机小组，冻结了公司账户，保住了剩余资产。虽然损失了大部分投资，但避免了最坏的情况。管理规模-3。`,
+            statChanges: {
+                aum: -6,
+                health: -7
+            }
+        }
+    }, {
+        text: `观望——也许只是误会`,
+        outcome: {
+            description: `你没有及时行动。等你想行动的时候，公司账户已经被冻结，剩余资金被作为赃款追缴。你的投资全部清零。管理规模-8，投资业绩-5。`,
+            statChanges: {
+                aum: -12,
+                trackRecord: -12
+            }
+        }
+    }]
+}, {
+    id: `ev_chain_rival`,
+    title: `Competitor Blitz`,
+    description: `你投的一家公司刚刚完成A轮，竞品突然宣布完成了C轮——金额是你投的公司的十倍，领投方是行业里最凶悍的基金。你的创始人打电话来时声音在发抖。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.length >= 3,
+    choices: [{
+        text: `帮创始人制定差异化策略，避开正面竞争`,
+        outcome: {
+            description: `你和创始人花了一个周末重新定位。虽然市场空间缩小了，但找到了一片蓝海。公司活了下来。投资业绩+3。`,
+            statChanges: {
+                trackRecord: 8,
+                health: -5
+            }
+        }
+    }, {
+        text: `建议创始人快速烧钱抢市场份额`,
+        outcome: {
+            description: `一场消耗战开始了。你的被投公司烧掉了全部融资，市场份额涨了5个点，但现金流撑不过六个月。`,
+            statChanges: {
+                aum: -10,
+                health: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_chain_breakthrough`,
+    title: `Tech Breakthrough`,
+    description: `你投的一个硬科技项目发来一封邮件：他们的核心技术刚刚取得了关键性突破——实验室数据超过了行业标杆。创始人激动得在邮件里打了一串感叹号。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.length >= 3,
+    choices: [{
+        text: `马上追加投资，抢在估值暴涨之前`,
+        outcome: {
+            description: `你以最快速度完成了追加投资的流程。三个月后公司的估值翻了五倍。管理规模+10，投资业绩+8。`,
+            statChanges: {
+                aum: 15,
+                trackRecord: 14
+            }
+        }
+    }, {
+        text: `谨慎——实验室到量产还有很长的路`,
+        outcome: {
+            description: `你的谨慎是对的。一年后他们还在调试量产工艺。但估值确实涨了三倍——你错过了一个很好的加仓机会。`,
+            statChanges: {
+                trackRecord: -5
+            }
+        }
+    }]
+}, {
+    id: `ev_chain_bigclient`,
+    title: `Whale Client`,
+    description: `你投的一家SaaS公司刚刚拿下了一个超大型客户——年合同额是公司去年总收入的五倍。但客户的要求极其苛刻，团队需要全力以赴才能交付。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.length >= 3,
+    choices: [{
+        text: `帮创始人对接资源，全力支持交付`,
+        outcome: {
+            description: `你调动了自己的所有关系，帮公司招到了关键人才、对接了合作伙伴。项目交付成功，公司迈上了新台阶。人脉网络+3，投资业绩+5。`,
+            statChanges: {
+                network: 8,
+                trackRecord: 13
+            }
+        }
+    }, {
+        text: `提醒创始人注意依赖风险——一个大客户不代表一切`,
+        outcome: {
+            description: `创始人听了你的建议，在服务大客户的同时没有放弃中小客户。后来大客户确实缩减了预算，但公司没有伤筋动骨。`,
+            statChanges: {
+                trackRecord: 5
+            }
+        }
+    }]
+}, {
+    id: `ev_chain_key_leave`,
+    title: `Key Talent Exodus`,
+    description: `你投的一家公司CTO突然辞职——带着三个核心工程师一起走了，据说是被竞品挖走的。创始人给你发了一条很长的微信，最后一句是："我现在不知道该怎么办。"`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.length >= 2,
+    choices: [{
+        text: `亲自出面挽留——飞到公司跟CTO面谈`,
+        outcome: {
+            description: `你在公司旁边的咖啡馆跟CTO谈了四个小时。他最终同意留下——但你承诺的条件（包括加薪和期权）让公司burn rate又涨了。健康-3，管理规模-2。`,
+            statChanges: {
+                health: -7,
+                aum: -4
+            }
+        }
+    }, {
+        text: `接受现实——帮创始人快速找到替代者`,
+        outcome: {
+            description: `你在24小时内联系了三个候选人。两周后新CTO到岗——他比前任更适配公司现阶段的需求。人脉网络+3。`,
+            statChanges: {
+                network: 8
+            }
+        }
+    }]
+}, {
+    id: `ev_chain_policy_good`,
+    title: `Policy Tailwind`,
+    description: `政府突然出台了一项重磅政策——你投的某个赛道被列入了国家重点支持目录。行业群炸了，所有人都在重新评估你的被投公司的价值。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.length >= 3,
+    choices: [{
+        text: `趁热打铁，帮公司对接政策资源`,
+        outcome: {
+            description: `你的人脉网络让公司第一时间拿到了政策试点资格。这在行业里引起了关注——公司的估值一个月内翻了倍。管理规模+8，投资业绩+5。`,
+            statChanges: {
+                aum: 12,
+                trackRecord: 13
+            }
+        }
+    }, {
+        text: `提醒创始人不要过度依赖政策红利`,
+        outcome: {
+            description: `你的冷静让创始人避免了盲目扩张的陷阱。一年后政策细则出台时，很多同行发现红利没有想象中大——但他们已经过度投入了。`,
+            statChanges: {
+                trackRecord: 8
+            }
+        }
+    }]
+}, {
+    id: `ev_chain_supply`,
+    title: `Supply Chain Break`,
+    description: `你投的一家硬件公司突然收到供应商的通知：关键零部件的供货周期从4周变成了6个月——而且价格翻了三倍。全球芯片短缺正在吞噬你的被投公司。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.length >= 3,
+    choices: [{
+        text: `动用自己的人脉帮公司找替代供应商`,
+        outcome: {
+            description: `你联系了十几个业内朋友，终于在一个不起眼的渠道找到了稳定供应。成本高了30%，但至少产线不会停。人脉网络-3（你欠了好多人情），管理规模-3。`,
+            statChanges: {
+                network: -7,
+                aum: -6
+            }
+        }
+    }, {
+        text: `建议公司暂停部分产品线，集中资源保核心`,
+        outcome: {
+            description: `公司砍掉了两个边缘产品，聚焦最赚钱的SKU。虽然短期收入下降，但现金流稳住了。`,
+            statChanges: {
+                aum: -4
+            }
+        }
+    }]
+}, {
+    id: `ev_chain_hack`,
+    title: `Security Breach`,
+    description: `深夜两点，你被电话吵醒。你投的一家消费平台刚刚被黑客拖库，数百万用户的隐私数据被挂在暗网上出售。舆论已经炸了。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.length >= 3,
+    choices: [{
+        text: `连夜协调网络安全团队和公关公司`,
+        outcome: {
+            description: `你在天亮前组建了应急小组。虽然数据泄露已成事实，但公司的快速响应把损失降到了最低。客户流失了15%，但没有崩盘。健康-5，管理规模-3。`,
+            statChanges: {
+                health: -12,
+                aum: -6
+            }
+        }
+    }, {
+        text: `让公司自己处理——这是CEO的责任`,
+        outcome: {
+            description: `CEO的应对非常糟糕——他发了一条微博试图撇清责任，反而激怒了用户。舆论升级成了社会事件。你的投资账面浮亏了一半。`,
+            statChanges: {
+                aum: -15,
+                trackRecord: -12
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2005_baidu`,
+    title: `Search IPO`,
+    description: `百度在纳斯达克上市了——首日涨幅354%，震惊了整个华尔街。这是中国互联网公司在资本市场的里程碑时刻。你虽然还没入行太久，但你能感觉到——属于中国的互联网故事才刚刚开始。`,
+    era: `era_pc_internet`,
+    year: 2005,
+    category: `era_milestone`,
+    choices: [{
+        text: `认真研究百度的招股书，学习资本市场的逻辑`,
+        outcome: {
+            description: `你花了一个周末读完了几百页的招股书。虽然很多术语你还看不懂，但这个习惯为你后来理解中国互联网奠定了重要基础。投资业绩+3。`,
+            statChanges: {
+                trackRecord: 8
+            }
+        }
+    }, {
+        text: `在行业聚会上跟人讨论百度值不值这个价`,
+        outcome: {
+            description: `你说"泡沫"。你旁边的大佬笑了笑没说话。后来百度股价又涨了三倍。你学到了第一个教训——在VC行业，说"太贵了"的人最后往往什么都没投。`,
+            statChanges: {
+                network: 5
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2007_iphone`,
+    title: `Steve Jobs Moment`,
+    description: `乔布斯在旧金山发布了第一代iPhone。你看完了发布会视频。它没有物理键盘、不能换电池、不支持3G——你是做VC的，你在想：这个东西跟中国有关系吗？`,
+    era: `era_pc_internet`,
+    year: 2007,
+    category: `era_milestone`,
+    choices: [{
+        text: `直觉告诉你——这是未来，开始关注移动赛道`,
+        outcome: {
+            description: `你在机构内部写了一份关于移动互联网的研究报告。虽然当时没有人重视，但三年后这份报告成了基金最前瞻的布局指南。投资业绩+5。`,
+            statChanges: {
+                trackRecord: 13
+            }
+        }
+    }, {
+        text: `这东西在中国卖不动——太贵了`,
+        outcome: {
+            description: `你的判断在当时看来是正确的——iPhone确实没在中国卖几台。但你没有预见到的是，Android的免费授权和深圳的山寨机产业链将在两年内彻底改变一切。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_era_2009_3g`,
+    title: `3G Era Begins`,
+    description: `中国正式发放3G牌照。理论上，手机终于可以上网了——虽然速度很慢。但一个新时代的帷幕已经拉开。你开始注意到一些奇怪的App在冒出来——比如可以在手机上看视频、听音乐。`,
+    era: `era_mobile_dawn`,
+    year: 2009,
+    category: `era_milestone`,
+    choices: [{
+        text: `战略性布局移动互联网赛道`,
+        outcome: {
+            description: `你在投委会上力推了一个移动端专项基金的计划。虽然规模不大，但这让你在移动浪潮来临时抢到了先机。管理规模+3，投资业绩+5。`,
+            statChanges: {
+                aum: 6,
+                trackRecord: 13
+            }
+        }
+    }, {
+        text: `观望——PC互联网的钱还没赚够`,
+        outcome: {
+            description: `你继续在PC赛道上深耕。这个选择让你的短期回报不错——但移动互联网的船票，你可能没买到。人脉网络-3。`,
+            statChanges: {
+                network: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2010_3q`,
+    title: `3Q War`,
+    description: `360和腾讯爆发了著名的"3Q大战"——两家公司互相封杀对方的产品，用户在电脑前被迫"二选一"。这是中国互联网最激烈的一次平台战争。作为VC，你看到了什么？`,
+    era: `era_mobile_dawn`,
+    year: 2010,
+    category: `era_milestone`,
+    choices: [{
+        text: `看到了平台的护城河——投基础设施和平台型公司`,
+        outcome: {
+            description: `你从这个事件中总结出一个投资哲学：做平台比做应用更值钱。这个认知指导了你后续的多个成功投资。投资业绩+5。`,
+            statChanges: {
+                trackRecord: 13
+            }
+        }
+    }, {
+        text: `看到了危机——投安全软件和隐私保护`,
+        outcome: {
+            description: `你投了一家隐私保护工具——但时机太早了。用户在被封杀的时候才关心隐私，风头一过就忘了。`,
+            statChanges: {
+                trackRecord: -5
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2011_wechat`,
+    title: `WeChat Era`,
+    description: `腾讯发布了一款叫"微信"的App。你没太在意——市场上已经有米聊、Talkbox、Kik了。但三个月后，它的增长速度让你不得不开始关注它。`,
+    era: `era_mobile_dawn`,
+    year: 2011,
+    category: `era_milestone`,
+    choices: [{
+        text: `深入研究微信的产品逻辑，看到了社交+平台的潜力`,
+        outcome: {
+            description: `你写了一篇内部备忘录，预测微信将成为中国移动互联网的基础设施。后来这被证明是VC行业最精准的预测之一。投资业绩+8。`,
+            statChanges: {
+                trackRecord: 14,
+                network: 13
+            }
+        }
+    }, {
+        text: `觉得移动IM已经没有机会了，投资其他赛道`,
+        outcome: {
+            description: `你的判断逻辑是对的——微信确实统治了IM。但你错误地判断了微信生态的延展性——它后来变成了支付、电商、游戏、小程序的超级平台。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_era_2013_4g`,
+    title: `4G Revolution`,
+    description: `4G牌照正式发放。如果说3G是自行车道，4G就是高速公路。网速的提升将彻底改变你能投的所有赛道——视频、直播、手游、移动电商都将迎来爆发。`,
+    era: `era_o2o_goldrush`,
+    year: 2013,
+    category: `era_milestone`,
+    choices: [{
+        text: `全面拥抱移动互联网——重仓视频和手游`,
+        outcome: {
+            description: `你用最快的速度调整了portfolio配置。这个战略在接下来的三年内带来了超额回报。管理规模+8，投资业绩+5。`,
+            statChanges: {
+                aum: 12,
+                trackRecord: 13
+            }
+        }
+    }, {
+        text: `保持均衡——PC和移动并重`,
+        outcome: {
+            description: `你选择了稳健策略。虽然没有吃到最大的红利，但也没有在PC赛道上仓促退出。`,
+            statChanges: {
+                trackRecord: 3
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2015_crash`,
+    title: `Market Crash`,
+    description: `A股在两个月内暴跌了40%。大量人民币基金的LP开始违约——他们承诺的钱不会到了。你的基金今年的募资目标突然变得遥不可及。`,
+    era: `era_o2o_goldrush`,
+    year: 2015,
+    category: `era_milestone`,
+    choices: [{
+        text: `收缩——减少出手次数，保留弹药`,
+        outcome: {
+            description: `你在泡沫破裂前踩了刹车。虽然同事们笑你太保守，但一年后他们都在感谢你——因为你保住了基金的现金流。管理规模稳住了。`,
+            statChanges: {
+                aum: 4,
+                trackRecord: 8
+            }
+        }
+    }, {
+        text: `抄底——在别人恐惧时贪婪`,
+        outcome: {
+            description: `你在市场最低迷的时候投了两个项目——估值只有半年前的三分之一。其中一个后来成了你的代表作。管理规模+5，投资业绩+8。`,
+            statChanges: {
+                aum: 10,
+                trackRecord: 14,
+                health: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2016_alphago`,
+    title: `AlphaGo Moment`,
+    description: `AlphaGo击败了李世石。你在电视上看到这个消息时，浑身起了鸡皮疙瘩。你意识到这不只是一场棋局——这是一个新时代的开始。但你的LP们都在问你："AI到底能不能赚钱？"`,
+    era: `era_o2o_goldrush`,
+    year: 2016,
+    category: `era_milestone`,
+    choices: [{
+        text: `组建AI专项投资团队——这是下一个十年`,
+        outcome: {
+            description: `你overrule所有反对声音，recruit三位AI背景的investment professionals。尽管前两年他们的deal quality平平，然至2018年，你们已跻身市场最懂AI的VC之列。投资业绩+8。`,
+            statChanges: {
+                trackRecord: 14,
+                network: 8
+            }
+        }
+    }, {
+        text: `保持关注但不急着出手——AI商业化还太早`,
+        outcome: {
+            description: `你的判断有道理——2016年的AI项目确实大部分死在了商业化上。但你也错过了几个后来成为独角兽的早期deal。`,
+            statChanges: {
+                trackRecord: -5
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2019_star`,
+    title: `STAR Market Launch`,
+    description: `科创板正式开板。注册制来了——这意味着你投的科技项目有了新的退出通道。不需要去纳斯达克了，上海就可以。整个VC行业都在重新盘算自己的portfolio。`,
+    era: `era_hardtech_consumer`,
+    year: 2019,
+    category: `era_milestone`,
+    choices: [{
+        text: `系统梳理portfolio，推动符合条件的项目申报科创板`,
+        outcome: {
+            description: `你的三个项目入围了首批科创板受理名单。虽然最终只有一个成功上市，但这个过程大幅提升了你在LP心中的专业形象。管理规模+5，投资业绩+5。`,
+            statChanges: {
+                aum: 10,
+                trackRecord: 13
+            }
+        }
+    }, {
+        text: `观望——注册制到底能走多远还不确定`,
+        outcome: {
+            description: `你的谨慎让你错过了一波科创板红利。一年后首批上市企业平均涨幅超过100%。你的LP在问：为什么我们一个项目都没报？`,
+            statChanges: {
+                trackRecord: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2021_crackdown`,
+    title: `EdTech Crackdown`,
+    description: `双减政策正式落地——K12学科培训一夜之间被清零。你认识的所有投教育的VC都沉默了。如果你碰巧投了教育赛道，今天是你的至暗时刻。`,
+    era: `era_hardtech_consumer`,
+    year: 2021,
+    category: `era_milestone`,
+    choices: [{
+        text: `快速评估影响，该割的马上割，绝不恋战`,
+        outcome: {
+            description: `你的果断让你在其他VC还在犹豫时就已经完成了仓位调整。虽然亏了很多，但你是最先止血的。投资业绩+3，管理规模-8。`,
+            statChanges: {
+                aum: -12,
+                trackRecord: 8
+            }
+        }
+    }, {
+        text: `帮被投教育公司寻求转型——职业教育、出海、成人教育`,
+        outcome: {
+            description: `你陪着创始人熬夜开会、找方向。其中一家公司成功转型ToB教育科技——虽然估值打了三折，但活了下来。人脉网络+8。`,
+            statChanges: {
+                network: 14,
+                health: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_era_2022_chatgpt`,
+    title: `ChatGPT Launch`,
+    description: `OpenAI发布了ChatGPT。两个月内用户突破一亿——人类历史上增长最快的产品。你试用了之后，躺在床上盯着天花板看了很久。你在想——我到底刚刚看到了什么？`,
+    era: `era_aigc_newcycle`,
+    year: 2022,
+    category: `era_milestone`,
+    choices: [{
+        text: `All-in AIGC——这是PC和移动之后第三次范式革命`,
+        outcome: {
+            description: `你的all-in决策让你在未来两年内抢到了最好的AIGC早期deal。投资业绩+10，人脉网络+5。`,
+            statChanges: {
+                trackRecord: 18,
+                network: 13,
+                aum: 10
+            }
+        }
+    }, {
+        text: `兴奋但保持理性——先投一个试试水`,
+        outcome: {
+            description: `你投了一个AIGC项目，但只用了很小的仓位。两年后你意识到自己太保守了——但你的LP很满意你的克制。`,
+            statChanges: {
+                trackRecord: 3
+            }
+        }
+    }]
+}, {
+    id: `ev_anecdote_fomo`,
+    title: `FOMO Attack`,
+    description: `行业群里都在讨论一个deal——据说已经有五家机构给了TS。你还没见过创始人，但FA说"这轮明天就close了"。你的FOMO（害怕错过）正在疯狂发作。`,
+    category: `industry_anecdote`,
+    choices: [{
+        text: `打电话给FA——我要见创始人，明天飞过去`,
+        outcome: {
+            description: `你坐最早一班飞机去了杭州。见到创始人后你发现——这个项目确实不错，但远没有FA说的那么紧俏。你拿到了一个正常估值的deal。健康-2。`,
+            statChanges: {
+                health: -5,
+                network: 5
+            }
+        }
+    }, {
+        text: `深呼吸——FOMO是VC最差的投资顾问`,
+        outcome: {
+            description: `你决定不做被动决策。两周后你发现那个deal并没有close——FA只是在制造紧迫感。你保住了自己的节奏。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_anecdote_ts_drama`,
+    title: `Term Sheet Battle`,
+    description: `你和另一个基金同时给了同一个项目TS。对方的估值比你高10%，但没有你的投后服务好。创始人两边来回施加压力，想要"最优组合"。你已经开始烦这个创始人了。`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => n.length >= 2,
+    choices: [{
+        text: `坚持自己的TS，不参与竞拍`,
+        outcome: {
+            description: `你礼貌地退出了竞争。"估值不是一切"——你对创始人说。两周后创始人又联系了你：对方在尽调中发现了问题撤回了TS。你现在有了谈判的主动权。`,
+            statChanges: {
+                trackRecord: 8
+            }
+        }
+    }, {
+        text: `加价——我就是要拿下这个deal`,
+        outcome: {
+            description: `你加了15%的估值，拿下了这个deal。但在后来的尽调中你发现——这个项目根本不值你报的价格。你为自己的一时冲动付出了代价。管理规模-3。`,
+            statChanges: {
+                aum: -6,
+                trackRecord: -5
+            }
+        }
+    }]
+}, {
+    id: `ev_anecdote_conference_panel`,
+    title: `Awkward Panel`,
+    description: `你被安排在一个行业峰会的圆桌上。坐在你旁边的是一个你上个月刚刚拒掉的创始人——他现在是行业新星，他的公司刚融了C轮。主持人问了一个问题："在座各位最后悔错过什么deal？"`,
+    category: `industry_anecdote`,
+    choices: [{
+        text: `坦诚回答——"就是坐在我旁边的这位创始人"`,
+        outcome: {
+            description: `全场大笑。创始人拍了拍你的肩膀说："下次融资我第一个找你。"虽然是个玩笑，但你赢得了在场所有人的好感。人脉网络+5。`,
+            statChanges: {
+                network: 13
+            }
+        }
+    }, {
+        text: `转移话题——聊一个安全的不痛不痒的答案`,
+        outcome: {
+            description: `你说了个无关的deal。主持人没有追问，但你觉得这次圆桌没有给任何人留下印象——包括你自己。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_anecdote_dd_find`,
+    title: `DD Nightmare`,
+    description: `你的团队在做一个项目的尽调时发现了一个奇怪的数据异常。深挖下去发现——公司的核心客户其实是关联方，收入几乎全是左手倒右手。FA声称这是"行业惯例"。`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => n.length >= 1,
+    choices: [{
+        text: `直接Pass——再好的deal也不能碰诚信问题`,
+        outcome: {
+            description: `你果断退出了。创始人发了一条阴阳怪气的朋友圈——你没有回复。三个月后这家公司被媒体曝光财务造假，所有参与投资的VC都在忙着灭火。你逃过一劫。`,
+            statChanges: {
+                trackRecord: 8
+            }
+        }
+    }, {
+        text: `跟创始人谈——给他一个解释的机会`,
+        outcome: {
+            description: `创始人给了你一套"行业特有商业模式"的解释。你半信半疑地投了。一年后你的怀疑被证实了——但那笔钱已经亏掉了。管理规模-5，投资业绩-3。`,
+            statChanges: {
+                aum: -10,
+                trackRecord: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_anecdote_bathroom`,
+    title: `Restroom Encounter`,
+    description: `在一个行业酒会上，你在洗手间偶遇了一位传奇投资人——他投过好几个时代级的项目。他洗手的时候看了你一眼说："你是做VC的？"你有30秒的时间跟他说话。`,
+    category: `industry_anecdote`,
+    choices: [{
+        text: `"是的。你觉得现在最被低估的赛道是什么？"`,
+        outcome: {
+            description: `他想了想说："别人都在看的东西，不值钱。去看没人看的地方。"然后他就走了。这句话你记了很多年。投资业绩+2。`,
+            statChanges: {
+                trackRecord: 5
+            }
+        }
+    }, {
+        text: `快速报出你最近投的最好的项目`,
+        outcome: {
+            description: `他礼貌地点了点头，擦了手就走了。你意识到——在这种级别的投资人面前，你的项目根本不值一提。你错过了从他那里得到真正有价值建议的机会。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_anecdote_media_misquote`,
+    title: `Clickbait`,
+    description: `一篇关于你的行业评论被媒体转载了——但标题被编辑改成了《某VC投资人：这个赛道全是泡沫》。你的被投公司创始人们开始私信你：你说的泡沫不会是我们吧？`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => n.length >= 3,
+    choices: [{
+        text: `立即逐一联系被投公司解释`,
+        outcome: {
+            description: `你花了一整天时间给每个被投公司的CEO打电话解释。他们大多表示理解——但有一个CEO说："我希望下次如果你要公开说什么，先告诉我们一声。"人脉网络+2。`,
+            statChanges: {
+                network: 5,
+                health: -2
+            }
+        }
+    }, {
+        text: `发朋友圈澄清——"标题是编辑改的，不代表我的观点"`,
+        outcome: {
+            description: `朋友圈发出去后评论区更热闹了。有人支持你，有人说你此地无银。你意识到在社交媒体时代，解释就是二次传播。`,
+            statChanges: {
+                network: -5
+            }
+        }
+    }]
+}, {
+    id: `ev_anecdote_carry_talk`,
+    title: `Carry Legend`,
+    description: `行业聚会上大家喝多了开始聊carry。有人说自己去年的carry买了套别墅，有人说carry到现在还是零。轮到你了，所有人看着你。`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => n.length >= 4,
+    choices: [{
+        text: `实话实说——还没拿到过carry`,
+        outcome: {
+            description: `你坦诚的回答引来了两种反应——有人在笑，有人点了头。一位比你资深的合伙人私下说："能承认这一点，说明你有自知之明。大部分吹自己carry的人都在撒谎。"人脉网络+3。`,
+            statChanges: {
+                network: 8
+            }
+        }
+    }, {
+        text: `模糊带过——"还行吧，你懂的"`,
+        outcome: {
+            description: `大家心照不宣地笑了。在这个行业里，没有人真的会透露自己的carry——但每个人都想知道别人的。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_anecdote_founder_gift`,
+    title: `Founder's Gift`,
+    description: `你投的一个项目的创始人给你寄了一个包裹——里面是他公司的最新产品和一封手写感谢信。他说你在最困难的时候给了他信任，他想让你第一个试用新产品。`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => n.length >= 2,
+    choices: [{
+        text: `回信感谢——并认真试用产品给反馈`,
+        outcome: {
+            description: `你写了一封详细的反馈邮件。创始人后来告诉别人——你的反馈让他修改了产品的三个关键设计。人脉网络+5。`,
+            statChanges: {
+                network: 13
+            }
+        }
+    }, {
+        text: `收下礼物但没时间试用——太忙了`,
+        outcome: {
+            description: `礼物放在了办公桌上两周没拆。创始人后来问起的时候你尴尬地敷衍了过去。你没有意识到——他其实是在等你的反馈来判断是不是要换方向。`,
+            statChanges: {
+                network: -5
+            }
+        }
+    }]
+}, {
+    id: `ev_anecdote_lp_dinner`,
+    title: `LP Dinner Party`,
+    description: `一个重要LP邀请你去他家参加私宴。只有六个人——除了你之外都是LP的老朋友，其中一位是退休的顶级投资人。这是一场考验——你吃的不只是饭。`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => n.length >= 3,
+    choices: [{
+        text: `认真倾听，在恰当的时机提出有深度的问题`,
+        outcome: {
+            description: `你没有说太多话，但你提的两个问题让那位退休大佬记住了你。饭后LP的助理通知你——LP决定追加出资。管理规模+8，人脉网络+5。`,
+            statChanges: {
+                aum: 12,
+                network: 13
+            }
+        }
+    }, {
+        text: `主动秀肌肉——展示你的投资方法论`,
+        outcome: {
+            description: `你滔滔不绝地讲了20分钟。那位退休大佬中途打了个哈欠。后来LP委婉地告诉你：他更喜欢谦虚的年轻人。`,
+            statChanges: {
+                network: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_anecdote_sleepless`,
+    title: `Sleepless Night`,
+    description: `你投的一个项目明天要上投委会做追加投资的决策。但你现在睡不着——你在纠结：这个项目的数据在恶化，但创始人说是"季节性波动"。你是投还是不投？`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => n.length >= 3,
+    choices: [{
+        text: `相信数据——Pass掉追加投资`,
+        outcome: {
+            description: `第二天你给出了反对追加的理由。你的逻辑严密，投委会同意Pass。三个月后那家公司因为核心客户流失而陷入危机。你救了基金一笔钱。投资业绩+5。`,
+            statChanges: {
+                trackRecord: 13,
+                health: -5
+            }
+        }
+    }, {
+        text: `相信创始人——投了`,
+        outcome: {
+            description: `创始人慷慨激昂的陈词打动了投委会。追加投资获批。但六个月后数据没有恢复——"季节性波动"变成了"结构性下滑"。你学到了一个昂贵的教训。`,
+            statChanges: {
+                aum: -10,
+                trackRecord: -7
+            }
+        }
+    }]
+}, {
+    id: `ev_anecdote_rival_fund`,
+    title: `Competitor's Rumor`,
+    description: `你听说一个竞品基金在LP面前说你的基金"投了一堆烂项目，DPI永远是零"。你知道这不是真的——你的两个项目正在申报IPO。但LP群体很小，谣言传得很快。`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => n.length >= 5,
+    choices: [{
+        text: `用事实反击——主动给所有LP发portfolio最新进展`,
+        outcome: {
+            description: `你发了一份详细的portfolio更新，数据充分、逻辑清晰。LP们不仅没有被谣言影响，反而对你更加信任了。投资业绩+5。`,
+            statChanges: {
+                trackRecord: 13
+            }
+        }
+    }, {
+        text: `找到造谣的人当面质问`,
+        outcome: {
+            description: `你在行业聚会上找到了那个人。场面非常尴尬——他矢口否认，但所有人都看出来发生了什么。你"赢了"这场冲突，但在LP眼中——你变成了一个drama人物。人脉网络-5。`,
+            statChanges: {
+                network: -12
+            }
+        }
+    }]
+}, {
+    id: `ev_anecdote_wechat_group`,
+    title: `Group Chat War`,
+    description: `一个行业大群里有人发了一篇质疑VC行业价值的文章——"VC除了推高估值、制造泡沫还做了什么？"群里炸了，所有人都在争论。你被@了——有人问你怎么看。`,
+    category: `industry_anecdote`,
+    choices: [{
+        text: `写了一段冷静有料的回复——VC在创新生态中的真实角色`,
+        outcome: {
+            description: `你的回复被截图转到了好几个群里。甚至有媒体来采访你这篇文章的观点。你成为了这场争论中最理性的声音。投资业绩+2，人脉网络+5。`,
+            statChanges: {
+                trackRecord: 5,
+                network: 13
+            }
+        }
+    }, {
+        text: `不回复——这种争论没有意义`,
+        outcome: {
+            description: `你选择沉默。群里吵了两天就消停了——大家继续忙着发BP和约咖啡。在这个行业里，所有的争论到最后都会被新的deal冲淡。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_anecdote_mentor_advice`,
+    title: `Big Shot's Words`,
+    description: `你的一位前辈——一个你非常尊敬的投资人——在喝咖啡时给了你一句忠告："在这个行业，最重要的能力不是判断项目，而是判断人。大多数时候你投的不是商业模式——你投的是那个人的上限。"`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => n.length >= 2,
+    choices: [{
+        text: `把这句话记在心里，在你的下一个deal中实践`,
+        outcome: {
+            description: `你在下一个项目中花了更多时间去了解创始人的性格和决策模式，而不仅仅是他的PPT。这个转变让你的deal质量显著提升。投资业绩+3。`,
+            statChanges: {
+                trackRecord: 8
+            }
+        }
+    }, {
+        text: `礼貌地点头——但你觉得太感性了，数据更重要`,
+        outcome: {
+            description: `你继续坚持你的"数据驱动"方法论。多年后你回头看——那些数据最漂亮的BP，创始人最后往往是最早放弃的。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_anecdote_portfolio_ceo`,
+    title: `CEO's Moments`,
+    description: `你刷朋友圈时看到你投的一个CEO发了一张深夜加班的照片，配文："创业就是一个人对抗整个世界。"定位是公司的地下车库。你盯着这条朋友圈看了很久。`,
+    category: `industry_anecdote`,
+    choices: [{
+        text: `发一条私信给他：需不需要聊聊？`,
+        outcome: {
+            description: `他秒回了。你们聊了两个小时——原来他的联合创始人刚刚提了离职。你帮他分析了局面，他决定第二天跟联合创始人做最后一次深谈。后来联合创始人留了下来。人脉网络+5。`,
+            statChanges: {
+                network: 13
+            }
+        }
+    }, {
+        text: `点了个赞——滑过去了`,
+        outcome: {
+            description: `你的点赞淹没在了几十个点赞之中。三天后你从别人那里听说——他的联合创始人带着三个核心员工走了。你错过了帮助他的窗口期。`,
+            statChanges: {
+                network: -5
+            }
+        }
+    }]
+}, {
+    id: `ev_anecdote_taxi_pitch`,
+    title: `Cab Pitch`,
+    description: `你在北京打车去机场。出租车司机从后视镜里看了你一眼，问你是做什么的。你说做投资。他立刻说："我有个侄子，做了一个特别牛的App——你要不要看看他的BP？"然后他真的从副驾抽出了一份打印好的BP。`,
+    category: `industry_anecdote`,
+    choices: [{
+        text: `接过来看看——每一个创业者都值得尊重`,
+        outcome: {
+            description: `你从机场到登机口的路上看完了这份BP。项目本身一般，但你在BP里看到了一个被你忽略的细分需求。这个灵感后来启发你投了一个不错的deal。人脉网络+2。`,
+            statChanges: {
+                network: 5
+            }
+        }
+    }, {
+        text: `礼貌地收下——但你知道你永远不会看`,
+        outcome: {
+            description: `BP在行李箱里压了三个月后被清洁阿姨扔掉了。你不会知道——那个侄子的项目后来成为了一个百亿估值公司的前端原型。当然，大概率也不会。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_anecdote_cny`,
+    title: `CNY Greetings`,
+    description: `春节到了。你的微信被"新年快乐"轰炸了——来自FA、创始人、LP、同行。但200条消息里只有3条不是群发的。你突然有点分不清谁是真心、谁是群发。`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => n.length >= 2,
+    choices: [{
+        text: `给真正重要的3个人手写了新年祝福`,
+        outcome: {
+            description: `你给mentor、一个你信任的创始人、和一个长期支持你的LP分别发了不一样的新年祝福。他们的回复让你觉得——在这个浮躁的行业里，真诚依然是一种竞争优势。人脉网络+3。`,
+            statChanges: {
+                network: 8
+            }
+        }
+    }, {
+        text: `群发一个红包表情包完事`,
+        outcome: {
+            description: `你收到了大把同样的表情包。春节过去了，你的微信和去年一样热闹——也一样空洞。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_warn_radio_silence`,
+    title: `Radio Silence`,
+    description: `你突然意识到——有一个被投公司的CEO已经两个月没在朋友圈发动态了。以前他每天都要转发行业新闻、晒加班照、分享创业感悟。这种沉默让你不安。你打开他的微信对话框，发现上一条消息是六周前你发的——他没回。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.filter(e => e.status === `pending` && e.outcome === `failure`).length >= 1,
+    choices: [{
+        text: `主动打电话过去——别等出事再问`,
+        outcome: {
+            description: `CEO接了电话。他的声音很疲惫——公司账上只剩三个月现金，他不想告诉你，因为他觉得"对不起你的信任"。你提前知道了坏消息，至少有时间做准备了。`,
+            statChanges: {
+                health: -3
+            }
+        }
+    }, {
+        text: `再等等——也许只是他太忙了`,
+        outcome: {
+            description: `你又等了两个月。最终坏消息从别人嘴里传到了你耳朵里。你的拖延让情况变得更糟。`,
+            statChanges: {
+                trackRecord: -5,
+                health: -2
+            }
+        }
+    }]
+}, {
+    id: `ev_warn_lp_question`,
+    title: `LP's Question`,
+    description: `一个LP在季度会上不经意地问了一句："你portfolio里那几家早期公司，最近有什么进展吗？"你愣了一下——因为你已经很久没有主动跟进其中一家了。你看了看表，还有三个月就到它的预估退出窗口了。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.filter(e => e.status === `pending`).length >= 3,
+    choices: [{
+        text: `马上安排一次portfolio全面review`,
+        outcome: {
+            description: `你花了一周时间密集走访了所有被投公司。发现了两家需要紧急干预的——还好来得及。健康-5（累得够呛），但避免了更大的损失。`,
+            statChanges: {
+                health: -5,
+                trackRecord: 5
+            }
+        }
+    }, {
+        text: `给LP一个模糊但体面的回答`,
+        outcome: {
+            description: `LP没有再追问。但你看到了他眼神里的犹豫。这种犹豫会在下一次募资时变成拒绝。`,
+            statChanges: {
+                network: -5
+            }
+        }
+    }]
+}, {
+    id: `ev_warn_ghost_portfolio`,
+    title: `Zombie Project`,
+    description: `你在整理portfolio时发现了一个你几乎忘记的项目——三年前投的，之后就没怎么联系过。你翻了翻最近的文件，发现它可能已经默默死掉了，而你居然完全不知道。你感到一阵寒意——还有多少项目是你投完就忘了的？`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => n.filter(e => e.status === `pending`).length >= 4,
+    choices: [{
+        text: `立即联系创始人——不管好消息还是坏消息，你得知道真相`,
+        outcome: {
+            description: `创始人回复得很快："我们已经转型了，现在做B端SaaS，今年刚盈利。"你长舒一口气——但这次经历让你决定建立定期portfolio review机制。`,
+            statChanges: {
+                trackRecord: 3
+            }
+        }
+    }, {
+        text: `先翻一翻财务报告，看能不能找到线索`,
+        outcome: {
+            description: `你翻了三天的旧邮件和季度报告。结论是模糊的——你甚至无法判断这家公司到底还活着没有。这种"不知道"的状态在VC行业比明确的失败更让人焦虑。`,
+            statChanges: {
+                health: -3
+            }
+        }
+    }]
+}, {
+    id: `ev_end_family_office`,
+    title: `Family Office Invite`,
+    description: `一个低调的家族办公室通过中间人联系到你。他们想邀请你去做首席投资官——只管理一个家族的财富，不用募资、不用应付LP、不用参加行业峰会。条件是——你必须退出现在的基金。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => e.trackRecord > 40 && e.network > 50,
+    choices: [{
+        text: `接受——这场游戏我玩够了`,
+        outcome: {
+            description: `你退出了。家族办公室的办公室在一栋安静的洋房里，窗外是梧桐树。你突然发现自己终于有时间读书了。游戏结束——但这是你选择的路。`,
+            statChanges: {},
+            specialEffect: `ending_retire_early`
+        }
+    }, {
+        text: `婉拒——我还是喜欢战场的硝烟`,
+        outcome: {
+            description: `对方礼貌地表示理解。但挂掉电话后，你盯着窗外的国贸CBD看了很久。`,
+            statChanges: {
+                trackRecord: 5
+            }
+        }
+    }]
+}, {
+    id: `ev_end_gov_fund`,
+    title: `The Call of Duty`,
+    description: `一位政府背景的LP约你喝茶。茶过三巡，他说了真实来意——国家正在组建一个千亿级的产业投资基金，需要懂行的投资人来做管理人。他说你的名字被提到了好几次。"这是一个为国家做事的机会，也是个人职业生涯的顶峰。"`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => t === `partner` && e.trackRecord > 55,
+    choices: [{
+        text: `接受——从市场化基金转向国家战略`,
+        outcome: {
+            description: `你成为了国家产业基金的管理合伙人。你的办公室从国贸搬到了金融街。你不再有LP的压力——但你有KPI，关乎国家战略的KPI。游戏结束——你选择了更大的舞台。`,
+            statChanges: {},
+            specialEffect: `ending_gov_fund`
+        }
+    }, {
+        text: `婉拒——我还是习惯市场的逻辑`,
+        outcome: {
+            description: `对方不意外。"随时欢迎你改变主意。"离开时你意识到——这一刻你拒绝的，可能是一个时代的转折。`,
+            statChanges: {
+                network: 10
+            }
+        }
+    }]
+}, {
+    id: `ev_end_write_book`,
+    title: `Write a Book`,
+    description: `一家出版社找到你，想让你写一本关于中国VC二十年历程的书。编辑说："你是唯一经历过完整周期的人。"你突然意识到——确实，你经历了PC、移动、O2O、硬科技、AI——整整五个时代。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => n.length >= 15,
+    choices: [{
+        text: `接受——是时候把心得写下来了`,
+        outcome: {
+            description: `你花了半年时间写了《二十年创投笔记》。这本书成了行业必读书目。你找到了比投资更有意义的事——传承。游戏结束——但你留下的东西会继续。`,
+            statChanges: {},
+            specialEffect: `ending_author`
+        }
+    }, {
+        text: `现在还太早了——等我退休再说`,
+        outcome: {
+            description: `编辑留下了名片。你把它放在抽屉里——一个你偶尔会打开看看的抽屉。`,
+            statChanges: {
+                trackRecord: 3
+            }
+        }
+    }]
+}, {
+    id: `ev_end_exit_all`,
+    title: `Dust Settles`,
+    description: `你最后一个在管项目也退出了一一回报一般，但总算是画上了句号。你看着空荡荡的portfolio页面，突然觉得——也许是时候了。二十年了，你播种、浇水、等待、收割——循环往复。但这个循环，是不是也该有尽头？`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => n.filter(e => e.status === `resolved`).length >= 10 && n.filter(e => e.status === `pending`).length === 0,
+    choices: [{
+        text: `盖棺——是时候说再见了`,
+        outcome: {
+            description: `你写完了最后一封LP信，关掉了Bloomberg Terminal，合上了笔记本电脑。窗外北京的秋天来得正好。游戏结束——不是因为失败，而是因为圆满。`,
+            statChanges: {},
+            specialEffect: `ending_peaceful_retire`
+        }
+    }, {
+        text: `不——再投一个吧`,
+        outcome: {
+            description: `你又打开了邮箱——新的BP已经进来了。"就再投一个"——你这样告诉自己。管理规模+3，健康-3。`,
+            statChanges: {
+                aum: 3,
+                health: -3
+            }
+        }
+    }]
+}, {
+    id: `ev_sabbatical`,
+    title: `The Lost Year`,
+    description: `你已经连续高强度运转了好几年。每天早上醒来，你都需要在床上躺十分钟才有勇气起来。你看BP的速度越来越慢，见创始人的热情越来越低。体检报告上的红色箭头越来越多。你的身体在用最后的理智告诉你：再不停下来，就会被迫停下来。`,
+    era: `era_hardtech_consumer`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => e.health < 30,
+    choices: [{
+        text: `申请休假一年——去旅行、读书、陪家人`,
+        outcome: {
+            description: `你向投委会提交了休假申请。合伙人们面面相觑，但你的健康报告说服了他们。这一年你没有看一份BP、没有见一个创始人。你去了大理、学了三道菜、读完了十本书。回来时你觉得自己像换了一个人。当然——这一整年你没有任何投资。健康+8，直接进入年终回顾。`,
+            statChanges: {
+                health: 8
+            },
+            specialEffect: `sabbatical`
+        }
+    }, {
+        text: `硬撑——这个行业不允许停下来`,
+        outcome: {
+            description: `你吞了两片咖啡因片继续看BP。你的身体记住了这个选择——它会在未来的某一天跟你清算。健康-5。`,
+            statChanges: {
+                health: -5
+            }
+        }
+    }]
+}, {
+    id: `ev_network_dinner`,
+    title: `Private Dinner`,
+    description: `你的人脉圈里一位大佬组织了一个小型私人饭局——只有六个人，全是你想认识的人。这种场合不会公开邀请，消息只在信任的圈子里流通。你能拿到邀请，说明你已经在这个圈子里了。`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => e.network >= 40,
+    choices: [{
+        text: `好好准备——带上一个你觉得所有人都会感兴趣的deal`,
+        outcome: {
+            description: `你分享的项目引起了热烈讨论。饭后大佬单独留你下来聊了半小时。这次饭局为你带来了两个顶级项目的跟投机会。管理规模+8，投资业绩+5。`,
+            statChanges: {
+                aum: 8,
+                trackRecord: 5
+            }
+        }
+    }, {
+        text: `低调参加——多听少说，观察学习`,
+        outcome: {
+            description: `你没有成为焦点，但你认真记下了每个人说的每一句话。其中一条信息让你在三个月后避开了一个大坑。人脉网络+5。`,
+            statChanges: {
+                network: 5
+            }
+        }
+    }]
+}, {
+    id: `ev_network_leak`,
+    title: `Water Cooler Gossip`,
+    description: `一个在你圈子里的朋友私下告诉你——某家巨头正在秘密谈判收购一家创业公司，这家公司恰好跟你的被投公司是同一个赛道。如果收购完成，你的被投公司将面临巨大的竞争压力。这个消息目前只有极少数人知道。`,
+    category: `project_chain`,
+    triggerCondition: (e, t, n, r) => e.network >= 35,
+    choices: [{
+        text: `立即调整策略，帮被投公司提前布局应对`,
+        outcome: {
+            description: `你的情报让被投公司提前三个月调整了产品路线图，避开了正面冲突。创始人后来在一次采访中说"我们的投资人救了我们"。投资业绩+8。`,
+            statChanges: {
+                trackRecord: 8
+            }
+        }
+    }, {
+        text: `先验证消息的准确性再说`,
+        outcome: {
+            description: `消息是真的——但等你验证完，最佳窗口期已经过去了。不过至少你没有在错误的信息上做出错误的决策。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_network_headhunter`,
+    title: `Headhunter's Trap`,
+    description: `一个高端猎头通过你的人脉关系找到你。她说有一家全球顶级基金在秘密组建中国团队，薪资是目前的三倍。但她也暗示——你需要在两周内做出决定，而且不能告诉任何人你在考虑这件事。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => e.network >= 50,
+    choices: [{
+        text: `接受面试——看看对方到底出什么条件`,
+        outcome: {
+            description: `面试过程极其严格——五轮，横跨三个时区。最终你拿到了offer。但你需要决定：是留在现在的平台继续深耕，还是去一个更大的舞台？管理规模+10，但投资业绩-3（心思不在deal上了）。`,
+            statChanges: {
+                aum: 10,
+                trackRecord: -3
+            }
+        }
+    }, {
+        text: `婉拒——时机不对，我现在不想动`,
+        outcome: {
+            description: `猎头很失望，但你的决定让你的团队和LP感到安心。有时候，对一个机会说不，比说是更需要勇气。投资业绩+3。`,
+            statChanges: {
+                trackRecord: 3
+            }
+        }
+    }]
+}, {
+    id: `ev_network_gossip`,
+    title: `Industry Scandal`,
+    description: `你通过人脉得知——一个你非常尊敬的同行投资人，最近的一个deal涉嫌严重的利益输送。这件事还没有公开，但如果爆出来，整个行业都会被震动。你知道这件事，因为那个人的LP恰好也是你的LP的朋友。`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => e.network >= 45,
+    choices: [{
+        text: `保持沉默——这不是你的事`,
+        outcome: {
+            description: `三个月后这件事被媒体曝光了。你因为提前知情但没有卷入而安全渡过。但你也错过了一个在行业里建立正直形象的机会。`,
+            statChanges: {}
+        }
+    }, {
+        text: `私下提醒LP注意风险——不点名，但给出足够暗示`,
+        outcome: {
+            description: `LP听懂了你的暗示。当丑闻曝光时，你的LP是少数提前做了准备的。他对你的信任大幅提升。人脉网络+8，投资业绩+5。`,
+            statChanges: {
+                network: 8,
+                trackRecord: 5
+            }
+        }
+    }]
+}, {
+    id: `ev_network_coinvest`,
+    title: `Co-Investment Offer`,
+    description: `一位你通过人脉认识的投资人邀请你一起做一个deal。他的基金规模比你大，但他愿意让你领投——因为这给了他一个更好的价格。这种机会在人脉不广的时候是完全接触不到的。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => e.network >= 30,
+    choices: [{
+        text: `接受——这是一次很好的品牌曝光机会`,
+        outcome: {
+            description: `你第一次以领投方的身份出现在行业媒体的报道中。虽然这个deal本身回报一般，但你的名字开始被更多圈外人知道了。管理规模+5，投资业绩+3，人脉网络+3。`,
+            statChanges: {
+                aum: 5,
+                trackRecord: 3,
+                network: 3
+            }
+        }
+    }, {
+        text: `婉拒——我对这个deal没有足够信心去领投`,
+        outcome: {
+            description: `你坦率地表达了你的顾虑。对方不仅没有生气，反而因此更尊重你的判断力。他说"下次有更好的deal我先找你。"人脉网络+3。`,
+            statChanges: {
+                network: 3
+            }
+        }
+    }]
+}, {
+    id: `ev_health_vacation`,
+    title: `PTO Request`,
+    description: `你已经连续工作了很久，HR提醒你今年的年假一天都还没用。你看了下日历——如果现在不休，下个月deal flow高峰期就不可能休了。但手头还有三个项目要推进。`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => e.health < 60,
+    choices: [{
+        text: `请假一周，去海边——工作可以等`,
+        outcome: {
+            description: `你关了微信通知，在海边发了一周的呆。回来后的第一个周一，你发现自己的脑子比过去三个月任何时候都清楚。健康+10，但管理规模-2（错过了一个deal的窗口期）。`,
+            statChanges: {
+                health: 10,
+                aum: -2
+            }
+        }
+    }, {
+        text: `不休了——deal不等人的`,
+        outcome: {
+            description: `你继续高强度运转。效率确实高——但你知道这种状态不可能一直持续。`,
+            statChanges: {
+                trackRecord: 3,
+                health: -3
+            }
+        }
+    }]
+}, {
+    id: `ev_health_gym`,
+    title: `健康 Check`,
+    description: `年度体检报告出来了。医生皱着眉头说："你的各项指标都偏高——压力太大、睡眠不足、缺乏运动。"他把报告递给你："你现在只有两个选择——改变生活习惯，或者继续下去然后明年在病房里见我。"`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => e.health < 50,
+    choices: [{
+        text: `听话——开始跑步，控制饮食，戒掉宵夜`,
+        outcome: {
+            description: `你每天早上六点起床跑步，戒掉了加班时的泡面和啤酒。三个月后复检，指标大幅改善。健康+12。当然——少了很多社交饭局，人脉网络-3。`,
+            statChanges: {
+                health: 12,
+                network: -3
+            }
+        }
+    }, {
+        text: `哪有时间？吃片降压药继续干`,
+        outcome: {
+            description: `你把报告扔进了抽屉。半年后你感到胸闷不得不去了医院——这次医生不是在建议了，是在警告。健康-8。`,
+            statChanges: {
+                health: -8
+            }
+        }
+    }]
+}, {
+    id: `ev_health_hobby`,
+    title: `Unexpected Hobby`,
+    description: `一个被投公司的创始人邀请你去参加他的木工工作坊——他在创业之余靠做木工减压。"你也应该试试，比看BP治愈多了。"你看着手中的凿子和木板，有点不确定。`,
+    category: `industry_anecdote`,
+    triggerCondition: (e, t, n, r) => n.length >= 3,
+    choices: [{
+        text: `试试看——反正周末也没安排`,
+        outcome: {
+            description: `你做了一个歪歪扭扭的小板凳。这是你三年来第一次用双手创造了一件完全和"投资回报"无关的东西。健康+8。后来你把这个板凳放在了办公室——每个创始人进来都会问这个故事。人脉网络+3。`,
+            statChanges: {
+                health: 8,
+                network: 3
+            }
+        }
+    }, {
+        text: `婉拒——"我不太适合这种文艺活动"`,
+        outcome: {
+            description: `你礼貌地拒绝了。周末你在家补了两天的工作。效率一般，但你至少把inbox清空了。`,
+            statChanges: {}
+        }
+    }]
+}, {
+    id: `ev_health_sleep`,
+    title: `3AM Email`,
+    description: `凌晨三点，你还在回复LP的邮件。你忽然意识到——你已经连续两周每天睡眠不到五小时了。镜子里的你眼睛布满血丝。你告诉自己这很正常——做VC的都这样。但这真的正常吗？`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => e.health < 45,
+    choices: [{
+        text: `关掉电脑——明天再说`,
+        outcome: {
+            description: `你合上了笔记本电脑。这是六个月来你第一次在午夜之前睡觉。第二天醒来时你感觉像换了一个人。健康+5。当然，LP的邮件还没回完——但世界没有因此毁灭。`,
+            statChanges: {
+                health: 5
+            }
+        }
+    }, {
+        text: `喝杯咖啡继续——LP的邮件必须今晚回复`,
+        outcome: {
+            description: `咖啡续了一杯又一杯。邮件写完了——写得很漂亮。但你第二天在投决会上打瞌睡了。合伙人注意到了。健康-5，投资业绩-3。`,
+            statChanges: {
+                health: -5,
+                trackRecord: -3
+            }
+        }
+    }]
+}, {
+    id: `ev_health_mentor_health`,
+    title: `Veteran's Advice`,
+    description: `一位比你资深的合伙人在茶水间碰到你，看了一眼你的脸色说："你看起来跟我十年前一模一样。知道我那十年最后得到了什么吗？胃溃疡、高血压、和一个跟我离婚的前妻。"他拍了拍你的肩膀："不要等到失去了才明白什么叫得不偿失。"`,
+    category: `career`,
+    triggerCondition: (e, t, n, r) => e.health < 55 && n.length >= 5,
+    choices: [{
+        text: `认真听取——找一个你信任的人聊聊`,
+        outcome: {
+            description: `你和一位心理咨询师聊了一次。虽然你一开始觉得"做VC的看什么心理医生"，但一小时的谈话让你意识到——你承受的压力远远超过了你的想象。健康+6。你开始定期去。`,
+            statChanges: {
+                health: 6
+            }
+        }
+    }, {
+        text: `笑了笑说"谢谢关心"——但心里不以为然`,
+        outcome: {
+            description: `你觉得这是"弱者才需要的东西"。你没有改变任何习惯。前辈看了你一眼，没再说什么。他见过太多你这样的年轻人了。`,
+            statChanges: {}
+        }
+    }]
+}];
+
+function he(e, t, n) {
+    return e - t >= 1
+}
+
+function D(e, t, n, r, i, a, o) {
+    let s = me.filter(o => !(a.includes(o.id) || o.year !== void 0 && o.year !== i || o.era && o.era !== r || o.triggerCondition && !o.triggerCondition(e, t, n, i)));
+    if (s.length === 0) return null;
+    let c = s.flatMap(e => {
+        let t = e.category === `era_milestone` ? 4 : e.category === `project_chain` ? 2 : 1;
+        return Array(t).fill(e)
+    });
+    return c[Math.floor(o.next() * c.length)]
+}
+
+function ge(e, t, n, r, i) {
+    if (n === `partner` || e < 55 || r < 2012 || t < 25) return {
+        shouldAdvance: !1,
+        reason: ``
+    };
+    let a = (e - 55) / 100,
+        o = Math.max(0, (r - 2012) * .04),
+        s = Math.min(a + o, .7);
+    return i.next() < s ? {
+        shouldAdvance: !0,
+        reason: `晋升合伙人`
+    } : {
+        shouldAdvance: !1,
+        reason: ``
+    }
+}
+
+function _e(e) {
+    return Math.max(0, Math.min(100, e))
+}
+
+function ve(e, t) {
+    return {
+        aum: Math.max(0, e.aum + (t.aum || 0)),
+        trackRecord: _e(e.trackRecord + (t.trackRecord || 0)),
+        network: _e(e.network + (t.network || 0)),
+        health: _e(e.health + (t.health || 0))
+    }
+}
+var ye = [{
+    id: `end_icu`,
+    title: `ICU战神`,
+    description: `你的心脏支架手术刚做完三天，麻醉还没过就已经开始回复LP微信。护士以为你在看心电图，其实是在看项目的cap table。你终于懂了：VC这行不是Burnout，是Burn到连灰都不剩。现在你有半年强制" Sabbatical "——但你发现除了看BP，连剧都不会追了。`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => e.health <= 0,
+    priority: 1
+}, {
+    id: `end_fired`,
+    title: `灵活就业`,
+    description: `IRRs连续跑输benchmark，投委会的耐心终于归零。HR约你谈话那天下着暴雨，你抱着纸箱走出国贸写字楼，保安条件反射喊了声"张总"，然后尴尬地咽了回去。VC这行：今天的"总"，明天可能就是"那位"。但别慌——据说被开的VC转创业成功率+50%，虽然数据样本可能只有3个人。`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => e.trackRecord < 10 && i >= 2013,
+    priority: 2
+}, {
+    id: `end_demoted`,
+    title: `边缘人物`,
+    description: `你的 IRR 连续跑输余额宝，投委会"慈悲"地把你调到了投后管理。现在你每天的工作：给僵尸公司打催债电话、写投后报告、参加债权人会议。你的工位从落地窗搬到了洗手间隔壁，茶水间遇到以前的同事，他们眼神飘忽："呃...最近在看什么赛道啊？"你："在看怎么写债转股协议。"`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => e.trackRecord >= 15 && e.trackRecord < 25 && i >= 2014,
+    priority: 3
+}, {
+    id: `end_no_exit`,
+    title: `无人问津`,
+    description: `你试图" optimize career path "，投了20份简历、见了8个猎头、聊了5家基金。每次面试都是同样的剧本："你的track record还需要consolidate"、"我们再看看"。最后一个猎头直接ghost了你。你坐在滴滴上看着国贸的写字楼，突然顿悟：这座城市的每栋楼里都有VC，但没有一扇门是为你开的。`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => e.trackRecord < 25 && e.network < 20 && i >= 2013,
+    priority: 4
+}, {
+    id: `end_scandal`,
+    title: `行业冥灯`,
+    description: `你投的项目连环暴雷：数据造假→创始人跑路→审计非标，一气呵成。行业媒体做了个专题《那些年我们一起踩过的雷》，你荣登封面C位。有LP在群里放话："以后这个人的deal，看都不要看。"但你心里清楚：这不完全是眼光问题，你只是运气太差了...对吧？对吧？`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => n.filter(e => e.outcome === `failure`).length >= 6 && e.trackRecord < 25,
+    priority: 5
+}, {
+    id: `end_politics`,
+    title: `功高震主`,
+    description: `你的IRR碾压全公司，但合伙人看你不爽了。趁你休假，投委会把你的两个core portfolio全给否了。你回来发现木已成舟，终于悟了：在VC机构里，有时候不是你投得多好，而是你挡了谁的路。你带着一身本事离开，但江湖上开始流传"那件事"——不管你走到哪，都有人小声说："就是他，被老东家给搞了。"`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => e.trackRecord > 70 && r.some(e => e.eventId === `ev_career_politics`),
+    priority: 6
+}, {
+    id: `end_entrepreneur`,
+    title: `屠龙少年`,
+    description: `你摘下投资人的工牌，成为咖啡厅里"那些被看的"人之一。你的第一份BP只有15页——比你当年要求的30页标准短了一半。第一次路演，你在投资人面前紧张得手抖，终于明白为什么founder会在会议室里出汗。最魔幻的是：你的前同事们现在成了你的target LP。角色互换，这感觉真奇妙。`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => r.some(e => e.eventId === `ev_career_startup` && e.outcome.includes(`离开VC`)),
+    priority: 7
+}, {
+    id: `end_tech_giant`,
+    title: `上岸人`,
+    description: `某大厂战投部抛来橄榄枝：pay翻三倍、工时减半、不用背IRR。你挣扎了三天，最终在offer上签字。离职那天你在朋友圈发了张工位照，配文："上岸"。评论区瞬间爆炸："恭喜脱离苦海"、"求内推"、"战投还招人吗"。你才发现：原来这么多同行都想跑路，只是不好意思说。`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => e.disappointmentScore !== void 0 && e.disappointmentScore > 6 && i >= 2012,
+    priority: 8
+}, {
+    id: `end_retire_early`,
+    title: `江湖传说`,
+    description: `你正处于power peak，却突然宣布退休。不是身体原因，不是被fire，只是某天看着国贸CBD问自己："然后呢？"你投了PC互联网、移动互联网、O2O、AI——你投出了一个时代，却没找到自己的答案。退休消息震动半个VC圈，至今还有人问你当年怎么投中那家独角兽的。你只是笑笑："那是一个秘密。"`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => e.aum > 80 && e.trackRecord > 70 && e.health < 25,
+    priority: 9
+}, {
+    id: `end_system_collapse`,
+    title: `时代尘埃`,
+    description: `2008金融海啸、2015股灾、2018资管新规、2020疫情——你扛过了四次系统性危机。但第五次来临时，你的AUM归零、IRR跌破地平线。时代的一粒灰，落在GP头上就是一座山。基金被清算、LP全撤资，离开办公室那天你回头看了眼大楼：它还是二十年前的样子，而你已不是二十年前的你了。`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => e.aum <= 0 && e.trackRecord < 30 && i >= 2018,
+    priority: 10
+}, {
+    id: `end_naked_swimmer`,
+    title: `裸泳者`,
+    description: `巴菲特说退潮了才知道谁在裸泳——你的AUM已经连续三年为零，也就是说你三年没投出一个项目了。LP们早已对你dead silence，行业聚会也没人提起你的名字。最后一个LP撤资邮件你甚至没回，在空荡荡的办公室坐到凌晨，关掉电脑走到街上。天快亮了，该想想除了VC还能做什么了——也许去大理开民宿？`,
+    category: `early_termination`,
+    condition: () => !1,
+    priority: 11
+}, {
+    id: `end_gov_fund`,
+    title: `国之重器`,
+    description: `你加入了国家级产业基金，办公室从国贸搬到金融街。没有LP压力了，但有KPI——关于产业链安全的KPI。有人说你"上岸了"，但你明白：在这个位置上，你看问题的视角完全不同了。你不再只是一个赚钱的GP，而是国家战略的参与者。每次出手，都在布局国运。`,
+    category: `early_termination`,
+    condition: () => !1,
+    priority: 16
+}, {
+    id: `end_author`,
+    title: `说书人`,
+    description: `你写了本书叫《二十年创投野史》，不是投资指南，是一个时代的私人记忆。2005年中关村的咖啡味、2014年创业大街的人山人海、2018年寒冬里默默关门的基金、2023年AIGC的集体狂热...这本书成了行业必读书。有年轻投资人跟你说："看完才知道，这行不只有carry和IPO，还有人和故事。"你笑了笑：这才是真相。`,
+    category: `early_termination`,
+    condition: () => !1,
+    priority: 17
+}, {
+    id: `end_peaceful_retire`,
+    title: `功成身退`,
+    description: `最后一个项目也exit了。看着空荡荡的portfolio页面——二十年了。投过的公司有的成了巨头，有的消失，大部分在中间默默创造价值。VC的真相：大部分人是平庸的，但所有人共同推动了创新。你是洪流中的一滴水，现在安静地退出——不是因为失败，而是因为圆满。窗外北京的秋天，来得正好。`,
+    category: `early_termination`,
+    condition: () => !1,
+    priority: 18
+}, {
+    id: `end_lp_pullout`,
+    title: `资本弃儿`,
+    description: `你的AUM缩水到接近零，IRR一塌糊涂。最后一个LP的撤资邮件只有一句话："我们决定不再续约了。"你在办公室坐到凌晨，回邮件只写了两个字："理解。"然后关灯、关电脑、走到街上。北京的夜风很冷，你终于自由了——虽然是被迫的。`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => e.aum < 5 && e.trackRecord < 40,
+    priority: 13
+}, {
+    id: `end_lawsuit`,
+    title: `被告席`,
+    description: `你被LP告了，指控你DD存在重大过失——漏掉了审计报告脚注里写了三页的财务造假信号。你输了官司，赔偿金额超过从业以来所有carry的总和。你终于懂了：VC协议里那些法律条款不是摆设，因为当一切变糟时，每个人都需要一个替罪羊。这次，轮到你站在被告席上了。`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => n.filter(e => e.outcome === `failure`).length >= 3 && r.some(e => e.eventId === `ev_chain_scandal`),
+    priority: 12
+}, {
+    id: `end_depression`,
+    title: `人间蒸发`,
+    description: `不知道从哪天起，你每天早上都需要巨大的勇气才能起床。BP塞满邮箱却一封都不想打开，手机静音三个月只回家人微信。行业聚会开始有人问："那个谁谁谁去哪了？"没人知道。你去大理洱海边租了间客栈，学会做手冲咖啡，不再每天看market data。偶尔扫一眼行情，心里波澜不惊——这才是活着的感觉。`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => e.health < 12 && n.length >= 8,
+    priority: 14
+}, {
+    id: `end_fa`,
+    title: `人民币玩家`,
+    description: `你转行做FA了。从买方变卖方，身份反转很魔幻——以前是你挑项目，现在是你发"这轮马上close了"撩投资人。但你意外发现很擅长这个，VC背景让你比别的FA更懂投资人gut feeling。收入翻了3倍，你开始朋友圈晒保时捷方向盘，老同事们只回"抱拳"表情，没人约你喝咖啡了。`,
+    category: `early_termination`,
+    condition: (e, t, n, r, i) => e.trackRecord < 35 && e.network > 60,
+    priority: 15
+}, {
+    id: `end_godfather`,
+    title: `教父`,
+    description: `二十年，你从analyst变成行业legend。Portfolio里5只独角兽、2家上市公司、1个改变国人生活的killer product。你的门徒遍布各大tier-1基金，不少已成partner。行业峰会VIP晚宴，你的座位在主桌正中，邻座都在偷拍你。你淡然一笑——这份荣耀不是因为你是谁，而是因为你经历的每个cycle，都是他们梦寐以求的传说。`,
+    category: `normal_completion`,
+    condition: (e, t, n, r, i) => e.trackRecord > 80 && e.network > 80 && e.aum > 60 && e.health >= 35,
+    priority: 100
+}, {
+    id: `end_tragic_hero`,
+    title: `悲情英雄`,
+    description: `你的IRR冠绝全行业，投中两个generation-defining项目。但代价是：三段婚姻、错过了两个孩子的成长、四十岁白头。行业媒体称你"中国VC最有眼光的投资人"，但你女儿作文里写："我爸爸最擅长的事——答应来家长会，然后说在见重要founder。"你把二十年给了这行业，你觉得值吗？`,
+    category: `normal_completion`,
+    condition: (e, t, n, r, i) => e.trackRecord > 80 && e.health < 35 && e.aum >= 30,
+    priority: 101
+}, {
+    id: `end_survivor`,
+    title: `幸存者`,
+    description: `二十年，你还在。没投中过惊天动地的项目，也没踩过毁灭性的大雷。你的portfolio曲线像条温和直线——不惊艳，但稳。看着身边人一轮轮疯狂、一轮轮幻灭，你始终保持同样节奏。有人笑你太保守，有人羡慕你心态好。在VC这个容易焦虑的行业，你找到了最珍贵的东西——balance。`,
+    category: `normal_completion`,
+    condition: (e, t, n, r, i) => e.trackRecord >= 40 && e.trackRecord <= 60 && e.health >= 50 && e.aum >= 20,
+    priority: 110
+}, {
+    id: `end_fundraising_master`,
+    title: `融资大师`,
+    description: `你可能是全中国最会募资的人——没人质疑。AUM连续十年行业前列，LP大会演讲次次满堂彩。至于returns嘛...你的募资能力足以让LP忽略这一点。行业聚会上有人开玩笑："X总投的是LP关系，不是项目。"你听到后大笑举杯——因为你深知：在VC这行，有AUM就有一切，IRR是optional的。`,
+    category: `normal_completion`,
+    condition: (e, t, n, r, i) => e.aum > 80 && e.trackRecord < 45,
+    priority: 102
+}, {
+    id: `end_hermit`,
+    title: `江湖隐侠`,
+    description: `你看准了一切，但不想再玩了。二十年里投中PC互联网、移动互联网、AI三个时代，业绩证明你的眼光，但你选择低调。没做大基金、没当网红、没出书。只是在一个阳光很好的下午，倒杯茶翻看二十年前的旧BP——每份都是一个时代的注脚。偶尔在行业论坛发言，台下人窃窃私语："那人是谁？看起来很厉害的样子。"你只是笑笑。`,
+    category: `normal_completion`,
+    condition: (e, t, n, r, i) => e.trackRecord > 70 && e.aum < 30 && e.network > 60,
+    priority: 103
+}, {
+    id: `end_old_cattle`,
+    title: `VC老黄牛`,
+    description: `勤勤恳恳二十年，DD报告写了两万页。没当上partner，没投出独角兽，没在峰会发过言。但正是你这样的人，撑起了整个行业的基座——每笔deal背后，都有无数像你兢兢业业埋头尽调的人。退休那天，晚辈送你精装相册，收录你经手的每份BP封面。你翻阅良久，轻叹："这些founder，现在又在哪写他们的故事？"`,
+    category: `normal_completion`,
+    condition: (e, t, n, r, i) => e.trackRecord < 45 && e.aum < 25 && e.health >= 40 && e.network < 50,
+    priority: 111
+}, {
+    id: `end_hesitation`,
+    title: `犹豫败北`,
+    description: `你一直在纠结。转行？再等等。创业？风险太大。跳槽？明年吧。你错过三次升partner的机会、两次跳槽机会、一次跟founder创业的机会。想得多，做得少。二十年后终于悟了：做错决定的代价，远小于不做决定的代价。但这个道理，你明白得太晚了。`,
+    category: `normal_completion`,
+    condition: (e, t, n, r, i) => r.filter(e => e.eventId === `ev_career_startup` || e.eventId === `ev_career_poach` || e.eventId === `ev_career_fund`).length >= 3,
+    priority: 109
+}, {
+    id: `end_phoenix`,
+    title: `不死鸟`,
+    description: `你投的项目几乎都死了。2008电商、2014O2O、2018消费、2023AIGC——你全踩在风口上，但风都停了。神奇的是你没死，LP还在、AUM还在、意志还在。行业里流传一句话："连XX总都还在投，说明这行还没见底。"你成了反向指标——一个受尊敬的反向指标。毕竟，consistent contrarian也是种alpha。`,
+    category: `normal_completion`,
+    condition: (e, t, n, r, i) => n.filter(e => e.outcome === `failure`).length >= 6 && n.length >= 15,
+    priority: 106
+}, {
+    id: `end_lottery_winner`,
+    title: `彩票赢家`,
+    description: `你早期投中一个超级独角兽，那个项目的return cover了你之后所有失败的deal。你知道是运气，但也足够聪明地意识到了。没有因为一次成功就觉得自己是天才，只是安静做好该做的事。之后十几年业绩平平，但独角兽光环始终罩着你。有人嫉妒，有人敬重你的自知之明。VC这行，一辈子能抓住一个就够了——你抓住了。`,
+    category: `normal_completion`,
+    condition: (e, t, n, r, i) => n.some(e => e.outcome === `huge_success`) && n.length >= 18,
+    priority: 107
+}, {
+    id: `end_time_traveler`,
+    title: `穿越者`,
+    description: `你在每个时代拐点都选对——2008捡便宜、2014闷声发财、2018精准避雷、2023再次抄底。Portfolio曲线完美到无可挑剔。同行百思不得其解："这人是不是有insider info？"你只是笑而不语。没有内幕——你只是比所有人更早读到market signal。或者，你真的来自未来？这个secret，只有你自己知道。`,
+    category: `normal_completion`,
+    condition: (e, t, n, r, i) => e.trackRecord > 90 && e.aum > 80 && e.health > 60 && e.network > 70,
+    priority: 99
+}];
+
+function be(e, t, n, r, i = 2005) {
+    let a = [...ye].sort((e, t) => e.priority - t.priority);
+    for (let o of a)
+        if (o.condition(e, t, n, r, i)) return o;
+    return null
+}
+var xe = class {
+    state;
+    constructor(e) {
+        this.state = e
+    }
+    next() {
+        this.state |= 0, this.state = this.state + 1831565813 | 0;
+        let e = Math.imul(this.state ^ this.state >>> 15, 1 | this.state);
+        return e = e + Math.imul(e ^ e >>> 7, 61 | e) ^ e, ((e ^ e >>> 14) >>> 0) / 4294967296
+    }
+    nextInt(e, t) {
+        return Math.floor(this.next() * (t - e + 1)) + e
+    }
+    chance(e) {
+        return this.next() < e
+    }
+    pick(e) {
+        return e[Math.floor(this.next() * e.length)]
+    }
+};
+
+function Se() {
+    return Math.floor(Math.random() * 2147483647) + 1
+}
+
+function Ce() {
+    return {
+        currentYear: re,
+        currentTurn: 1,
+        gamePhase: `TITLE_SCREEN`,
+        gameOver: !1,
+        triggeredEndingId: null,
+        aum: ie.aum,
+        trackRecord: ie.trackRecord,
+        network: ie.network,
+        health: ie.health,
+        careerStage: `investment_manager`,
+        partnerYear: null,
+        firmName: `风念资本`,
+        investmentHistory: [],
+        eventHistory: [],
+        currentMarketBrief: null,
+        currentProjects: [],
+        selectedInvestments: [],
+        currentRandomEvent: null,
+        insiderProjectId: null,
+        maturedResults: [],
+        currentEraId: `era_pc_internet`,
+        lastEventTurn: 0,
+        recentProjectIds: [],
+        investedProjectIds: [],
+        triggeredEventIds: [],
+        consecutiveZeroAum: 0,
+        disappointmentScore: 0,
+        declinedCareerChangeCount: 0,
+        phaseMessage: null,
+        skipToYearEnd: !1
+    }
+}
+
+(function engineScript() {
+  let game;
+  let selectedProjectIds = [];
   let toastTimer = null;
-  const els = { cashMetric: document.getElementById('cashMetric'), navMetric: document.getElementById('navMetric'), dpiMetric: document.getElementById('dpiMetric'), lpMetric: document.getElementById('lpMetric'), repMetric: document.getElementById('repMetric'), disciplineMetric: document.getElementById('disciplineMetric'), heatList: document.getElementById('heatList'), yearPill: document.getElementById('yearPill'), phaseTag: document.getElementById('phaseTag'), cycleTag: document.getElementById('cycleTag'), eventTitle: document.getElementById('eventTitle'), eventCopy: document.getElementById('eventCopy'), choiceGrid: document.getElementById('choiceGrid'), portfolioList: document.getElementById('portfolioList'), logList: document.getElementById('logList'), portfolioCount: document.getElementById('portfolioCount'), logCount: document.getElementById('logCount'), endingPane: document.getElementById('endingPane'), endingTitle: document.getElementById('endingTitle'), endingCopy: document.getElementById('endingCopy'), endingStats: document.getElementById('endingStats'), toast: document.getElementById('toast'), cycleDot: document.getElementById('cycleDot') };
+
+  const sectorNames = {
+    pc_internet: 'PC互联网', ecommerce: '电商', saas: '企业服务', gaming: '游戏', ai: 'AI',
+    mobile: '移动互联网', fintech: '金融科技', o2o: 'O2O', healthcare: '医疗健康', hardtech: '硬科技',
+    consumer: '新消费', crypto: '区块链', green: '新能源', overseas: '出海'
+  };
+
+  const els = {
+    cashMetric: document.getElementById('cashMetric'), navMetric: document.getElementById('navMetric'), dpiMetric: document.getElementById('dpiMetric'), lpMetric: document.getElementById('lpMetric'), repMetric: document.getElementById('repMetric'), disciplineMetric: document.getElementById('disciplineMetric'), heatList: document.getElementById('heatList'), yearPill: document.getElementById('yearPill'), phaseTag: document.getElementById('phaseTag'), cycleTag: document.getElementById('cycleTag'), eventTitle: document.getElementById('eventTitle'), eventCopy: document.getElementById('eventCopy'), choiceGrid: document.getElementById('choiceGrid'), portfolioList: document.getElementById('portfolioList'), logList: document.getElementById('logList'), portfolioCount: document.getElementById('portfolioCount'), logCount: document.getElementById('logCount'), endingPane: document.getElementById('endingPane'), endingTitle: document.getElementById('endingTitle'), endingCopy: document.getElementById('endingCopy'), endingStats: document.getElementById('endingStats'), toast: document.getElementById('toast'), cycleDot: document.getElementById('cycleDot')
+  };
+
   function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
   function fmt(value) { return Number.isInteger(value) ? String(value) : Number(value).toFixed(1); }
-  function signed(value) { if (!value) return '0'; return `${value > 0 ? '+' : ''}${value}`; }
-  function currentTurn() { return turns[state.turn]; }
-  function projectOutcome(option, turn) {
-    const reference = turn.referenceResults?.find((item) => item.id === option.id);
-    if (reference) return reference;
-    const expected = option.successBaseRate * option.potentialMultiplier;
-    let outcome = 'failure'; let multiple = 0;
-    if (expected >= 4.5) { outcome = 'huge_success'; multiple = Math.min(18, option.potentialMultiplier * 0.82); }
-    else if (expected >= 2.2) { outcome = 'moderate_success'; multiple = Math.min(8, option.potentialMultiplier * 0.42); }
-    else if (option.successBaseRate >= 0.3) { outcome = 'breakeven'; multiple = 1; }
-    return { id: option.id, name: option.name, amount: option.amount, outcome, multiple, maturityYear: turn.year + 3 };
-  }
+  function stageLabel() { return game.careerStage === 'partner' ? '合伙人' : '投资经理'; }
+  function maxInvestments() { return game.careerStage === 'partner' ? 3 : 1; }
   function outcomeLabel(outcome) { return { huge_success: '大获成功', moderate_success: '稳步增长', breakeven: '勉强保本', failure: '投资失败' }[outcome] || outcome; }
-  function applyChoice(index) {
-    if (state.ended) return;
-    const turn = currentTurn(); const option = turn.options[index]; if (!turn || !option) return;
-    if (turn.type === 'event') {
-      const changes = option.statChanges || {};
-      state.aum = Math.max(0, state.aum + (changes.aum || 0)); state.trackRecord = clamp(state.trackRecord + (changes.trackRecord || 0), 0, 100); state.network = clamp(state.network + (changes.network || 0), 0, 100); state.health = clamp(state.health + (changes.health || 0), 0, 100);
-      state.log.unshift({ year: turn.year, text: `${turn.title}：选择「${option.text}」。AUM ${signed(changes.aum || 0)}，业绩 ${signed(changes.trackRecord || 0)}，人脉 ${signed(changes.network || 0)}，健康 ${signed(changes.health || 0)}。` });
-      showToast('事件选择完成', option.text);
-    }
-    if (turn.type === 'invest') {
-      const result = projectOutcome(option, turn);
-      state.aum = Math.max(0, state.aum - option.amount); state.trackRecord = clamp(state.trackRecord + 1, 0, 100);
-      state.portfolio.push({ id: option.id, name: option.name, sector: option.sector, amount: option.amount, year: turn.year, outcome: result.outcome, multiple: result.multiple, maturityYear: result.maturityYear, status: 'pending' });
-      state.log.unshift({ year: turn.year, text: `投资「${option.name}」，投入 ${option.amount}。预计 ${result.maturityYear} 年到期，退出结果届时揭晓。` });
-      showToast('投资确认', `${option.name} / ${sectorNames[option.sector] || option.sector}`);
-    }
-    if (turn.type === 'update') {
-      const resolved = [];
-      const applyExit = (holding, returned) => {
-        holding.status = 'resolved';
-        state.aum = Math.max(0, state.aum + returned);
-        if (holding.outcome === 'failure') { state.trackRecord = clamp(state.trackRecord - 8, 0, 100); state.network = clamp(state.network - 3, 0, 100); state.health = clamp(state.health - 2, 0, 100); }
-        else if (holding.outcome === 'breakeven') { state.trackRecord = clamp(state.trackRecord + 2, 0, 100); state.network = clamp(state.network + 1, 0, 100); }
-        else if (holding.outcome === 'moderate_success') { state.trackRecord = clamp(state.trackRecord + 10, 0, 100); state.network = clamp(state.network + 3, 0, 100); state.health = clamp(state.health + 2, 0, 100); }
-        else if (holding.outcome === 'huge_success') { state.trackRecord = clamp(state.trackRecord + 18, 0, 100); state.network = clamp(state.network + 5, 0, 100); state.health = clamp(state.health + 3, 0, 100); }
-        resolved.push(`${holding.name} ${outcomeLabel(holding.outcome)}，回款 ${fmt(returned)}`);
-      };
-      for (const result of turn.results) {
-        const holding = state.portfolio.find((item) => item.name === result.name && item.year === result.investedYear && item.status === 'pending');
-        if (!holding) continue;
-        holding.outcome = result.outcome; holding.multiple = result.multiple;
-        applyExit(holding, result.returned);
-      }
-      for (const holding of state.portfolio.filter((item) => item.status === 'pending' && item.maturityYear <= turn.year)) {
-        applyExit(holding, holding.amount * holding.multiple);
-      }
-      state.log.unshift({ year: turn.year, text: resolved.length ? resolved.join('；') : '本年没有你实际持有的项目到期。' });
-      showToast('Portfolio Update', resolved.length ? resolved[0] : '无到期项目');
-    }
-    const nextTurn = turns[state.turn + 1];
-    if (!nextTurn || nextTurn.year > turn.year) state.health = clamp(state.health - 1, 0, 100);
-    if (state.aum < 5 && state.trackRecord < 40 && turn.year >= 2013) { finishGame('capital_orphan'); return; }
-    state.turn += 1;
-    if (state.turn >= turns.length) finishGame('complete'); else render();
+  function outcomeMark(outcome) { return { huge_success: '★', moderate_success: '✓', breakeven: '—', failure: '×' }[outcome] || '·'; }
+
+  function initGame() {
+    const seed = Math.floor(Math.random() * 2147483647) + 1;
+    game = { ...Ce(), seed, rng: new xe(seed), logs: [], pendingView: null };
+    game.gamePhase = 'PROJECT_SELECTION';
+    prepareYear();
+    showToast('新游戏开始', `Seed ${seed}`);
+    render();
   }
-  function finishGame(reason) {
-    state.ended = true; render(); els.choiceGrid.hidden = true; els.endingPane.classList.add('is-visible');
-    if (reason === 'capital_orphan') { els.endingTitle.textContent = `结局：${endingText.title}`; els.endingCopy.textContent = endingText.copy; }
-    else { els.endingTitle.textContent = '结局：幸存者'; els.endingCopy.textContent = '你走完了这条 reference 路线，没有被提前淘汰。虽然过程充满波动，但至少还留在牌桌上。'; }
-    els.endingStats.innerHTML = [['AUM', fmt(state.aum)], ['投资业绩', fmt(state.trackRecord)], ['人脉网络', fmt(state.network)], ['健康', fmt(state.health)], ['投资项目', `${state.portfolio.length} 个`], ['完成回合', `${Math.min(state.turn + 1, turns.length)}/${turns.length}`]].map(([label, value]) => `<div class="ending-stat"><span class="metric-label">${label}</span><strong>${value}</strong></div>`).join('');
+
+  function prepareYear() {
+    const era = oe(game.currentYear);
+    const marketText = se(era, game.currentYear);
+    const projectPack = ue(era.id, game.network, game.trackRecord, game.careerStage, game.recentProjectIds, game.investedProjectIds, game.rng);
+    const projects = projectPack.insider ? [...projectPack.regular, projectPack.insider] : projectPack.regular;
+    game.currentEraId = era.id;
+    game.currentMarketBrief = { year: game.currentYear, eraId: era.id, eraName: era.name, theme: era.theme, backgroundText: marketText };
+    game.currentProjects = projects;
+    game.insiderProjectId = projectPack.insider?.id || null;
+    game.recentProjectIds = [...game.recentProjectIds, ...projects.map((project) => project.id)].slice(-9);
+    selectedProjectIds = [];
   }
+
+  function chooseProject(projectId) {
+    const limit = maxInvestments();
+    if (selectedProjectIds.includes(projectId)) {
+      selectedProjectIds = selectedProjectIds.filter((id) => id !== projectId);
+    } else if (selectedProjectIds.length >= limit) {
+      selectedProjectIds = [...selectedProjectIds.slice(1), projectId];
+    } else {
+      selectedProjectIds.push(projectId);
+    }
+    render();
+  }
+
+  function confirmProjects() {
+    if (!selectedProjectIds.length) {
+      showToast('请选择项目', '至少选择一个项目才能进入下一年。');
+      return;
+    }
+    const records = selectedProjectIds.map((projectId) => {
+      const project = game.currentProjects.find((item) => item.id === projectId);
+      const result = fe(project, game.trackRecord, game.careerStage === 'partner', game.rng);
+      let maturityOffset = 3;
+      if (result.tier === 'failure') maturityOffset = game.rng.nextInt(1, 2);
+      if (result.tier === 'breakeven') maturityOffset = game.rng.nextInt(2, 4);
+      if (result.tier === 'moderate_success') maturityOffset = game.rng.nextInt(2, 5);
+      if (result.tier === 'huge_success') maturityOffset = game.rng.nextInt(3, 6);
+      return { projectId: project.id, projectName: project.name, sector: project.sector, year: game.currentYear, amount: project.investmentAmount, outcome: result.tier, outcomeText: result.text, returnMultiple: result.returnMultiple, status: 'pending', maturityYear: game.currentYear + maturityOffset };
+    });
+    const spent = records.reduce((sum, item) => sum + item.amount, 0);
+    game.aum = Math.max(0, game.aum - spent);
+    game.trackRecord = clamp(game.trackRecord + (game.careerStage === 'partner' ? records.length * 2 : 1), 0, 100);
+    if (game.careerStage === 'partner' && records.length > 1) game.health = Math.max(0, game.health - (records.length - 1));
+    game.investmentHistory = [...game.investmentHistory, ...records];
+    game.investedProjectIds = [...game.investedProjectIds, ...records.map((item) => item.projectId)];
+    game.logs.unshift({ year: game.currentYear, text: `新投 ${records.map((item) => `「${item.projectName}」`).join('、')}，合计投入 ${spent}。` });
+    advanceYear();
+  }
+
+  function resolveCurrentEvent(choiceIndex) {
+    const event = game.currentRandomEvent;
+    const choice = event.choices[choiceIndex];
+    if (!choice) return;
+    const requirement = choice.requirement || {};
+    if ((requirement.trackRecord && game.trackRecord < requirement.trackRecord) || (requirement.network && game.network < requirement.network) || (requirement.aum && game.aum < requirement.aum) || (requirement.health && game.health < requirement.health)) {
+      showToast('条件不满足', '当前状态不足以选择这个选项。');
+      return;
+    }
+    const stats = ve({ aum: game.aum, trackRecord: game.trackRecord, network: game.network, health: game.health }, choice.outcome.statChanges || {});
+    Object.assign(game, stats);
+    if (event.id === 'ev_career_poach' && choiceIndex === 0) game.firmName = 'Wonolith资本';
+    if ((choice.outcome.statChanges?.trackRecord || 0) <= -5 || (choice.outcome.statChanges?.health || 0) <= -5) game.disappointmentScore += 1;
+    if ((event.id === 'ev_career_startup' || event.id === 'ev_career_poach' || event.id === 'ev_career_fund') && choiceIndex === 1) game.declinedCareerChangeCount += 1;
+    const endingMap = { ending_entrepreneur: 'end_entrepreneur', ending_retire_early: 'end_retire_early', ending_gov_fund: 'end_gov_fund', ending_author: 'end_author', ending_peaceful_retire: 'end_peaceful_retire' };
+    if (choice.outcome.specialEffect && endingMap[choice.outcome.specialEffect]) {
+      game.triggeredEndingId = endingMap[choice.outcome.specialEffect];
+      game.gameOver = true;
+    }
+    game.eventHistory = [...game.eventHistory, { eventId: event.id, year: game.currentYear, title: event.title, choiceIndex, outcome: choice.outcome.description }];
+    game.triggeredEventIds = [...game.triggeredEventIds, event.id];
+    game.logs.unshift({ year: game.currentYear, text: `事件「${event.title}」：${choice.text}` });
+    game.currentRandomEvent = null;
+    if (game.gameOver) finishWithEnding(game.triggeredEndingId);
+    else render();
+  }
+
+  function applyMaturedResults() {
+    const matured = game.investmentHistory.filter((item) => item.status === 'pending' && item.maturityYear === game.currentYear);
+    const resolved = [];
+    for (const item of matured) {
+      const delta = pe(item.outcome || 'breakeven');
+      game.trackRecord = clamp(game.trackRecord + delta.trackRecord, 0, 100);
+      game.network = clamp(game.network + delta.network, 0, 100);
+      const returned = (item.returnMultiple || 1) * item.amount;
+      game.aum = Math.max(0, game.aum + returned);
+      if (item.outcome === 'failure') game.health = Math.max(0, game.health - 2);
+      if (item.outcome === 'moderate_success') game.health = Math.min(100, game.health + 2);
+      if (item.outcome === 'huge_success') game.health = Math.min(100, game.health + 3);
+      item.status = 'resolved';
+      resolved.push({ ...item, returned });
+    }
+    if (resolved.length) {
+      game.logs.unshift({ year: game.currentYear, text: `退出：${resolved.map((item) => `${outcomeMark(item.outcome)}「${item.projectName}」${Number(item.returnMultiple || 0).toFixed(1)}x`).join('；')}` });
+      game.pendingView = { type: 'portfolio_update', results: resolved };
+    }
+  }
+
+  function advanceYear() {
+    applyMaturedResults();
+    game.consecutiveZeroAum = game.aum <= 0 ? game.consecutiveZeroAum + 1 : 0;
+    game.health = Math.max(0, game.health - (game.careerStage === 'partner' ? 2 : 1));
+    const earlyEnding = be({ aum: game.aum, trackRecord: game.trackRecord, network: game.network, health: game.health, disappointmentScore: game.disappointmentScore }, game.careerStage, game.investmentHistory, game.eventHistory, game.currentYear);
+    if (earlyEnding && earlyEnding.category === 'early_termination') {
+      finishWithEnding(earlyEnding.id);
+      return;
+    }
+    if (game.consecutiveZeroAum >= 3) {
+      finishWithEnding('end_naked_swimmer');
+      return;
+    }
+    const nextYear = game.currentYear + 1;
+    game.currentTurn += 1;
+    if (nextYear > 2025 || game.currentTurn > 20) {
+      const finalEnding = be({ aum: game.aum, trackRecord: game.trackRecord, network: game.network, health: game.health, disappointmentScore: game.disappointmentScore }, game.careerStage, game.investmentHistory, game.eventHistory, game.currentYear) || ye.find((ending) => ending.id === 'end_survivor');
+      finishWithEnding(finalEnding.id);
+      return;
+    }
+    const promotion = ge(game.trackRecord, game.network, game.careerStage, game.currentYear, game.rng);
+    if (promotion.shouldAdvance) {
+      game.careerStage = 'partner';
+      game.partnerYear = nextYear;
+      game.pendingView = game.pendingView || { type: 'promotion' };
+      game.logs.unshift({ year: nextYear, text: '晋升合伙人：每年最多可投 3 个项目。' });
+    }
+    game.currentYear = nextYear;
+    prepareYear();
+    const era = oe(game.currentYear);
+    if (he(game.currentTurn, game.lastEventTurn, game.rng)) {
+      const event = D({ aum: game.aum, trackRecord: game.trackRecord, network: game.network, health: game.health }, game.careerStage, game.investmentHistory, era.id, game.currentYear, game.triggeredEventIds, game.rng);
+      if (event) {
+        game.currentRandomEvent = event;
+        game.lastEventTurn = game.currentTurn;
+      }
+    }
+    render();
+  }
+
+  function finishWithEnding(endingId) {
+    game.gameOver = true;
+    game.triggeredEndingId = endingId;
+    render();
+  }
+
   function render() {
-    const turn = currentTurn(); const pending = state.portfolio.filter((item) => item.status === 'pending');
-    els.cashMetric.textContent = fmt(state.aum); els.navMetric.textContent = String(pending.length); els.dpiMetric.textContent = state.careerStage; els.lpMetric.textContent = fmt(state.trackRecord); els.repMetric.textContent = fmt(state.network); els.disciplineMetric.textContent = fmt(state.health);
-    renderProgress(); renderPortfolio(); renderLog(); if (!turn || state.ended) return;
-    els.yearPill.textContent = turn.year; els.phaseTag.textContent = turn.type === 'event' ? '时代事件' : turn.type === 'invest' ? '投资选择' : '退出更新'; els.cycleTag.textContent = `${state.turn + 1}/${turns.length}`; els.eventTitle.textContent = turn.title; els.eventCopy.textContent = turn.copy; els.choiceGrid.hidden = false; els.endingPane.classList.remove('is-visible');
-    els.choiceGrid.innerHTML = turn.options.map((option, index) => choiceMarkup(turn, option, index)).join('');
-    els.choiceGrid.querySelectorAll('.choice').forEach((button) => button.addEventListener('click', () => applyChoice(Number(button.dataset.choice))));
+    els.cashMetric.textContent = fmt(game.aum);
+    els.navMetric.textContent = String(game.investmentHistory.filter((item) => item.status === 'pending').length);
+    els.dpiMetric.textContent = stageLabel();
+    els.lpMetric.textContent = fmt(game.trackRecord);
+    els.repMetric.textContent = fmt(game.network);
+    els.disciplineMetric.textContent = fmt(game.health);
+    renderProgress();
+    renderPortfolio();
+    renderLog();
+    if (game.gameOver) return renderEnding();
+    els.endingPane.classList.remove('is-visible');
+    els.choiceGrid.hidden = false;
+    if (game.pendingView) return renderPendingView();
+    if (game.currentRandomEvent) return renderEvent();
+    renderProjects();
   }
-  function choiceMarkup(turn, option, index) {
-    const isReference = index === turn.referenceChoice;
-    if (turn.type === 'invest') {
-      const impact = [`投入 -${option.amount}`, `成功率 ${Math.round(option.successBaseRate * 100)}%`, `潜在 ${option.potentialMultiplier}x`];
-      return `<button class="choice" type="button" data-choice="${index}"><span class="choice-top"><span class="choice-title">${option.name}</span><span class="tag">${sectorNames[option.sector] || option.sector}</span></span><p class="choice-copy">${option.tagline}</p><p class="choice-copy">风险：${option.riskHint}</p><span class="choice-impact">${impact.map((item) => `<span class="impact">${item}</span>`).join('')}</span></button>`;
+
+  function renderPendingView() {
+    const view = game.pendingView;
+    els.yearPill.textContent = game.currentYear;
+    els.phaseTag.textContent = view.type === 'promotion' ? '晋升' : '退出更新';
+    els.cycleTag.textContent = `${game.currentTurn}/20`;
+    if (view.type === 'promotion') {
+      els.eventTitle.textContent = '晋升合伙人';
+      els.eventCopy.textContent = '你的投资业绩获得认可。从今年开始，你拥有更大的投资权限，也会承担更高压力。';
+    } else {
+      els.eventTitle.textContent = `${game.currentYear} 年项目退出`;
+      els.eventCopy.textContent = view.results.map((item) => `${item.projectName}：${outcomeLabel(item.outcome)}，回款 ${fmt(item.returned)}。${item.outcomeText}`).join('\n');
     }
-    const changes = option.statChanges || {}; const impact = [`AUM ${signed(changes.aum || 0)}`, `业绩 ${signed(changes.trackRecord || 0)}`, `人脉 ${signed(changes.network || 0)}`, `健康 ${signed(changes.health || 0)}`];
-    return `<button class="choice" type="button" data-choice="${index}"><span class="choice-top"><span class="choice-title">${option.text}</span><span class="tag">可选</span></span><p class="choice-copy">选择后立即影响职业状态。</p><span class="choice-impact">${impact.map((item) => `<span class="impact">${item}</span>`).join('')}</span></button>`;
+    els.choiceGrid.innerHTML = '<button class="choice" type="button" data-continue="1"><span class="choice-top"><span class="choice-title">继续</span><span class="tag">下一步</span></span><p class="choice-copy">进入下一阶段。</p></button>';
+    els.choiceGrid.querySelector('[data-continue]').addEventListener('click', () => { game.pendingView = null; render(); });
   }
+
+  function renderEvent() {
+    const event = game.currentRandomEvent;
+    els.yearPill.textContent = game.currentYear;
+    els.phaseTag.textContent = event.category === 'era_milestone' ? '时代事件' : event.category === 'career' ? '职业抉择' : '随机事件';
+    els.cycleTag.textContent = `${game.currentTurn}/20`;
+    els.eventTitle.textContent = event.title;
+    els.eventCopy.textContent = event.description;
+    els.choiceGrid.innerHTML = event.choices.map((choice, index) => {
+      const changes = choice.outcome.statChanges || {};
+      const impact = [`AUM ${signed(changes.aum || 0)}`, `业绩 ${signed(changes.trackRecord || 0)}`, `人脉 ${signed(changes.network || 0)}`, `健康 ${signed(changes.health || 0)}`];
+      return `<button class="choice" type="button" data-event-choice="${index}"><span class="choice-top"><span class="choice-title">${choice.text}</span><span class="tag">可选</span></span><p class="choice-copy">${choice.requirement ? '需要满足条件。' : '选择后立即生效。'}</p><span class="choice-impact">${impact.map((item) => `<span class="impact">${item}</span>`).join('')}</span></button>`;
+    }).join('');
+    els.choiceGrid.querySelectorAll('[data-event-choice]').forEach((button) => button.addEventListener('click', () => resolveCurrentEvent(Number(button.dataset.eventChoice))));
+  }
+
+  function renderProjects() {
+    const brief = game.currentMarketBrief;
+    els.yearPill.textContent = game.currentYear;
+    els.phaseTag.textContent = '投资选择';
+    els.cycleTag.textContent = `${game.currentTurn}/20`;
+    els.eventTitle.textContent = `${brief.eraName} · ${brief.theme}`;
+    els.eventCopy.textContent = brief.backgroundText;
+    const cards = game.currentProjects.map((project) => {
+      const selected = selectedProjectIds.includes(project.id);
+      return `<button class="choice" type="button" data-project-id="${project.id}" aria-pressed="${selected}"><span class="choice-top"><span class="choice-title">${project.name}</span><span class="tag">${sectorNames[project.sector] || project.sector}</span></span><p class="choice-copy">${project.tagline}</p><p class="choice-copy">风险：${project.riskHint}</p><span class="choice-impact"><span class="impact">投入 ${project.investmentAmount}</span><span class="impact">成功率 ${Math.round(project.successBaseRate * 100)}%</span><span class="impact">潜在 ${project.potentialMultiplier}x</span>${selected ? '<span class="impact">已选择</span>' : ''}</span></button>`;
+    }).join('');
+    els.choiceGrid.innerHTML = `${cards}<button class="button" type="button" id="confirmInvestments">确认投资（${selectedProjectIds.length}/${maxInvestments()}）</button>`;
+    els.choiceGrid.querySelectorAll('[data-project-id]').forEach((button) => button.addEventListener('click', () => chooseProject(button.dataset.projectId)));
+    document.getElementById('confirmInvestments').addEventListener('click', confirmProjects);
+  }
+
+  function signed(value) { if (!value) return '0'; return `${value > 0 ? '+' : ''}${value}`; }
+
   function renderProgress() {
-    const progress = turns.length <= 1 ? 0 : state.turn / (turns.length - 1);
-    els.heatList.innerHTML = [['游戏进度', Math.round(progress * 100)], ['AUM', clamp(state.aum, 0, 100)], ['投资业绩', state.trackRecord], ['人脉网络', state.network], ['健康', state.health]].map(([label, value]) => `<div class="heat-row"><span>${label}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:${clamp(value, 0, 100)}%"></span></span><span class="heat-value">${fmt(value)}</span></div>`).join('');
-    const x = 24 + progress * 206; const y = 90 - Math.sin(progress * Math.PI * 1.15) * 34 + progress * 8; els.cycleDot.setAttribute('cx', String(clamp(x, 24, 230))); els.cycleDot.setAttribute('cy', String(clamp(y, 28, 108)));
+    const progress = clamp(((game.currentYear - 2005) / 20) * 100, 0, 100);
+    els.heatList.innerHTML = [['游戏进度', Math.round(progress)], ['AUM', clamp(game.aum, 0, 100)], ['投资业绩', game.trackRecord], ['人脉网络', game.network], ['健康', game.health]].map(([label, value]) => `<div class="heat-row"><span>${label}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:${clamp(value, 0, 100)}%"></span></span><span class="heat-value">${fmt(value)}</span></div>`).join('');
+    const x = 24 + (progress / 100) * 206;
+    const y = 90 - Math.sin((progress / 100) * Math.PI * 1.15) * 34 + (progress / 100) * 8;
+    els.cycleDot.setAttribute('cx', String(clamp(x, 24, 230)));
+    els.cycleDot.setAttribute('cy', String(clamp(y, 28, 108)));
   }
+
   function renderPortfolio() {
-    const pending = state.portfolio.filter((item) => item.status === 'pending'); els.portfolioCount.textContent = `${pending.length} 个`;
-    if (!state.portfolio.length) { els.portfolioList.innerHTML = '<div class="empty">暂无投资。选择项目后会显示在这里。</div>'; return; }
-    els.portfolioList.innerHTML = state.portfolio.slice().reverse().slice(0, 9).map((item) => { const width = clamp((Number(item.multiple) || 0) * 8, 6, 100); return `<article class="deal"><div class="deal-head"><div><div class="deal-name">${item.name}</div><div class="deal-sector">${sectorNames[item.sector] || item.sector} / ${item.year} 投 / ${item.maturityYear} 到期</div></div><div class="deal-mark">${item.status === 'resolved' ? '已退出' : '待退出'}</div></div><div class="deal-progress"><span style="width:${width}%"></span></div></article>`; }).join('');
+    const pending = game.investmentHistory.filter((item) => item.status === 'pending');
+    els.portfolioCount.textContent = `${pending.length} 个`;
+    if (!game.investmentHistory.length) {
+      els.portfolioList.innerHTML = '<div class="empty">暂无投资。选择项目后会显示在这里。</div>';
+      return;
+    }
+    els.portfolioList.innerHTML = game.investmentHistory.slice().reverse().slice(0, 10).map((item) => {
+      const width = item.status === 'resolved' ? clamp((item.returnMultiple || 0) * 8, 6, 100) : 18;
+      return `<article class="deal"><div class="deal-head"><div><div class="deal-name">${item.projectName}</div><div class="deal-sector">${sectorNames[item.sector] || item.sector} / ${item.year} 投 / ${item.maturityYear} 到期</div></div><div class="deal-mark">${item.status === 'resolved' ? `${Number(item.returnMultiple || 0).toFixed(1)}x` : '待退出'}</div></div><div class="deal-progress"><span style="width:${width}%"></span></div></article>`;
+    }).join('');
   }
+
   function renderLog() {
-    els.logCount.textContent = `${state.log.length} 条`; if (!state.log.length) { els.logList.innerHTML = '<div class="empty">选择和退出会记录在这里。</div>'; return; }
-    els.logList.innerHTML = state.log.slice(0, 10).map((entry) => `<article class="log-entry"><span class="log-year">${entry.year}</span>${entry.text}</article>`).join('');
+    els.logCount.textContent = `${game.logs.length} 条`;
+    if (!game.logs.length) {
+      els.logList.innerHTML = '<div class="empty">选择和退出会记录在这里。</div>';
+      return;
+    }
+    els.logList.innerHTML = game.logs.slice(0, 10).map((entry) => `<article class="log-entry"><span class="log-year">${entry.year}</span>${entry.text}</article>`).join('');
   }
-  function resetGame() { state = initialState(); els.endingPane.classList.remove('is-visible'); showToast('重新开始', 'Reference 路线已重置。'); render(); }
-  function showToast(title, body) { window.clearTimeout(toastTimer); els.toast.innerHTML = `<strong>${title}</strong><span>${body}</span>`; els.toast.classList.add('is-visible'); toastTimer = window.setTimeout(() => els.toast.classList.remove('is-visible'), 3200); }
-  document.getElementById('restartTop').addEventListener('click', resetGame); document.getElementById('restartEnding').addEventListener('click', resetGame); document.getElementById('howToPlay').addEventListener('click', () => showToast('玩法说明', '每回合选择一个事件处理方式或投资项目。投资会占用 AUM，项目到期后才揭晓退出结果。'));
-  render();
+
+  function renderEnding() {
+    const ending = ye.find((item) => item.id === game.triggeredEndingId) || ye.find((item) => item.id === 'end_survivor');
+    els.choiceGrid.hidden = true;
+    els.endingPane.classList.add('is-visible');
+    els.yearPill.textContent = game.currentYear;
+    els.phaseTag.textContent = '游戏结束';
+    els.cycleTag.textContent = `${game.currentTurn}/20`;
+    els.eventTitle.textContent = '二十年回顾';
+    els.eventCopy.textContent = '每一次出手，都是一个时代的注脚。';
+    els.endingTitle.textContent = `结局：${ending.title}`;
+    els.endingCopy.textContent = ending.description;
+    els.endingStats.innerHTML = [['AUM', fmt(game.aum)], ['投资业绩', fmt(game.trackRecord)], ['人脉网络', fmt(game.network)], ['健康', fmt(game.health)], ['投资项目', `${game.investmentHistory.length} 个`], ['职业阶段', stageLabel()]].map(([label, value]) => `<div class="ending-stat"><span class="metric-label">${label}</span><strong>${value}</strong></div>`).join('');
+  }
+
+  function showToast(title, body) {
+    window.clearTimeout(toastTimer);
+    els.toast.innerHTML = `<strong>${title}</strong><span>${body}</span>`;
+    els.toast.classList.add('is-visible');
+    toastTimer = window.setTimeout(() => els.toast.classList.remove('is-visible'), 3200);
+  }
+
+  document.getElementById('restartTop').addEventListener('click', initGame);
+  document.getElementById('restartEnding').addEventListener('click', initGame);
+  document.getElementById('howToPlay').addEventListener('click', () => showToast('玩法说明', '每年先处理行业/职业事件，再选择项目投资。投资项目会在多年后退出，影响 AUM、业绩、人脉和健康。'));
+  initGame();
 })();
   </script>
 </body>
