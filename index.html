@@ -697,7 +697,7 @@
           Investment Committee Simulator
         </p>
         <h1>中国VC投资模拟器</h1>
-        <p class="subtitle">按 reference 路线复刻：从 2005 年开始，在项目投资、行业事件、人脉和健康之间做选择。</p>
+        <p class="subtitle">从 2005 年开始，在项目投资、行业事件、人脉和健康之间做选择。</p>
       </div>
       <div class="top-actions">
         <button class="button secondary" type="button" id="howToPlay">
@@ -822,8 +822,8 @@
   const sectorNames = { pc_internet: 'PC互联网', ecommerce: '电商', saas: '企业服务', gaming: '游戏', ai: 'AI/教育', mobile: '移动互联网', fintech: '金融科技', o2o: 'O2O', healthcare: '医疗健康' };
   const endingText = { title: '资本弃儿', copy: '你的AUM缩水到接近零，IRR一塌糊涂。最后一个LP的撤资邮件只有一句话：我们决定不再续约了。你在办公室坐到凌晨，回邮件只写了两个字：理解。然后关灯、关电脑、走到街上。北京的夜风很冷，你终于自由了，虽然是被迫的。' };
   const turns = referenceLog.map((entry, index) => {
-    if (entry.type === 'event') return { index, type: 'event', year: entry.year, title: entry.title, copy: '行业事件会改变你的管理规模、投资业绩、人脉网络或健康。这里的选项来自 reference 网站同一局记录。', options: entry.options.map((option) => ({ ...option, label: option.text })), referenceChoice: entry.chosenIndex };
-    if (entry.type === 'invest') return { index, type: 'invest', year: entry.year, title: `${entry.year} 年看项目`, copy: '作为投资经理，本回合只能选择 1 个项目。项目结果会在若干年后到期退出；部分结果来自 reference 同一局的隐藏预计算。', options: entry.options.map((option) => ({ ...option, label: option.name })), referenceChoice: entry.options.findIndex((option) => entry.chosenIds.includes(option.id)), referenceResults: entry.projects };
+    if (entry.type === 'event') return { index, type: 'event', year: entry.year, title: entry.title, copy: '行业事件会改变你的管理规模、投资业绩、人脉网络或健康。', options: entry.options.map((option) => ({ ...option, label: option.text })), referenceChoice: entry.chosenIndex };
+    if (entry.type === 'invest') return { index, type: 'invest', year: entry.year, title: `${entry.year} 年看项目`, copy: '作为投资经理，本回合只能选择 1 个项目。项目结果会在若干年后到期退出。', options: entry.options.map((option) => ({ ...option, label: option.name })), referenceChoice: entry.options.findIndex((option) => entry.chosenIds.includes(option.id)), referenceResults: entry.projects };
     return { index, type: 'update', year: entry.year, title: `${entry.year} 年 Portfolio Update`, copy: '本年有历史项目到期。退出结果会影响 AUM、投资业绩、人脉和健康。', options: [{ label: '查看退出并进入下一回合', text: '查看退出并进入下一回合' }], results: entry.results || [] };
   });
   const initialState = () => ({ turn: 0, aum: 50, trackRecord: 5, network: 10, health: 80, careerStage: '投资经理', portfolio: [], log: [], ended: false });
@@ -858,7 +858,7 @@
       const result = projectOutcome(option, turn);
       state.aum = Math.max(0, state.aum - option.amount); state.trackRecord = clamp(state.trackRecord + 1, 0, 100);
       state.portfolio.push({ id: option.id, name: option.name, sector: option.sector, amount: option.amount, year: turn.year, outcome: result.outcome, multiple: result.multiple, maturityYear: result.maturityYear, status: 'pending' });
-      state.log.unshift({ year: turn.year, text: `投资「${option.name}」，投入 ${option.amount}。隐藏结果：${outcomeLabel(result.outcome)}，${Number(result.multiple).toFixed(2)}x，预计 ${result.maturityYear} 年到期。` });
+      state.log.unshift({ year: turn.year, text: `投资「${option.name}」，投入 ${option.amount}。预计 ${result.maturityYear} 年到期，退出结果届时揭晓。` });
       showToast('投资确认', `${option.name} / ${sectorNames[option.sector] || option.sector}`);
     }
     if (turn.type === 'update') {
@@ -908,20 +908,20 @@
     const isReference = index === turn.referenceChoice;
     if (turn.type === 'invest') {
       const impact = [`投入 -${option.amount}`, `成功率 ${Math.round(option.successBaseRate * 100)}%`, `潜在 ${option.potentialMultiplier}x`];
-      return `<button class="choice" type="button" data-choice="${index}"><span class="choice-top"><span class="choice-title">${option.name}</span><span class="tag">${isReference ? 'Reference选择' : (sectorNames[option.sector] || option.sector)}</span></span><p class="choice-copy">${option.tagline}</p><p class="choice-copy">风险：${option.riskHint}</p><span class="choice-impact">${impact.map((item) => `<span class="impact">${item}</span>`).join('')}</span></button>`;
+      return `<button class="choice" type="button" data-choice="${index}"><span class="choice-top"><span class="choice-title">${option.name}</span><span class="tag">${sectorNames[option.sector] || option.sector}</span></span><p class="choice-copy">${option.tagline}</p><p class="choice-copy">风险：${option.riskHint}</p><span class="choice-impact">${impact.map((item) => `<span class="impact">${item}</span>`).join('')}</span></button>`;
     }
     const changes = option.statChanges || {}; const impact = [`AUM ${signed(changes.aum || 0)}`, `业绩 ${signed(changes.trackRecord || 0)}`, `人脉 ${signed(changes.network || 0)}`, `健康 ${signed(changes.health || 0)}`];
-    return `<button class="choice" type="button" data-choice="${index}"><span class="choice-top"><span class="choice-title">${option.text}</span><span class="tag">${isReference ? 'Reference选择' : '可选'}</span></span><p class="choice-copy">选择后立即影响职业状态。</p><span class="choice-impact">${impact.map((item) => `<span class="impact">${item}</span>`).join('')}</span></button>`;
+    return `<button class="choice" type="button" data-choice="${index}"><span class="choice-top"><span class="choice-title">${option.text}</span><span class="tag">可选</span></span><p class="choice-copy">选择后立即影响职业状态。</p><span class="choice-impact">${impact.map((item) => `<span class="impact">${item}</span>`).join('')}</span></button>`;
   }
   function renderProgress() {
     const progress = turns.length <= 1 ? 0 : state.turn / (turns.length - 1);
-    els.heatList.innerHTML = [['路线进度', Math.round(progress * 100)], ['AUM', clamp(state.aum, 0, 100)], ['投资业绩', state.trackRecord], ['人脉网络', state.network], ['健康', state.health]].map(([label, value]) => `<div class="heat-row"><span>${label}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:${clamp(value, 0, 100)}%"></span></span><span class="heat-value">${fmt(value)}</span></div>`).join('');
+    els.heatList.innerHTML = [['游戏进度', Math.round(progress * 100)], ['AUM', clamp(state.aum, 0, 100)], ['投资业绩', state.trackRecord], ['人脉网络', state.network], ['健康', state.health]].map(([label, value]) => `<div class="heat-row"><span>${label}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:${clamp(value, 0, 100)}%"></span></span><span class="heat-value">${fmt(value)}</span></div>`).join('');
     const x = 24 + progress * 206; const y = 90 - Math.sin(progress * Math.PI * 1.15) * 34 + progress * 8; els.cycleDot.setAttribute('cx', String(clamp(x, 24, 230))); els.cycleDot.setAttribute('cy', String(clamp(y, 28, 108)));
   }
   function renderPortfolio() {
     const pending = state.portfolio.filter((item) => item.status === 'pending'); els.portfolioCount.textContent = `${pending.length} 个`;
     if (!state.portfolio.length) { els.portfolioList.innerHTML = '<div class="empty">暂无投资。选择项目后会显示在这里。</div>'; return; }
-    els.portfolioList.innerHTML = state.portfolio.slice().reverse().slice(0, 9).map((item) => { const width = clamp((Number(item.multiple) || 0) * 8, 6, 100); return `<article class="deal"><div class="deal-head"><div><div class="deal-name">${item.name}</div><div class="deal-sector">${sectorNames[item.sector] || item.sector} / ${item.year} 投 / ${item.maturityYear} 到期</div></div><div class="deal-mark">${item.status === 'resolved' ? '已退出' : `${Number(item.multiple).toFixed(1)}x`}</div></div><div class="deal-progress"><span style="width:${width}%"></span></div></article>`; }).join('');
+    els.portfolioList.innerHTML = state.portfolio.slice().reverse().slice(0, 9).map((item) => { const width = clamp((Number(item.multiple) || 0) * 8, 6, 100); return `<article class="deal"><div class="deal-head"><div><div class="deal-name">${item.name}</div><div class="deal-sector">${sectorNames[item.sector] || item.sector} / ${item.year} 投 / ${item.maturityYear} 到期</div></div><div class="deal-mark">${item.status === 'resolved' ? '已退出' : '待退出'}</div></div><div class="deal-progress"><span style="width:${width}%"></span></div></article>`; }).join('');
   }
   function renderLog() {
     els.logCount.textContent = `${state.log.length} 条`; if (!state.log.length) { els.logList.innerHTML = '<div class="empty">选择和退出会记录在这里。</div>'; return; }
@@ -929,7 +929,7 @@
   }
   function resetGame() { state = initialState(); els.endingPane.classList.remove('is-visible'); showToast('重新开始', 'Reference 路线已重置。'); render(); }
   function showToast(title, body) { window.clearTimeout(toastTimer); els.toast.innerHTML = `<strong>${title}</strong><span>${body}</span>`; els.toast.classList.add('is-visible'); toastTimer = window.setTimeout(() => els.toast.classList.remove('is-visible'), 3200); }
-  document.getElementById('restartTop').addEventListener('click', resetGame); document.getElementById('restartEnding').addEventListener('click', resetGame); document.getElementById('howToPlay').addEventListener('click', () => showToast('玩法说明', '项目和事件选项来自 reference 同一局记录。带 Reference选择 标签的是我那局实际点的选项，你可以照走，也可以改走其他路线。'));
+  document.getElementById('restartTop').addEventListener('click', resetGame); document.getElementById('restartEnding').addEventListener('click', resetGame); document.getElementById('howToPlay').addEventListener('click', () => showToast('玩法说明', '每回合选择一个事件处理方式或投资项目。投资会占用 AUM，项目到期后才揭晓退出结果。'));
   render();
 })();
   </script>
